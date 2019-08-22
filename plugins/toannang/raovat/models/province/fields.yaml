@@ -1,0 +1,5 @@
+fields:
+    name:
+        label: 'Tên tỉnh / thành phố'
+        span: auto
+        type: text

@@ -1,0 +1,10 @@
+name: Contact
+form: $/toannang/contact/models/contact/fields.yaml
+modelClass: toannang\Contact\Models\Contact
+defaultRedirect: toannang/contact/contact
+create:
+    redirect: 'toannang/contact/contact/update/:id'
+    redirectClose: toannang/contact/contact
+update:
+    redirect: toannang/contact/contact
+    redirectClose: toannang/contact/contact

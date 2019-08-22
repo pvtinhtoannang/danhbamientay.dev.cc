@@ -1,0 +1,36 @@
+<section class="section">
+    <div class="block appear-el animated fadeInLeft" data-animation="fadeInLeft">
+        <h3 class="uppercase no-top-margin">{{ 'toannang.contact::lang.sendus'|_ }}</h3>
+        <p>&nbsp;</p>
+        <form role="form" id="contact-us" data-request="onSend" method="post">
+            <div class="form-group">
+                <label for="name">{{ 'toannang.contact::lang.fullname'|_ }}</label>
+                <input type="text" name="fullname" class="form-control" id="name">
+                {{ errors.first('name')}}
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" id="email">
+                {{ errors.first('email')}}
+            </div>
+            <div class="form-group">
+                <label for="email">{{ 'toannang.contact::lang.phone'|_ }}</label>
+                <input type="text" name="phone" class="form-control" id="phone">
+                {{ errors.first('phone')}}
+            </div>
+            <div class="form-group">
+                <label for="message">{{ 'toannang.contact::lang.message'|_ }}</label>
+                <textarea name="message" class="form-control" rows="5" id="message"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="g-recaptcha" style="float: right;" data-sitekey="6Lf1jUEUAAAAAIJkfoY__3246l7qJIxEF-Hzixg0"></div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-theme uppercase">{{ 'toannang.contact::lang.send'|_ }}</button>
+                <button type="reset" class="btn uppercase">{{ 'toannang.contact::lang.cancel'|_ }}</button>
+            </div>
+
+        </form>
+    </div>
+ 
+</section>

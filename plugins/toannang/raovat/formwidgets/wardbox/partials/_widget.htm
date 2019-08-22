@@ -1,0 +1,22 @@
+<style >
+  #Form-field-Posts-ward-group .select2-selection--single{
+  height: 40px;
+}
+#Form-field-Posts-ward-group .select2-selection__rendered{
+  line-height: 20px;
+}
+#Form-field-Posts-ward-group .select2-selection__arrow{
+  top: 7px;
+}
+#Form-field-Posts-ward-group .select2-selection__arrow b::before{
+  all:unset;
+}
+</style>
+<select id="ward" name="Posts[ward]" class=" form-control js-example-disabled-results" >
+  <?php foreach ($all_ward as $key => $ward_item) {?>
+    <option <?php if($key == $ward) {?> selected="selected" <?php } ?> value="<?= $key ?>"><?= $ward_item ?></option>
+  <?php }  ?>
+</select>
+<script>
+  $("#ward").select2({});
+</script>

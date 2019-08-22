@@ -1,0 +1,8 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table toannang_contact_entries'
+    - builder_table_create_toannang_contact_entries.php
+1.0.3:
+    - 'Updated table toannang_contact_entries'
+    - builder_table_update_toannang_contact_entries.php

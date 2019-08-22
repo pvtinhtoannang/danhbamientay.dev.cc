@@ -1,0 +1,16 @@
+1566469205a:1:{s:12:"dang-tin.htm";a:14:{s:8:"fileName";s:12:"dang-tin.htm";s:7:"content";s:350:"title = "Đăng tin"
+url = "/dang-tin"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "user"
+redirect = "dang-nhap"
+
+[PvtinhDBMienTayBreadCrumb]
+
+[PvtinhDBMienTayDangTin]
+==
+{% component 'session' %}{% component 'PvtinhDBMienTayBreadCrumb' %}{% component 'PvtinhDBMienTayDangTin' %}";s:5:"mtime";i:1566467912;s:6:"markup";s:108:"{% component 'session' %}{% component 'PvtinhDBMienTayBreadCrumb' %}{% component 'PvtinhDBMienTayDangTin' %}";s:4:"code";N;s:5:"title";s:10:"Đăng tin";s:3:"url";s:9:"/dang-tin";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"session";a:2:{s:8:"security";s:4:"user";s:8:"redirect";s:9:"dang-nhap";}s:25:"PvtinhDBMienTayBreadCrumb";a:0:{}s:22:"PvtinhDBMienTayDangTin";a:0:{}}}

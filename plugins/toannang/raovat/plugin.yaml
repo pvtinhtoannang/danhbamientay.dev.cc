@@ -1,0 +1,36 @@
+plugin:
+    name: 'toannang.raovat::lang.plugin.name'
+    description: 'toannang.raovat::lang.plugin.description'
+    author: toannang
+    icon: oc-icon-camera-retro
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'Rao Vặt'
+        url: toannang/raovat/postcontroller
+        icon: icon-bullhorn
+        sideMenu:
+            side-menu-item:
+                label: 'Vị trí'
+                url: toannang/raovat/locationscontroller
+                icon: icon-location-arrow
+            side-menu-item2:
+                label: 'Chuyên mục'
+                url: toannang/raovat/categorycontroller
+                icon: icon-sitemap
+            side-menu-item3:
+                label: 'Bất động sản'
+                url: toannang/raovat/property
+                icon: icon-home
+            side-menu-item4:
+                label: 'Tỉnh / Thành phố'
+                url: toannang/raovat/province
+                icon: icon-university
+            side-menu-item5:
+                label: 'Quận huyện'
+                url: toannang/raovat/districtcontroller
+                icon: icon-yelp
+            side-menu-item6:
+                label: 'Phường / Xã'
+                url: toannang/raovat/wards
+                icon: icon-sun-o

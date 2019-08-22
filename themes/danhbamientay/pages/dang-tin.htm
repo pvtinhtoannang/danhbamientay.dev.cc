@@ -1,0 +1,16 @@
+title = "Đăng tin"
+url = "/dang-tin"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "user"
+redirect = "dang-nhap"
+
+[PvtinhDBMienTayBreadCrumb]
+
+[PvtinhDBMienTayDangTin]
+==
+{% component 'session' %}{% component 'PvtinhDBMienTayBreadCrumb' %}{% component 'PvtinhDBMienTayDangTin' %}

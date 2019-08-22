@@ -1,0 +1,4 @@
+title: PostController
+modelClass: Toannang\Raovat\Models\Posts
+toolbar:
+    buttons: reorder_toolbar

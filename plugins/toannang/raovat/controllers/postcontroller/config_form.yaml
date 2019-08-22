@@ -1,0 +1,10 @@
+name: PostController
+form: $/toannang/raovat/models/posts/fields.yaml
+modelClass: Toannang\Raovat\Models\Posts
+defaultRedirect: toannang/raovat/postcontroller
+create:
+    redirect: 'toannang/raovat/postcontroller/update/:id'
+    redirectClose: toannang/raovat/postcontroller
+update:
+    redirect: toannang/raovat/postcontroller
+    redirectClose: toannang/raovat/postcontroller

@@ -1,0 +1,10 @@
+name: DistrictController
+form: $/toannang/raovat/models/district/fields.yaml
+modelClass: Toannang\Raovat\Models\District
+defaultRedirect: toannang/raovat/districtcontroller
+create:
+    redirect: 'toannang/raovat/districtcontroller/update/:id'
+    redirectClose: toannang/raovat/districtcontroller
+update:
+    redirect: toannang/raovat/districtcontroller
+    redirectClose: toannang/raovat/districtcontroller

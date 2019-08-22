@@ -1,0 +1,12 @@
+list: $/toannang/raovat/models/locations/columns.yaml
+modelClass: Toannang\Raovat\Models\Locations
+title: LocationsController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'toannang/raovat/locationscontroller/update/:id'

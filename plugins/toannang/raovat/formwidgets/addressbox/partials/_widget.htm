@@ -1,0 +1,54 @@
+<style >
+  #Form-field-Posts-province-group .select2-selection--single{
+    height: 40px;
+  }
+  #Form-field-Posts-province-group .select2-selection__rendered{
+    line-height: 20px;
+  }
+  #Form-field-Posts-province-group .select2-selection__arrow{
+    top: 7px;
+  }
+  #Form-field-Posts-province-group .select2-selection__arrow b::before{
+    all:unset;
+  }
+  #Form-field-Posts-user-group .select2-selection--single{
+    height: 40px;
+  }
+  #Form-field-Posts-user-group .select2-selection__rendered{
+    line-height: 20px;
+  }
+  #Form-field-Posts-user-group .select2-selection__arrow{
+    top: 7px;
+  }
+  #Form-field-Posts-user-group .select2-selection__arrow b::before{
+    all:unset;
+  }
+  
+</style>
+<select id="province" name="Posts[province]" class=" form-control js-example-disabled-results" >
+  <?php foreach ($all_province as $key => $province_item) {?>
+    <option <?php if($key == $province) {?> selected="selected" <?php } ?> value="<?= $key ?>"><?= $province_item ?></option>
+  <?php }  ?>
+</select>
+<script>
+  $("#province").select2({ });
+  var district = $('#district');
+  var ward = $('#ward');
+  $("#province").on('select2:select', function (e) {
+    var id = $(this).val();
+    var url = '/backend-district/'+id;
+    
+    $.ajax({
+      url: url,
+      type: "GET",
+    }).done(function(data) {
+      $('#district').empty();
+      $.each( data, function( key, value ) {
+        $.each( data, function( key2, value2 ) {
+          $('#district').append('<option value="'+value2.id+'" selected="">'+value2.name+'</option>');
+        });        
+      });
+    });
+  });
+  
+</script>

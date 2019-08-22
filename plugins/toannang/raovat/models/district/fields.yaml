@@ -1,0 +1,11 @@
+fields:
+    name:
+        label: 'Tên quận huyện'
+        span: auto
+        type: text
+    province:
+        label: 'Tỉnh / thành phố'
+        nameFrom: name
+        descriptionFrom: 'Tỉnh / thành phố'
+        span: auto
+        type: relation

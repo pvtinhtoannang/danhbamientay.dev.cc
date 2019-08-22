@@ -1,0 +1,4 @@
+title: CategoryController
+modelClass: Toannang\Raovat\Models\Category
+toolbar:
+    buttons: reorder_toolbar

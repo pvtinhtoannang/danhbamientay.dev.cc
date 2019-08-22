@@ -1,0 +1,6 @@
+plugin:
+    name: 'Component Builder'
+    description: 'Plugin xây dựng Component'
+    author: toannang
+    icon: oc-icon-dribbble
+    homepage: 'https://toannang.com.vn'

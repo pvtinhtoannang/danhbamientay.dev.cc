@@ -1,0 +1,52 @@
+title = "Đăng nhập"
+url = "/dang-nhap"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+==
+
+
+<div class="pvtinh_account_dbmientay">
+  <div class="container">
+  {% if not user %}
+  <div class="row">
+    <div class="col-md-offset-2 col-md-7">
+      <div class="account_form ">
+        <h3 class="account_title">ĐĂNG NHẬP</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="login_form">
+              {% partial account ~ '::signin' %}
+              
+              <ul class="account_link">
+                <li>Bạn chưa có tài khoản? <a href="/dang-ky" title="Đăng ký">Tạo tài khoản</a>  </li>
+                <li><a href="#">Quên mật khẩu?</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% else %}
+
+      {% partial account ~ '::activation_check' %}
+
+      {% partial account ~ '::update' %}
+
+      {% partial account ~ '::deactivate_link' %}
+
+  {% endif %}
+
+  </div>
+</div>

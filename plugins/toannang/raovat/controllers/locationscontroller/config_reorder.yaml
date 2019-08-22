@@ -1,0 +1,4 @@
+title: LocationsController
+modelClass: Toannang\Raovat\Models\Locations
+toolbar:
+    buttons: reorder_toolbar

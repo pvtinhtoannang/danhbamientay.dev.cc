@@ -1,0 +1,10 @@
+name: LocationsController
+form: $/toannang/raovat/models/locations/fields.yaml
+modelClass: Toannang\Raovat\Models\Locations
+defaultRedirect: toannang/raovat/locationscontroller
+create:
+    redirect: 'toannang/raovat/locationscontroller/update/:id'
+    redirectClose: toannang/raovat/locationscontroller
+update:
+    redirect: toannang/raovat/locationscontroller
+    redirectClose: toannang/raovat/locationscontroller

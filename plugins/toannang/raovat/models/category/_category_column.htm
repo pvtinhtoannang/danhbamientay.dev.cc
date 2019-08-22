@@ -1,0 +1,12 @@
+<?php
+  use Toannang\Raovat\Models\Category;
+  if ($value == 0){
+    echo 'Không';
+  }
+  else{
+    $category = Category::where('id', '=', $value)->select()->get();
+    foreach ($category as $key => $value) {
+        echo $value->name;
+    }
+  }
+?>

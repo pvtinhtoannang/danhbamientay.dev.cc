@@ -1,0 +1,12 @@
+columns:
+    id:
+        label: ID
+        type: number
+    name:
+        label: 'Tên tỉnh / TP'
+        type: text
+        searchable: true
+        sortable: true
+    type:
+        label: Loại
+        type: text

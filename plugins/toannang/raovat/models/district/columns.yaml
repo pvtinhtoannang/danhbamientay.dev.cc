@@ -1,0 +1,24 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: 'Tên quận / huyện'
+        type: text
+        searchable: true
+        sortable: true
+    type:
+        label: 'Phường xã'
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true
+    tentp:
+        label: 'Tỉnh / thành phố'
+        type: text
+        searchable: true
+        sortable: true
+        select: name
+        relation: district

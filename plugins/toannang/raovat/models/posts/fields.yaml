@@ -1,0 +1,95 @@
+fields:
+    title:
+        label: 'Tên bài viết'
+        span: auto
+        type: text
+    slug:
+        label: 'Đường dẫn tĩnh'
+        span: auto
+        preset:
+            field: title
+            type: slug
+        type: text
+    description:
+        label: 'Mô tả ngắn'
+        size: small
+        span: left
+        type: textarea
+    images:
+        label: 'Ảnh đại diện'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    content:
+        label: 'Nội dung bài viết'
+        size: large
+        span: left
+        type: richeditor
+    images_gallery:
+        label: 'Thư viện ảnh'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        imageWidth: '50'
+        imageHeight: '50'
+        type: fileupload
+    price:
+        label: Giá
+        span: auto
+        type: number
+    categories:
+        label: 'Chuyên mục'
+        nameFrom: name
+        descriptionFrom: 'Chuyên mục'
+        span: auto
+        type: relation
+    locations:
+        label: 'Vị trí'
+        nameFrom: name
+        descriptionFrom: 'Vị trí'
+        span: auto
+        type: relation
+    property_type:
+        label: 'Chọn danh mục bất động sản'
+        span: left
+        type: propertytypebox
+    province:
+        label: 'Tỉnh / Thành phố: '
+        span: right
+        type: addressbox
+    district:
+        label: 'Quận / Huyện: '
+        span: right
+        type: districtbox
+    area:
+        label: 'Diện tích'
+        span: left
+        type: number
+    ward:
+        label: 'Phường / Xã / Thị Trấn: '
+        span: right
+        type: wardbox
+    meta_title:
+        label: 'Meta title'
+        span: left
+        type: text
+    meta_description:
+        label: 'Meta description'
+        size: small
+        span: left
+        type: textarea
+    user:
+        label: 'Người đăng'
+        nameFrom: name
+        descriptionFrom: 'Người đăng'
+        span: right
+        type: relation

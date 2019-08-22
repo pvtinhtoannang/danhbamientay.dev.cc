@@ -1,0 +1,21 @@
+fields:
+    name:
+        label: 'Tên địa điểm'
+        span: auto
+        type: text
+    slug:
+        label: 'Đường dẫn tĩnh'
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    description:
+        label: 'Mô tả'
+        size: small
+        span: full
+        type: textarea
+    sort_order:
+        label: 'Sắp xếp'
+        span: left
+        type: sortlocations

@@ -1,0 +1,10 @@
+name: CategoryController
+form: $/toannang/raovat/models/category/fields.yaml
+modelClass: Toannang\Raovat\Models\Category
+defaultRedirect: toannang/raovat/categorycontroller
+create:
+    redirect: 'toannang/raovat/categorycontroller/update/:id'
+    redirectClose: toannang/raovat/categorycontroller
+update:
+    redirect: toannang/raovat/categorycontroller
+    redirectClose: toannang/raovat/categorycontroller

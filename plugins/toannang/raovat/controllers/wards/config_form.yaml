@@ -1,0 +1,10 @@
+name: Wards
+form: $/toannang/raovat/models/ward/fields.yaml
+modelClass: Toannang\Raovat\Models\Ward
+defaultRedirect: toannang/raovat/wards
+create:
+    redirect: 'toannang/raovat/wards/update/:id'
+    redirectClose: toannang/raovat/wards
+update:
+    redirect: toannang/raovat/wards
+    redirectClose: toannang/raovat/wards

@@ -1,0 +1,5 @@
+fields:
+    name:
+        label: 'Tên phường xã'
+        span: auto
+        type: text

@@ -1,0 +1,39 @@
+@import 'mixin.scss';
+
+.lp_danhbamientay_breadcrumb {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    padding: 97.1px 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+    @include tablet {
+        padding: 50px 0;
+    }
+
+    @include big_phone {
+        padding: 30px 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    a {
+        color:#fff;
+    }
+}

@@ -1,0 +1,54 @@
+<section id="lp_danhbamientay_footer">
+    <div class="lp_danhbamientay_footer" style="background-image: url( {{ 'lamdbmientayfooter/images/bg_footer.jpg'|component }} )">
+        <div class="container">
+            <div class="row footer_wrapper">
+                <div class="col-md-4 col-sm-12 footer_info_wrapper">
+                    <h2 class="ft_title">
+                        <span><img src="{{ 'lamdbmientayfooter/images/cube.png'|component }}" alt="cube"></span>
+                        {{ company_name }}
+                    </h2>
+
+                    <div class="footer_info">
+                        <div class="info_item text-white">
+                            <span><img src="{{ 'lamdbmientayfooter/images/address.png'|component }}" alt="address"></span>
+                            <p><strong>Địa chỉ: </strong>{{ address }}</p>
+                        </div>
+                        <div class="info_item text-white">
+                            <span><img src="{{ 'lamdbmientayfooter/images/email.png'|component }}" alt="email"></span>
+                            <p><strong>Điện thoại: </strong>{{ hotline }}</p>
+                        </div>
+                        <div class="info_item text-white">
+                            <span><img src="{{ 'lamdbmientayfooter/images/phone.png'|component }}" alt="phone"></span>
+                            <p><strong>Email: </strong>{{ email }}</p>
+                        </div>
+                    </div> 
+
+                    <div class="report_wrapper">
+                        <a href="#"><img src="{{ 'lamdbmientayfooter/images/report.png'|component }}" alt="report"></a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 footer_category_wrapper">
+                    <h2 class="ft_title">
+                        <span><img src="{{ 'lamdbmientayfooter/images/cube.png'|component }}" alt="cube"></span>
+                        Danh mục
+                    </h2>
+                    <div class="footer_category">
+                        {% component "footerMenu" %}
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 footer_fanpage">
+                    <h2 class="ft_title">
+                        <span><img src="{{ 'lamdbmientayfooter/images/cube.png'|component }}" alt="cube"></span>
+                        Facebook fanpage
+                    </h2>
+                    <div class="fanpage_wrapper">
+                        <div class="fb-page" data-href="{{ socials.0.link_social }}" data-tabs="timeline" data-width="500" data-height="231" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        {{ copyright }}. Designed by <a href="https://toannang.com.vn">Toan Nang</a>
+    </div>
+</section>

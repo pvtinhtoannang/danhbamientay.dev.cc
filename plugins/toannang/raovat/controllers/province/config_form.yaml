@@ -1,0 +1,10 @@
+name: Province
+form: $/toannang/raovat/models/province/fields.yaml
+modelClass: Toannang\Raovat\Models\Province
+defaultRedirect: toannang/raovat/province
+create:
+    redirect: 'toannang/raovat/province/update/:id'
+    redirectClose: toannang/raovat/province
+update:
+    redirect: toannang/raovat/province
+    redirectClose: toannang/raovat/province

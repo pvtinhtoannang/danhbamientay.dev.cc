@@ -1,0 +1,6 @@
+plugin:
+    name: Settings
+    description: Settings
+    author: toannang
+    icon: oc-icon-gears
+    homepage: 'https://toannang.com.vn'

@@ -1,0 +1,4 @@
+title: Property
+modelClass: Toannang\Raovat\Models\PropertyType
+toolbar:
+    buttons: reorder_toolbar

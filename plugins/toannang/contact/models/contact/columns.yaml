@@ -1,0 +1,21 @@
+columns:
+    id:
+        label: ID
+        type: text
+        searchable: false
+        sortable: true
+    name:
+        label: 'Họ và tên'
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: true
+    phone:
+        label: 'Số điện thoại'
+        type: text
+        searchable: true
+    created_at:
+        label: 'Ngày đăng ký'
+        type: date

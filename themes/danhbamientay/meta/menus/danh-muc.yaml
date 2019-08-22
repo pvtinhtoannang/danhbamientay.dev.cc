@@ -1,0 +1,96 @@
+name: 'Danh mục'
+items:
+    -
+        title: 'Bất động sản'
+        nesting: ''
+        type: url
+        url: /
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /house.png
+    -
+        title: 'Địa điểm ăn uống'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /spoon.png
+    -
+        title: 'Địa điểm du lịch'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /foodcover.png
+    -
+        title: 'Thiết bị công nghệ'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /screen.png
+    -
+        title: 'Oto Xe máy'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /car.png
+    -
+        title: 'Xây dựng'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /contruct.png
+    -
+        title: 'Nông nghiệp'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /aghi.png
+    -
+        title: 'Tuyển dụng - Việc làm'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /beauty.png
+    -
+        title: 'Làm đẹp'
+        type: url
+        url: /
+        code: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /beauty.png

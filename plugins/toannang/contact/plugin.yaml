@@ -1,0 +1,11 @@
+plugin:
+    name: 'toannang.contact::lang.plugin.name'
+    description: 'toannang.contact::lang.plugin.description'
+    author: toannang
+    icon: oc-icon-envelope
+    homepage: 'https://toannang.com.vn'
+navigation:
+    tn-contact-form:
+        label: 'toannang.contact::lang.contactform'
+        url: toannang/contact/contact
+        icon: icon-envelope

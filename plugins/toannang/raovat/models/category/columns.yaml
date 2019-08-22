@@ -1,0 +1,18 @@
+columns:
+    id:
+        label: ID
+        type: number
+        searchable: true
+        sortable: true
+    name:
+        label: 'Tên chuyên mục'
+        type: text
+        searchable: true
+        sortable: true
+    parent_id:
+        label: 'Danh mục cha'
+        type: partial
+        searchable: true
+        sortable: true
+        select: parent_id
+        path: ~/plugins/toannang/raovat/models/category/_category_column.htm

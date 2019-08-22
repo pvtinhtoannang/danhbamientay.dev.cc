@@ -1,0 +1,4 @@
+title: Wards
+modelClass: Toannang\Raovat\Models\Ward
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: ID
+        type: number
+    name:
+        label: 'Tên địa điểm'
+        type: text
+    created_at:
+        label: 'Ngày khởi tạo'
+        type: datetime
+    updated_at:
+        label: 'Cập nhật lần cuối'
+        type: datetime
+    sort_order:
+        label: 'Sắp xếp'
+        type: number

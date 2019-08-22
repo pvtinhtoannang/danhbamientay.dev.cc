@@ -1,0 +1,13 @@
+points:
+    label: 'Số điểm'
+    span: auto
+    type: number
+    tab: 'Tích điểm mua hàng'
+    options:
+        shipper: Shipper
+        stocker: Thủ kho
+rank_name:
+    label: 'Hạng'
+    span: auto
+    type: dropdown
+    tab: 'Tích điểm mua hàng'

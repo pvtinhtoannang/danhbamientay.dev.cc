@@ -1,0 +1,78 @@
+$mobile: 580px;
+$tablet: 768px;
+$large: 992px;
+$desktop: 1024px;
+$largedesktop: 1199px;
+$bigsize: 1400px;
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media (max-width: #{$large}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin largedesktop {
+    @media (max-width: #{$largedesktop}) {
+        @content;
+    }
+}
+
+@media screen and(min-width: 1230px) {
+    .container {
+        width: 1230px !important;
+    }
+}
+
+@mixin transition($trans) {
+    -webkit-transition: $trans;
+    -moz-transition: $trans;
+    -ms-transition: $trans;
+    -o-transition: $trans;
+    transition: $trans;
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin textWithEllipsis($fontSize, $lineHeight, $line) {
+    font-size: $fontSize+px;
+    line-height: $lineHeight;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: ($fontSize * $lineHeight * $line)+px;
+}
+
+@mixin flexbox() {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+

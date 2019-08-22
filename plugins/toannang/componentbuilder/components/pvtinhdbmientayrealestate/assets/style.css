@@ -1,0 +1,170 @@
+.lp_danhbamientay_real_estate {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  background-color: #f9f9f9; }
+  .lp_danhbamientay_real_estate .mientay_title_wrapper {
+    background-color: #272a72;
+    padding: 14.2px 15px; }
+    .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_box .mientay_title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase; }
+    .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_box .mientay_title_slider a {
+      font-size: 13px;
+      font-weight: 300;
+      color: #fff;
+      text-transform: uppercase;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_box .mientay_title_slider a:hover {
+        color: #fac918; }
+    .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_arrow {
+      text-align: right; }
+      .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_arrow .slide_btn {
+        border: none;
+        background: none;
+        color: #fff;
+        padding: 0 3.5px; }
+    @media (max-width: 991px) {
+      .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_arrow {
+        padding: 0 10px; } }
+    @media (max-width: 767px) {
+      .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_box {
+        text-align: center;
+        margin-bottom: 10px; }
+      .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_box {
+        margin-bottom: 10px; }
+        .lp_danhbamientay_real_estate .mientay_title_wrapper .mientay_title_slider_box .mientay_title_slider a {
+          text-align: center; } }
+  .lp_danhbamientay_real_estate .content_wrapper {
+    margin: 7px -5px 35px; }
+    .lp_danhbamientay_real_estate .content_wrapper .left_wrapper {
+      padding: 0 5px; }
+      .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box {
+        background-color: #fff;
+        padding-top: 12px; }
+        .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper {
+          padding: 12px 12px 0;
+          border-top: 1px dashed #ebebeb; }
+          .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper form input,
+          .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper form select {
+            width: 100%;
+            border: 1px solid #ebebeb;
+            border-radius: 2px;
+            font-size: 13px;
+            font-weight: 300;
+            color: #7a7a7a;
+            margin-bottom: 15px;
+            padding: 7.1px 7px; }
+          .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper form button {
+            width: 100%;
+            background-color: #2a922d;
+            border-radius: 2px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            border: none;
+            padding: 7.3px 0;
+            -webkit-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+            -ms-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            transition: all 0.4s; }
+            .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper form button:hover {
+              background-color: #272a72; }
+            .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .advance_search_wrapper form button i {
+              margin-left: 5px; }
+        .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper {
+          margin-top: 35px;
+          text-align: center; }
+          .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper img {
+            width: 100%; }
+      @media (max-width: 991px) {
+        .lp_danhbamientay_real_estate .content_wrapper .left_wrapper {
+          margin-bottom: 10px; }
+          .lp_danhbamientay_real_estate .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper img {
+            width: unset; } }
+    .lp_danhbamientay_real_estate .content_wrapper .right_wrapper {
+      padding: 0 5px; }
+      .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item {
+          width: calc(100%/4);
+          overflow: hidden; }
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item:hover .product_content .product_name a {
+            color: #2a922d; }
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_img a {
+            display: block;
+            width: 100%;
+            height: 180px;
+            overflow: hidden; }
+            .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_img a img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content {
+            border: 1px solid #e1e1e1;
+            padding: 5px; }
+            .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content .product_name {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 1.4;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap; }
+              .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content .product_name a {
+                color: #242424;
+                display: block;
+                -webkit-transition: all 0.4s;
+                -moz-transition: all 0.4s;
+                -ms-transition: all 0.4s;
+                -o-transition: all 0.4s;
+                transition: all 0.4s; }
+            .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content .product_info p {
+              color: #494949;
+              font-size: 13px;
+              line-height: 1.4;
+              font-size: 13px;
+              line-height: 1.4;
+              display: block;
+              display: -webkit-box;
+              margin: 0 auto;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-height: 36.4px;
+              margin: 2px 0; }
+              .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content .product_info p img {
+                margin-right: 5px;
+                vertical-align: middle; }
+              .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item .product_item .product_content .product_info p span {
+                font-weight: 700;
+                color: #d01c1c;
+                font-size: 15px; }
+        @media (max-width: 991px) {
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item {
+            width: calc(100%/3); } }
+        @media (max-width: 767px) {
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item {
+            width: calc(100%/2); } }
+        @media (max-width: 576px) {
+          .lp_danhbamientay_real_estate .content_wrapper .right_wrapper .product_wrapper .product_box_item {
+            width: calc(100%); } }
+
+/*# sourceMappingURL=style.css.map */

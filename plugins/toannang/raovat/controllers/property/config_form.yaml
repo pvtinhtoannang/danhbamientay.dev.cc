@@ -1,0 +1,10 @@
+name: Property
+form: $/toannang/raovat/models/propertytype/fields.yaml
+modelClass: Toannang\Raovat\Models\PropertyType
+defaultRedirect: toannang/raovat/property
+create:
+    redirect: 'toannang/raovat/property/update/:id'
+    redirectClose: toannang/raovat/property
+update:
+    redirect: toannang/raovat/property
+    redirectClose: toannang/raovat/property

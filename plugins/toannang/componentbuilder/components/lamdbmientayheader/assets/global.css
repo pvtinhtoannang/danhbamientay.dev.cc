@@ -1,0 +1,92 @@
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+p,
+span {
+  transition: all 0.4s ease-in-out; }
+
+body {
+  font-family: 'Roboto', sans-serif; }
+
+.input-dbmt {
+  width: 100%;
+  border: 1px solid #ebebeb;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 300;
+  color: #7a7a7a;
+  padding: 7.1px 7px; }
+  .input-dbmt:focus {
+    border: 1px solid #2a922d; }
+
+.error-label {
+  font-size: 12px;
+  color: #ff4546; }
+
+.text-white {
+  color: #FFFFFF; }
+
+.text-dark {
+  color: #343A40 !important; }
+
+.button-bdmt {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #272a72;
+  width: 165px;
+  height: 35px;
+  text-align: center;
+  line-height: 0;
+  justify-content: center;
+  border: 0; }
+
+.pvtinh_account_dbmientay {
+  max-width: 1920px;
+  margin: auto;
+  position: relative;
+  padding: 70px 0 120px;
+  background-image: url("../images/bk-salon.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px; }
+  .pvtinh_account_dbmientay .account_form {
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    padding: 0 0 20px;
+    border-radius: 5px; }
+    .pvtinh_account_dbmientay .account_form .account_title {
+      display: block;
+      font-size: 25px;
+      color: #333;
+      line-height: 1.2;
+      text-align: center;
+      font-weight: 700;
+      padding: 5px 10px;
+      background-image: linear-gradient(to right, #434eff, #3a8a2a);
+      color: #fff;
+      border-radius: 3px; }
+    .pvtinh_account_dbmientay .account_form .account_link {
+      font-size: 14px;
+      margin: 10px auto; }
+      .pvtinh_account_dbmientay .account_form .account_link a {
+        color: #434eff; }
+        .pvtinh_account_dbmientay .account_form .account_link a:hover {
+          color: #fac918; }
+    .pvtinh_account_dbmientay .account_form .login_form {
+      padding: 0 15px;
+      margin-top: 15px; }
+    .pvtinh_account_dbmientay .account_form label {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5; }
+
+/*# sourceMappingURL=global.css.map */

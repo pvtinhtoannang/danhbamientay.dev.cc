@@ -1,0 +1,10 @@
+columns:
+    id:
+        label: ID
+        type: text
+        searchable: true
+        sortable: true
+    name:
+        label: 'Nhu cầu bất động sản'
+        type: text
+        searchable: true

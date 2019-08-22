@@ -1,0 +1,4 @@
+title: Province
+modelClass: Toannang\Raovat\Models\Province
+toolbar:
+    buttons: reorder_toolbar

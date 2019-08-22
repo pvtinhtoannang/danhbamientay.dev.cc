@@ -1,0 +1,4 @@
+title: DistrictController
+modelClass: Toannang\Raovat\Models\District
+toolbar:
+    buttons: reorder_toolbar

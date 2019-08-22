@@ -1,0 +1,18 @@
+fields:
+    name:
+        label: 'toannang.contact::lang.fullname'
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    phone:
+        label: 'toannang.contact::lang.phone'
+        span: auto
+        type: text
+    message:
+        label: 'toannang.contact::lang.message'
+        size: ''
+        span: auto
+        type: textarea

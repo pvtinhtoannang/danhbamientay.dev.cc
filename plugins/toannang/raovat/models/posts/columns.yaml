@@ -1,0 +1,20 @@
+columns:
+    title:
+        label: 'Tên bài viết'
+        type: text
+        searchable: true
+        sortable: true
+    price:
+        label: Giá
+        type: number
+        searchable: true
+        sortable: true
+    images:
+        label: 'Ảnh đại diện'
+        type: partial
+        path: ~/plugins/toannang/raovat/models/posts/_images_column.htm
+    categories:
+        label: 'Chuyên mục'
+        type: text
+        select: name
+        relation: categories
