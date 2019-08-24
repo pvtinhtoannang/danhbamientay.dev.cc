@@ -409,4 +409,5 @@
   'Flynsarmy\\SocialLogin\\Components\\SocialLogin' => 'plugins\\flynsarmy\\sociallogin\\components\\SocialLogin.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayBreadCrumb' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayBreadCrumb.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayDangTin' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayDangTin.php',
+  'Toannang\\Raovat\\Formwidgets\\CategoryBox' => 'plugins\\toannang\\raovat\\formwidgets\\CategoryBox.php',
 );

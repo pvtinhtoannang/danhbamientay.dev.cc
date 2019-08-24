@@ -1,0 +1,36 @@
+<style >
+  #Form-field-Locations-category_id-group .select2-selection--single{
+    height: 40px;
+  }
+  #Form-field-Locations-category_id-group .select2-selection__rendered{
+    line-height: 20px;
+  }
+  #Form-field-Locations-category_id-group .select2-selection__arrow{
+    top: 7px;
+  }
+  #Form-field-Locations-category_id-group .select2-selection__arrow b::before{
+    all:unset;
+  }
+  #Form-field-Posts-user-group .select2-selection--single{
+    height: 40px;
+  }
+  #Form-field-Posts-user-group .select2-selection__rendered{
+    line-height: 20px;
+  }
+  #Form-field-Posts-user-group .select2-selection__arrow{
+    top: 7px;
+  }
+  #Form-field-Posts-user-group .select2-selection__arrow b::before{
+    all:unset;
+  }
+  
+</style>
+<select id="category" name="Locations[category_id]" class=" form-control js-example-disabled-results" >
+  <?php foreach ($all_category as $key => $cat_item) {?>
+    <option <?php if($key == $category) {?> selected="selected" <?php } ?> value="<?= $key ?>"><?= $cat_item ?></option>
+  <?php }  ?>
+</select>
+<script>
+  $("#category").select2({ });
+  
+</script>

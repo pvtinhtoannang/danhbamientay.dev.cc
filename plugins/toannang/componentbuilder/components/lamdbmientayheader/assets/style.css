@@ -34,7 +34,7 @@ body {
   color: #FFFFFF; }
 
 .text-dark {
-  color: #343A40 !important; }
+  color: #343A40; }
 
 .button-bdmt {
   font-weight: 700;
@@ -97,7 +97,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
-  z-index: 50;
+  z-index: 1;
   width: 100%;
   background-color: #fff; }
   .lp_danhbamientay_header .icon {

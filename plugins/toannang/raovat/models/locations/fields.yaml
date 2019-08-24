@@ -1,21 +1,26 @@
 fields:
     name:
         label: 'Tên địa điểm'
-        span: auto
+        span: left
         type: text
+    category_id:
+        label: 'Chuyên mục'    
+        span: right
+        type: categorybox
     slug:
         label: 'Đường dẫn tĩnh'
-        span: auto
+        span: left
         preset:
             field: name
             type: slug
         type: text
+    sort_order:
+        label: 'Sắp xếp'
+        span: right
+        type: sortlocations
     description:
         label: 'Mô tả'
         size: small
         span: full
         type: textarea
-    sort_order:
-        label: 'Sắp xếp'
-        span: left
-        type: sortlocations
+    

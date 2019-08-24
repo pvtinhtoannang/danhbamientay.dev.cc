@@ -19,7 +19,13 @@ class PvtinhDBMienTayDangTin extends ComponentBase
     }
     public function onRun()
     {
-        $this->addCss('components/pvtinhdbmientaydangtin/assets/style.css');
-        $this->addJs('components/pvtinhdbmientaydangtin/assets/script.js'); 
+        $this->addCss(
+        [
+            'components/pvtinhdbmientaydangtin/assets/style.css' 
+        ]
+        );
+        $this->addJs([
+            'components/pvtinhdbmientaydangtin/assets/script.js' 
+        ]); 
     }
 }

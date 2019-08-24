@@ -1,14 +1,93 @@
 <section class="pvtinh-dbmientay-dang-tin">
 	<div class="container">
-		<div class="col-xs-12 col-sm-4 col-md-3">
-			<ul>
-				<li class="text-dark"><i class="fa fa-user"></i><a href="/tai-khoan" class="text-dark" title="Tài khoản">Trang cá nhân</a></li>
-				<li class="text-dark"><i class="fa fa-plus"></i><a href="/dang-tin" class="text-dark" title="Đăng tin">Đăng tin</a></li>
-				<li class="text-dark"><i class="fa fa-key"></i><a href="/dang-tin" class="text-dark" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
-				<li class="text-dark"><i class="fa fa-list"></i><a href="/dang-tin" class="text-dark" title="Danh sách tin đăng">Danh sách tin đăng</a></li>
-				<li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" href="/dang-xuat" class="text-dark" title="Đăng xuất">Đăng xuất</a></li>
-				
-			</ul>
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<div class="box-user">
+					<ul class="list-user">
+						<li class="text-dark"><i class="fa fa-user"></i><a href="/tai-khoan" class="text-dark" title="Tài khoản">Trang cá nhân</a></li>
+						<li class="text-dark"><i class="fa fa-plus"></i><a href="/dang-tin" class="text-dark" title="Đăng tin">Đăng tin</a></li>
+						<li class="text-dark"><i class="fa fa-key"></i><a href="/dang-tin" class="text-dark" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
+						<li class="text-dark"><i class="fa fa-list"></i><a href="/dang-tin" class="text-dark" title="Danh sách tin đăng">Danh sách tin đăng</a></li>
+						<li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" href="/dang-xuat" class="text-dark" title="Đăng xuất">Đăng xuất</a></li>
+					</ul>	
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9">
+				<h2 class="text-dark text-center title-form">Đăng tin</h2>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-6">
+						  <div class="form-group">
+						    <label for="category">Chọn danh mục:</label>
+						     <select class="js-example-basic-single input-dbmt" name="category">
+							  <option value="AL">Alabama</option> 
+							  <option value="WY">Wyoming</option>
+							</select>
+						  </div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6">
+					  	<div class="form-group">
+					    	<label for="category">Chọn loại hình:</label>
+					     	<select class="js-example-basic-single input-dbmt" name="location">
+							  <option value="AL">Alabama</option> 
+							  <option value="WY">Wyoming</option>
+							</select>
+					  	</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="form-group">
+					    	<label for="category">Tiêu đề tin đăng:</label>
+					     	<input type="text" class="input-dbmt">
+					  	</div>
+					</div>
+
+					<div class="col-xs-12">
+						<div class="form-group">
+					    	<label for="category">Mô tả tin đăng:</label>
+					     	<textarea rows class="input-dbmt"> Chèn wigth vào đây </textarea>  
+					  	</div>
+					</div>
+
+					<div class="col-xs-6">
+						<div class="form-group">
+					    	<label for="category">Nhập giá:</label>
+					     	<input type="text" class="input-dbmt">
+					  	</div>
+					</div>
+
+					<div class="col-xs-6">
+						<div class="form-group">
+					    	<label for="category">Diện tích:</label>
+					     	<input type="text" class="input-dbmt">
+					  	</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<div class="form-group">
+							    	<label for="category">Thêm ảnh
+							    		<small></small></label>
+							     	    <input id="uploader" type="file" name="files">
+							  	</div>
+							</div>
+							<div class="col-xs-12">
+								<div class="form-group">
+							    	<label for="province">Chọn Tỉnh / Thành phố</label>
+							     	<select class="js-example-basic-single input-dbmt" name="province">
+									  <option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option><option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option><option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option><option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option><option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option><option value="AL">Tỉnh</option> 
+									  <option value="WY">Thành phố</option>
+									</select>
+							  	</div>
+							</div>
+						</div>	
+					</div>					
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
+ 

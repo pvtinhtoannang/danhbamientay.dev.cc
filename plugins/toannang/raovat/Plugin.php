@@ -43,8 +43,12 @@ class Plugin extends PluginBase
           'label' => 'Danh mục bất động sản',
           'description'=>'danh mục bất động sản',
           'code' => 'propertytypebox'
+        ],  
+        'Toannang\Raovat\Formwidgets\CategoryBox'=>[
+          'label' => 'Chuyên mục',
+          'description'=>'Chuyên mục',
+          'code' => 'categorybox'
         ],
-        
         
       ];
     }

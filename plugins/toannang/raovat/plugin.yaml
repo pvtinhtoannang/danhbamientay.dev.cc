@@ -11,7 +11,7 @@ navigation:
         icon: icon-bullhorn
         sideMenu:
             side-menu-item:
-                label: 'Vị trí'
+                label: 'Địa điểm'
                 url: toannang/raovat/locationscontroller
                 icon: icon-location-arrow
             side-menu-item2:
