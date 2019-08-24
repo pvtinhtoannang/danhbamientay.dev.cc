@@ -410,4 +410,8 @@
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayBreadCrumb' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayBreadCrumb.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayDangTin' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayDangTin.php',
   'Toannang\\Raovat\\Formwidgets\\CategoryBox' => 'plugins\\toannang\\raovat\\formwidgets\\CategoryBox.php',
+  'backend\\Controllers\\accesslogs' => 'modules\\backend\\controllers\\accesslogs.php',
+  'rainlab\\location\\Controllers\\locations' => 'plugins\\rainlab\\location\\controllers\\locations.php',
+  'RainLab\\Location\\Models\\Setting' => 'plugins\\rainlab\\location\\models\\Setting.php',
+  'toannang\\users\\Plugin' => 'plugins\\toannang\\users\\Plugin.php',
 );

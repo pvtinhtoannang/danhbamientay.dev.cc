@@ -1,4 +1,5 @@
-<?php namespace Toannang\Settings\Controllers;
+<?php 
+namespace Toannang\Settings\Controllers;
 
 use BackendMenu;
 use System\Classes\SettingsManager;

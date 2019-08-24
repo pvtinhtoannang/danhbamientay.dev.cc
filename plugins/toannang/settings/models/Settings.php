@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 6/6/2019
- * Time: 10:45
- */
 
 namespace toannang\Settings\Models;
 use Model;
-use Config;
-use OFFLINE\Mall\Models\Category;
+use Config; 
 
 class Settings extends Model
 {
@@ -28,7 +21,4 @@ class Settings extends Model
     static public function getFavicon(){
         return url(Config::get('cms.storage.media.path').self::get('favicon_image'));
     }
-
-
-
 }

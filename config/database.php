@@ -56,7 +56,7 @@ return [
             'driver'    => 'mysql',
             'host'      => 'localhost',
             'port'      => 3306,
-            'database'  => 'oms_danhbamientay',
+            'database'  => 'danhbamientay-goc',
             'username'  => 'root',
             'password'  => 'mysql',
             'charset'   => 'utf8mb4',

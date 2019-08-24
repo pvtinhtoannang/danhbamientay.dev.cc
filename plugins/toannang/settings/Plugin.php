@@ -1,4 +1,5 @@
-<?php namespace Toannang\Settings;
+<?php 
+namespace Toannang\Settings;
 
 use System\Classes\PluginBase;
 use toannang\Settings\Models\Settings;
@@ -51,5 +52,4 @@ class Plugin extends PluginBase
             ]);
         });
     }
-
 }

@@ -22,7 +22,7 @@ class LamDBMienTayHeader extends ComponentBase
     {
         $this->addCss('components/lamdbmientayheader/assets/style.css');
         $this->page['locations'] = Locations::all();
-        $this->page['hotline'] = Settings::get('hotline');
+        $this->page['hotline'] = Settings::get('hotline'); 
         $this->page['site_name'] = Settings::get('site_name');
         $this->page['logo'] = Settings::getLogo();
     }

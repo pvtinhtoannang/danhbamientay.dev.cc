@@ -1,5 +1,5 @@
-1566608720a:1:{s:21:"dang-ky-tai-khoan.htm";a:13:{s:8:"fileName";s:21:"dang-ky-tai-khoan.htm";s:7:"content";s:1194:"title = "Đăng ký tài khoản"
-url = "/dang-ky"
+1566619555a:1:{s:21:"dang-ky-tai-khoan.htm";a:13:{s:8:"fileName";s:21:"dang-ky-tai-khoan.htm";s:7:"content";s:1203:"title = "Đăng ký tài khoản"
+url = "/dang-ky-tai-khoan"
 layout = "master"
 is_hidden = 1
 robot_index = "index"
@@ -15,7 +15,7 @@ forceSecure = 0
 ==
 {% component 'session' %}
 
-
+ 
 <div class="pvtinh_account_dbmientay">
   <div class="container">
   {% if not user %}
@@ -54,10 +54,9 @@ forceSecure = 0
   {% endif %}
 
   </div>
-</div>
-";s:5:"mtime";i:1566377016;s:6:"markup";s:953:"{% component 'session' %}
+</div>";s:5:"mtime";i:1566618326;s:6:"markup";s:954:"{% component 'session' %}
 
-
+ 
 <div class="pvtinh_account_dbmientay">
   <div class="container">
   {% if not user %}
@@ -96,4 +95,4 @@ forceSecure = 0
   {% endif %}
 
   </div>
-</div>";s:4:"code";N;s:5:"title";s:23:"Đăng ký tài khoản";s:3:"url";s:8:"/dang-ky";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"1";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"session";a:1:{s:8:"security";s:3:"all";}s:7:"account";a:3:{s:8:"redirect";s:4:"home";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}
+</div>";s:4:"code";N;s:5:"title";s:23:"Đăng ký tài khoản";s:3:"url";s:18:"/dang-ky-tai-khoan";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"1";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"session";a:1:{s:8:"security";s:3:"all";}s:7:"account";a:3:{s:8:"redirect";s:4:"home";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}

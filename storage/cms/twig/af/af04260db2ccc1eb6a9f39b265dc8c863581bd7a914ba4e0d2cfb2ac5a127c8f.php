@@ -32,7 +32,9 @@ class __TwigTemplate_557e7044eecbd21bb1d340b5036502ff8794e0e6940408425da182259e3
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<section class=\"pvtinh-dbmientay-dang-tin\">
+        echo $this->extensions['Cms\Twig\DebugExtension']->runDump($this->env, $context, ($context["locations"] ?? null));
+        echo "
+<section class=\"pvtinh-dbmientay-dang-tin\">
 \t<div class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-xs-12 col-sm-4 col-md-3\">
@@ -132,6 +134,11 @@ class __TwigTemplate_557e7044eecbd21bb1d340b5036502ff8794e0e6940408425da182259e3
         return "F:\\OCTOBERCMS\\danhbamientay.dev.cc/plugins/toannang/componentbuilder/components/pvtinhdbmientaydangtin/default.htm";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
         return array (  35 => 1,);
@@ -139,7 +146,8 @@ class __TwigTemplate_557e7044eecbd21bb1d340b5036502ff8794e0e6940408425da182259e3
 
     public function getSourceContext()
     {
-        return new Source("<section class=\"pvtinh-dbmientay-dang-tin\">
+        return new Source("{{  dump(locations) }}
+<section class=\"pvtinh-dbmientay-dang-tin\">
 \t<div class=\"container\">
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-xs-12 col-sm-4 col-md-3\">
