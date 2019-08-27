@@ -14,7 +14,9 @@
 			</div>
 			<div class="col-xs-12 col-sm-8 col-md-9">
 				<h2 class="text-dark text-center title-form">Đăng tin</h2>
-				<form data-request="onSave" data-request-validate data-request-flash class="postform" enctype='multipart/form-data'>
+		 
+				<form data-request="onSave" data-request-validate data-request-flash  data-request-files class="postform"   >   
+					{{ form_open({ request: 'onSave', files: true }) }}
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
 							  <div class="form-group">
@@ -79,7 +81,7 @@
 									<div class="form-group">
 								    	<label for="category">Thêm ảnh: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn có thể thêm tối đa 5 ảnh cho bài đăng, mỗi ảnh tối đa 2MB và bạn có thể đăng các định dạng ảnh như: 'jpg', 'jpeg', 'png', 'gif', 'bmp'."></span>
 								    		<small></small></label>
-								     	    <input id="uploader" type="file" name="files">
+								     	    <input id="uploader" type="file" name="files-images">
 								  	</div>
 								</div>
 								<div class="col-xs-12">
@@ -133,8 +135,8 @@
 								Đăng tin
 							</button>	
 						</div>				
-
-					</div>									
+					</div>	
+					{{ form_close() }}
 				</form>
 			</div>
 		</div>

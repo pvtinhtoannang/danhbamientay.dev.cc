@@ -36,7 +36,7 @@ class Plugin extends PluginBase
         'Toannang\Raovat\Formwidgets\WardBox'=>[
           'label' => 'Quận huyện',
           'description'=>'Địa chỉ',
-          'code' => 'wardbox'
+          'code' => 'wardbox' 
         ],
 
         'Toannang\Raovat\Formwidgets\PropertyTypeBox'=>[

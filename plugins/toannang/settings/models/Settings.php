@@ -20,5 +20,5 @@ class Settings extends Model
     }
     static public function getFavicon(){
         return url(Config::get('cms.storage.media.path').self::get('favicon_image'));
-    }
+    } 
 }

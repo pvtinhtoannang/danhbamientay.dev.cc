@@ -27,7 +27,16 @@ class Plugin extends PluginBase
                 'order'       => 0,
                 'keywords'    => 'settings, general, cài đặt chung',
                 'permissions' => ['toannang.settings.access_settings']
-            ]
+            ] 
+        ];
+    }
+    public function registerFormWidgets(){
+        return[
+            'Toannang\Settings\Formwidgets\PropertyTypeBox'=>[
+              'label' => 'Danh mục bất động sản',
+              'description'=>'danh mục bất động sản',
+              'code' => 'propertytypebox'
+            ], 
         ];
     }
     public function boot()

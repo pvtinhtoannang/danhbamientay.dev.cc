@@ -5,6 +5,7 @@ use toannang\Settings\Models\Settings;
 use DB;
 use Toannang\RaoVat\Models\Locations;
 use Toannang\RaoVat\Models\Posts;
+use System\Models\File;
 use Lang;
 use Auth;
 use Mail;
@@ -51,8 +52,9 @@ class PvtinhDBMienTayDangTin extends ComponentBase
 
     public function onSave()
     {
+
         try {
-            $data = post();
+            $data = post(); 
             $var = ['title'=> Input::get('title')];
             $rules = [
                 'title'         => 'required|between:8,255',
@@ -72,6 +74,7 @@ class PvtinhDBMienTayDangTin extends ComponentBase
 
             ];
             $validation = Validator::make($data, $rules,$messages);
+
             if ($validation->fails()) {
                 throw new ValidationException($validation);
             }
@@ -85,10 +88,21 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 $post->area         = $data['area'];
                 $post->province     = $data['province'];
                 $post->district     = $data['district'];
-                $post->ward         = $data['ward'];
+                $post->ward         = $data['ward']; 
 
+
+                if (Input::file('files-images')) {
+                    $image = Input::file('files-images');
+                    $post->images = $image[0];
+                    foreach ($image as $files) {
+                        $post->images_gallery = $files;    
+                    }
+                    
+                }
+                else{
+                    echo 'Khoong cos file';
+                }
                 $post->save();
-                echo $data['fileuploader-list-files'];
             }
         }   
         catch (Exception $ex) {

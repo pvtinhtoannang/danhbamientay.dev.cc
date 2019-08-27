@@ -415,4 +415,5 @@
   'RainLab\\Location\\Models\\Setting' => 'plugins\\rainlab\\location\\models\\Setting.php',
   'toannang\\users\\Plugin' => 'plugins\\toannang\\users\\Plugin.php',
   'Toannang\\RaoVat\\Models\\Posts' => 'plugins\\toannang\\raovat\\models\\Posts.php',
+  'Toannang\\Settings\\Formwidgets\\PropertyTypeBox' => 'plugins\\toannang\\settings\\formwidgets\\PropertyTypeBox.php',
 );

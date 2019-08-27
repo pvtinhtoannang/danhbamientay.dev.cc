@@ -1,5 +1,5 @@
 <?php 
-class Cms5d63a6c1f36a8834471343_8d16ea784beda3cb240f628d84d292ddClass extends Cms\Classes\LayoutCode
+class Cms5d64cf1b5155f188038583_7f425b9a6cc4020fcc2f1878079430b9Class extends Cms\Classes\LayoutCode
 {
 public function onStart(){
     $this['favicon'] = \toannang\Settings\Models\Settings::getFavicon();

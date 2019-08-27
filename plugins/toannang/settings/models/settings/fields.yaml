@@ -136,3 +136,9 @@ tabs:
                    type: text
                    span: storm
                    cssClass: col-xs-4
+
+    propertytype:
+      label: 'Chuyên mục bất động sản'
+      type: propertytypebox
+      span: auto
+      tab: 'Trang chủ'
