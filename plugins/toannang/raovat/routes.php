@@ -251,3 +251,14 @@ Route::get('make-password', function ()
 {
   return Hash::make('8935001800347');
 });
+
+
+Route::get('frontend-get-locations-bycategory/{id}', function ($id)
+{
+  return Locations::all()->where('category_id', '=', $id);
+});
+Route::get('frontend-get-property', function ()
+{
+  return PropertyType::all();
+});
+

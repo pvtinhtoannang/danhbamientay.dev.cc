@@ -414,4 +414,5 @@
   'rainlab\\location\\Controllers\\locations' => 'plugins\\rainlab\\location\\controllers\\locations.php',
   'RainLab\\Location\\Models\\Setting' => 'plugins\\rainlab\\location\\models\\Setting.php',
   'toannang\\users\\Plugin' => 'plugins\\toannang\\users\\Plugin.php',
+  'Toannang\\RaoVat\\Models\\Posts' => 'plugins\\toannang\\raovat\\models\\Posts.php',
 );

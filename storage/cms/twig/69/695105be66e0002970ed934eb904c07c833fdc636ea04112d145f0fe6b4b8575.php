@@ -35,9 +35,11 @@ class __TwigTemplate_889c2eca804434a27aa5e8262fc9916077331e38831f57c5ab3aa1901a5
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("session"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
+        // line 2
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTayBreadCrumb"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
+        // line 3
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTayDangTin"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
@@ -55,11 +57,13 @@ class __TwigTemplate_889c2eca804434a27aa5e8262fc9916077331e38831f57c5ab3aa1901a5
 
     public function getDebugInfo()
     {
-        return array (  35 => 1,);
+        return array (  43 => 3,  39 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% component 'session' %}{% component 'PvtinhDBMienTayBreadCrumb' %}{% component 'PvtinhDBMienTayDangTin' %}", "F:\\OCTOBERCMS\\danhbamientay.dev.cc/themes/danhbamientay/pages/dang-tin.htm", "");
+        return new Source("{% component 'session' %}
+{% component 'PvtinhDBMienTayBreadCrumb' %}
+{% component 'PvtinhDBMienTayDangTin' %}", "F:\\OCTOBERCMS\\danhbamientay.dev.cc/themes/danhbamientay/pages/dang-tin.htm", "");
     }
 }

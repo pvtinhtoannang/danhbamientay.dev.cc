@@ -34,7 +34,7 @@ class Account extends ComponentBase
 
     public function defineProperties()
     {
-        return [
+        return [ 
             'redirect' => [
                 'title'       => /*Redirect to*/'rainlab.user::lang.account.redirect_to',
                 'description' => /*Page name to redirect to after update, sign in or registration.*/'rainlab.user::lang.account.redirect_to_desc',

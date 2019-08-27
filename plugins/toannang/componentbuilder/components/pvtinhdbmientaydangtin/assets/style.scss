@@ -113,6 +113,9 @@ $bigsize: 1400px;
         text-transform: uppercase;
         font-weight: 700;
     }
+    #area-box{
+        @include transition(all .4s ease-in-out);
+    }
 }
 
 

@@ -27,5 +27,5 @@ class Locations extends Model
     public $rules = [
     ];
 
-    protected $fillable = ['name', 'slug', 'desciption', 'sort_order'];
+    protected $fillable = ['name', 'slug', 'desciption', 'sort_order', 'category_id'];
 }
