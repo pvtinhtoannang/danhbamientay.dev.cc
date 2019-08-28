@@ -32,6 +32,6 @@ class PropertyTypeBox extends FormWidgetBase
 
   public function loadAssets()
   {
- 
+    
   }
 }

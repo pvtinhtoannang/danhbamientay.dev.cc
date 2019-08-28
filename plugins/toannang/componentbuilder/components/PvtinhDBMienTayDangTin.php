@@ -18,7 +18,8 @@ use Validator;
 use ValidationException;
 use ApplicationException;
 use Session;
-use Exception;
+use Exception; 
+
 class PvtinhDBMienTayDangTin extends ComponentBase
 {
     public function componentDetails()
@@ -89,20 +90,19 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 $post->province     = $data['province'];
                 $post->district     = $data['district'];
                 $post->ward         = $data['ward']; 
-
-
+                $post->locations    = $data['location_id'];
+                $post->categories   = $data['category'];
+                $post->user         = Auth::user()->id;
+                
                 if (Input::file('files-images')) {
                     $image = Input::file('files-images');
                     $post->images = $image[0];
                     foreach ($image as $files) {
                         $post->images_gallery = $files;    
                     }
-                    
-                }
-                else{
-                    echo 'Khoong cos file';
-                }
+                }                
                 $post->save();
+                return \Redirect::to('/dang-tin/');
             }
         }   
         catch (Exception $ex) {

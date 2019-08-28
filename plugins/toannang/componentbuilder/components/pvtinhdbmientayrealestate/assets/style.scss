@@ -1,5 +1,4 @@
 @import 'mixin.scss';
-
 .lp_danhbamientay_real_estate {
   max-width: 1920px;
   margin: 0 auto;
@@ -7,11 +6,74 @@
   z-index: 50;
   width: 100%;
   background-color: #f9f9f9;
-
-  .mientay_title_wrapper {
+  
+  .content_wrapper {
+    margin: 7px -5px 35px;
+    .left_wrapper {
+      padding: 0 5px;
+      .left_box { 
+        background-color: #fff;
+        padding-top: 12px;
+        .advance_search_wrapper {
+          padding: 12px 12px 0;
+          border-top: 1px dashed #ebebeb;
+          form {
+            input,
+            select {
+              width: 100%;
+              border: 1px solid #ebebeb;
+              border-radius: 2px;
+              font-size: 13px;
+              font-weight: 300;
+              color: #7a7a7a;
+              margin-bottom: 15px;
+              padding: 7.1px 7px;
+            }
+            button {
+              width: 100%;
+              background-color: $color;
+              border-radius: 2px;
+              color: #fff;
+              font-size: 13px;
+              font-weight: 700;
+              text-transform: uppercase;
+              text-align: center;
+              border: none;
+              padding: 7.3px 0;
+              @include trans(0.4);
+              &:hover {
+                background-color: $bg;
+              }
+              i {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        .dbmt_ads_wrapper {
+          margin-top: 35px;
+          text-align: center;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      @include tablet {
+        margin-bottom: 10px;
+        .left_box {
+          .dbmt_ads_wrapper {
+            img {
+              width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.mientay_title_wrapper {
     background-color: $bg;
     padding: 14.2px 15px;
-
     .mientay_title_box {
       .mientay_title {
         font-size: 20px;
@@ -20,7 +82,6 @@
         text-transform: uppercase;
       }
     }
-
     .mientay_title_slider_box {
       .mientay_title_slider {
         a {
@@ -35,10 +96,8 @@
         }
       }
     }
-
     .mientay_title_slider_arrow {
       text-align: right;
-
       .slide_btn {
         border: none;
         background: none;
@@ -56,10 +115,8 @@
         text-align: center;
         margin-bottom: 10px;
       }
-
       .mientay_title_slider_box {
         margin-bottom: 10px;
-
         .mientay_title_slider {
           a {
             text-align: center;
@@ -68,172 +125,86 @@
       }
     }
   }
-
-  .content_wrapper {
-    margin: 7px -5px 35px;
-
-    .left_wrapper {
-      padding: 0 5px;
-
-      .left_box {
-        background-color: #fff;
-        padding-top: 12px;
-
-        .advance_search_wrapper {
-          padding: 12px 12px 0;
-          border-top: 1px dashed #ebebeb;
-
-          form {
-            input,
-            select {
-              width: 100%;
-              border: 1px solid #ebebeb;
-              border-radius: 2px;
-              font-size: 13px;
-              font-weight: 300;
-              color: #7a7a7a;
-              margin-bottom: 15px;
-              padding: 7.1px 7px;
-            }
-
-            button {
-              width: 100%;
-              background-color: $color;
-              border-radius: 2px;
-              color: #fff;
-              font-size: 13px;
-              font-weight: 700;
-              text-transform: uppercase;
-              text-align: center;
-              border: none;
-              padding: 7.3px 0;
-              @include trans(0.4);
-
-              &:hover {
-                background-color: $bg;
-              }
-
-              i {
-                margin-left: 5px;
-              }
+.right_wrapper {
+  padding: 0 5px;
+  .product_wrapper {
+    @include dis_f;
+    @include f_wrap;
+    .product_box_item {
+      width: calc(100%/4);
+      overflow: hidden;
+      .product_item {
+        &:hover {
+          .product_name {
+            a {
+              color: $color;
             }
           }
         }
-
-        .dbmt_ads_wrapper {
-          margin-top: 35px;
-          text-align: center;
-
-          img {
+        .product_img {
+          a {
+            display: block;
             width: 100%;
+            height: 180px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
           }
         }
-      }
-      @include tablet {
-        margin-bottom: 10px;
-
-        .left_box {
-          .dbmt_ads_wrapper {
-            img {
-              width: unset;
+        .inline-text{
+          @include cut_line1;
+        }
+        .product_name {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 1.4;
+          
+          a {
+            color: #242424;
+            display: block;
+            @include trans(0.4);
+          }
+        }
+        .product_content {
+          border: 1px solid #e1e1e1;
+          padding: 5px;
+          .product_info {
+            p {
+              color: #494949;
+              font-size: 13px;
+              line-height: 1.4;
+              @include cut_line(13, 1.4, 2);
+              margin: 2px 0;
+              img {
+                margin-right: 5px;
+                vertical-align: middle;
+              }
+              span {
+                font-weight: 700;
+                color: #d01c1c;
+                font-size: 15px;
+              }
             }
           }
         }
       }
     }
-
-    .right_wrapper {
-      padding: 0 5px;
-
-      .product_wrapper {
-        @include dis_f;
-        @include f_wrap;
-
-        .product_box_item {
-          width: calc(100%/4);
-          overflow: hidden;
-
-          .product_item {
-            &:hover {
-              .product_content {
-                .product_name {
-                  a {
-                    color: $color;
-                  }
-                }
-              }
-            }
-
-            .product_img {
-              a {
-                display: block;
-                width: 100%;
-                height: 180px;
-                overflow: hidden;
-
-                img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                }
-              }
-            }
-
-            .product_content {
-              border: 1px solid #e1e1e1;
-              padding: 5px;
-
-              .product_name {
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 1.4;
-                @include cut_line1;
-
-                a {
-                  color: #242424;
-                  display: block;
-                  @include trans(0.4);
-                }
-              }
-
-              .product_info {
-                p {
-                  color: #494949;
-                  font-size: 13px;
-                  line-height: 1.4;
-                  @include cut_line(13, 1.4, 2);
-                  margin: 2px 0;
-
-                  img {
-                    margin-right: 5px;
-                    vertical-align: middle;
-                  }
-
-                  span {
-                    font-weight: 700;
-                    color: #d01c1c;
-                    font-size: 15px;
-                  }
-                }
-              }
-            }
-          }
-        }
-        @include tablet {
-          .product_box_item {
-            width: calc(100%/3);
-          }
-        }
-        @include big_phone {
-          .product_box_item {
-            width: calc(100%/2);
-          }
-        }
-        @include normal_phone {
-          .product_box_item {
-            width: calc(100%);
-          }
-        }
+    @include tablet {
+      .product_box_item {
+        width: calc(100%/3);
+      }
+    }
+    @include big_phone {
+      .product_box_item {
+        width: calc(100%/2);
+      }
+    }
+    @include normal_phone {
+      .product_box_item {
+        width: calc(100%);
       }
     }
   }

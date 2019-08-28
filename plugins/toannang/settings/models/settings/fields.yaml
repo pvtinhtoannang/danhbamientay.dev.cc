@@ -142,3 +142,8 @@ tabs:
       type: propertytypebox
       span: auto
       tab: 'Trang chủ'
+    category:
+      label: 'Chuyên mục địa điểm du lịch'
+      type: categorybox
+      span: auto
+      tab: 'Trang chủ'

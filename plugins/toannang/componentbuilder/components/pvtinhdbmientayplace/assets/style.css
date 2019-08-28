@@ -1,0 +1,48 @@
+.lp_danhbamientay_place {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #f9f9f9; }
+  .lp_danhbamientay_place .content_wrapper {
+    margin: 7px -5px 35px -5px; }
+    .lp_danhbamientay_place .content_wrapper .left_wrapper {
+      padding: 0 5px; }
+      .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box {
+        background-color: #fff;
+        padding-top: 12px; }
+        .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .place_category_wrapper {
+          margin-bottom: 25px; }
+          .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .place_category_wrapper .place_category ul li {
+            padding-left: 12px;
+            margin-bottom: 10px; }
+            .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .place_category_wrapper .place_category ul li:before {
+              content: '\25A0';
+              color: #2a922d;
+              font-size: 10px;
+              margin-right: 5px; }
+            .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .place_category_wrapper .place_category ul li a {
+              color: #7a7a7a;
+              font-weight: 300;
+              font-size: 13px;
+              line-height: 1.4;
+              -webkit-transition: all 0.4s ease-in-out;
+              -moz-transition: all 0.4s ease-in-out;
+              -ms-transition: all 0.4s ease-in-out;
+              -o-transition: all 0.4s ease-in-out;
+              transition: all 0.4s ease-in-out; }
+              .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .place_category_wrapper .place_category ul li a:hover {
+                color: #2a922d; }
+        .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper {
+          margin-bottom: 8px;
+          text-align: center; }
+          .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper img {
+            width: 100%; }
+      @media (max-width: 991px) {
+        .lp_danhbamientay_place .content_wrapper .left_wrapper {
+          margin-bottom: 10px; }
+          .lp_danhbamientay_place .content_wrapper .left_wrapper .left_box .dbmt_ads_wrapper img {
+            width: unset; } }
+
+/*# sourceMappingURL=style.css.map */

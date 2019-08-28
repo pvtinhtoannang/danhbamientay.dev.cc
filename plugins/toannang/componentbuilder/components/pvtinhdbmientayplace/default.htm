@@ -1,0 +1,87 @@
+<section id="lp_danhbamientay_place">
+	<div class="lp_danhbamientay_place">
+        <div class="container">
+            <div class="mientay_title_wrapper">
+                <div class="row">
+                    <div class="col-md-3 col-sm-4 mientay_title_box">
+                        <h2 class="mientay_title">Địa điểm du lịch</h2>
+                    </div>
+                    <div class="col-md-8 col-sm-7 mientay_title_slider_box">
+                        <div class="mientay_title_slider place_slider ">
+                            <a href="#">Cần Thơ</a>
+                            <a href="#">Kiên Giang</a>
+                            <a href="#">Cà Mau</a>
+                            <a href="#">Hậu Giang</a>
+                            <a href="#">Tiền Giang</a>
+                            <a href="#">Bến Tre</a>
+                            <a href="#">An Giang</a>
+                            <a href="#">Bạc Liêu</a>
+                            <a href="#">Cần Thơ</a>
+                            <a href="#">Kiên Giang</a>
+                            <a href="#">Cà Mau</a>
+                            <a href="#">Hậu Giang</a>
+                            <a href="#">Tiền Giang</a>
+                            <a href="#">Bến Tre</a>
+                            <a href="#">An Giang</a>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-1 mientay_title_slider_arrow place_slider_arrow arrows-place"></div>
+                </div>
+            </div>
+            <div class="row place_wrapper content_wrapper">
+                <div class="col-md-3 left_wrapper">
+                    <div class="left_box">
+                        <div class="place_category_wrapper">
+                            <div class="place_category">
+                                <ul>
+                                    <li>
+                                        <a href="#">Địa điểm du lịch tâm linh</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Vườn trái cây</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Địa điểm lịch sử</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Địa điểm văn hóa</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Danh lam thắng cảnh</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
+                            <a href="#">
+                                <img src="{{ 'pvtinhdbmientayplace/images/qc2.jpg'|component }}">
+                            </a>
+                        </div>
+                        <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
+                            <a href="#">
+                                <img src="{{ 'pvtinhdbmientayplace/images/qc3.jpg'|component }}">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 right_wrapper">
+                    <div class="product_wrapper">
+                        <?php for($i=1;$i<=12;$i++): ?>
+                        <div class="product_box_item">
+                            <div class="product_item">
+                                <div class="product_img">
+                                    <a href="#"><img src="<?= $linklp ?>images/item<?= $i ?>.jpg"></a>
+                                </div> 
+
+                                <h3 class="product_name">
+                                    <a href="#">Tour Miền Tây - Khám phá con đường xuyên rừng tràm đẹp nhất Việt Nam</a>
+                                </h3>
+                            </div>
+                        </div>
+                        <?php endfor; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</section> 

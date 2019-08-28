@@ -7,7 +7,7 @@
                         <h2 class="mientay_title">Bất động sản</h2>
                     </div>
                     <div class="col-md-8 col-sm-7 mientay_title_slider_box">
-                        <div class="mientay_title_slider real_estate_slider">
+                        <div class="mientay_title_slider real_estate_slider menu-slider">
                             {% for item in provinces %}
                             <a href="#">{{ item.name }}</a>
                             {% endfor %}
@@ -23,15 +23,15 @@
                             <form role="search" method="get" class="search-form" action="">
                                 <select name="property">
                                     {% for item in propertytype %}
-                                        <option value="{{ item.id }}" selected="selected">{{ item.name }}</option>
+                                        <option value="{{ item.id }}">{{ item.name }}</option>
                                     {% endfor %}
                                 </select>
-                                <select name="province">                                    
+                                <select name="province" id="province">                                    
                                     {% for item in provinces %}
-                                        <option value="{{ item.id }}" selected="selected">{{ item.name }}</option>
+                                        <option value="{{ item.id }}">{{ item.name }}</option>
                                     {% endfor %}
                                 </select>
-                                <select name="district">
+                                <select name="district" id="district">
                                     <option value="-1">Chọn quận / huyện</option>
 
                                 </select>
@@ -62,7 +62,7 @@
                                     </a>
                                 </div>
                                 <div class="product_content">
-                                    <h3 class="product_name">
+                                    <h3 class="product_name inline-text">
                                         <a href="#" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
                                     </h3>
                                     <div class="product_info">

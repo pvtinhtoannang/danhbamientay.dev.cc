@@ -90,6 +90,6 @@ fields:
     user:
         label: 'Người đăng'
         nameFrom: name
-        descriptionFrom: 'Người đăng'
-        span: right
+        descriptionFrom: description
+        span: auto
         type: relation

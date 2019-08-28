@@ -1,3 +1,8 @@
+{% if(status is not empty) %}
+    <div class="alert alert-success">
+        {{ status }}
+    </div>
+{% endif %}
 <section class="pvtinh-dbmientay-dang-tin">
 	<div class="container">
 		<div class="row">
@@ -15,7 +20,7 @@
 			<div class="col-xs-12 col-sm-8 col-md-9">
 				<h2 class="text-dark text-center title-form">Đăng tin</h2>
 		 
-				<form data-request="onSave" data-request-validate data-request-flash  data-request-files class="postform"   >   
+				<form data-request="onSave" data-request-validate data-request-flash  data-request-files class="postform" data-request-success="formSubmit();">   
 					{{ form_open({ request: 'onSave', files: true }) }}
 					<div class="row">
 						<div class="col-xs-12 col-sm-6 col-md-6">
@@ -134,7 +139,8 @@
 							<button type="submit" class="button-bdmt " data-attach-loading>
 								Đăng tin
 							</button>	
-						</div>				
+						</div>
+
 					</div>	
 					{{ form_close() }}
 				</form>

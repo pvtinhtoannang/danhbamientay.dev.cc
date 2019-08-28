@@ -7,6 +7,7 @@ use Toannang\Componentbuilder\Components\LamDBMienTaySlider;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayRealEstate;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayBreadCrumb;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayDangTin;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayPlace;
 
 class Plugin extends PluginBase
 {
@@ -18,7 +19,8 @@ class Plugin extends PluginBase
             LamDBMienTaySlider::class => 'LamDBMienTaySlider',
             PvtinhDBMienTayRealEstate::class => 'PvtinhDBMienTayRealEstate',
             PvtinhDBMienTayBreadCrumb::class => 'PvtinhDBMienTayBreadCrumb',
-            PvtinhDBMienTayDangTin::class => 'PvtinhDBMienTayDangTin'
+            PvtinhDBMienTayDangTin::class => 'PvtinhDBMienTayDangTin',
+            PvtinhDBMienTayPlace::class => 'PvtinhDBMienTayPlace',
             
           ];
     }

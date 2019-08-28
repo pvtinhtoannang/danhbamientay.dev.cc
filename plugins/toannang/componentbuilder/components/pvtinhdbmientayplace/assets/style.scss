@@ -1,0 +1,77 @@
+@import 'mixin.scss';
+
+.lp_danhbamientay_place {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%; 
+    background-color: #f9f9f9; 
+
+    
+    .content_wrapper {
+        margin: 7px -5px 35px -5px;
+
+        .left_wrapper {
+            padding: 0 5px;
+
+            .left_box {
+                background-color: #fff;
+                padding-top: 12px;
+
+                .place_category_wrapper {
+                    margin-bottom: 25px;
+
+                    .place_category {
+                        ul {
+                            li {
+                                padding-left: 12px;
+                                margin-bottom: 10px;
+
+                                &:before {
+                                    content: '\25A0';
+                                    color: $color;
+                                    font-size: 10px;
+                                    margin-right: 5px;
+                                }
+
+                                a {
+                                    color: #7a7a7a;
+                                    font-weight: 300;
+                                    font-size: 13px;
+                                    line-height: 1.4;
+                                    @include trans(0.4);
+
+                                    &:hover {
+                                         color: $color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dbmt_ads_wrapper {
+                    margin-bottom: 8px;
+                    text-align: center;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            @include tablet {
+                margin-bottom: 10px;
+
+                .left_box {
+                    .dbmt_ads_wrapper {
+                        img {
+                            width: unset;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
