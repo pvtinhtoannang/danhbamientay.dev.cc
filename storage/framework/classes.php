@@ -417,4 +417,9 @@
   'Toannang\\RaoVat\\Models\\Posts' => 'plugins\\toannang\\raovat\\models\\Posts.php',
   'Toannang\\Settings\\Formwidgets\\PropertyTypeBox' => 'plugins\\toannang\\settings\\formwidgets\\PropertyTypeBox.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayPlace' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayPlace.php',
+  'Toannang\\Settings\\Formwidgets\\CategoryBox' => 'plugins\\toannang\\settings\\formwidgets\\CategoryBox.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayPartner' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayPartner.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchive' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchive.php',
+  'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins\\rainlab\\builder\\classes\\ComponentHelper.php',
+  'AnandPatel\\SeoExtension\\Models\\BlogPost' => 'plugins\\anandpatel\\seoextension\\models\\BlogPost.php',
 );

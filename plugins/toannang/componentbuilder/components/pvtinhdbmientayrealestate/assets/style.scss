@@ -168,6 +168,16 @@
             @include trans(0.4);
           }
         }
+        .medium-font{
+          font-weight: 500;
+          a{
+            display: block;
+             @include cut_line(14, 1.4, 3);
+          }
+        }
+        .content-product{
+          min-height: 80px;
+        }
         .product_content {
           border: 1px solid #e1e1e1;
           padding: 5px;

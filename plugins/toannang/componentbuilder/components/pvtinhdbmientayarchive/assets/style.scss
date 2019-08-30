@@ -1,0 +1,215 @@
+@import '../../lp_danhbamientay_real_estate/assets/mixin.scss';
+
+.lp_danhbamientay_archive_real_estate {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    font-family: 'Conv_HelveticaNeue';
+    background-color: #f9f9f9;
+
+    .arc_realestate_title_wrapper {
+    	background: linear-gradient(to bottom, #0249cc, #1a1c7e);
+    	margin-top: 11px;
+
+    	.re_title_wrapper {
+    		@include dis_f;
+    		@include f_align_i(center);
+    		@include f_just(space-between);
+    		@include f_wrap;
+    		padding: 4px;
+
+	    	.re_title_box {
+	    		max-width: 200px;
+
+	    		.re_title {
+	    			font-weight: 700;
+	    			font-size: 20px;
+	    			text-transform: uppercase;
+	    			color: #fff;
+	    			line-height: 1.4;
+	    			padding-left: 11px;
+	    		}
+	    	}
+
+	    	.re_cat_box {
+	    		@include f_grow;
+
+	    		.re_cat {
+	    			ul {
+	    				li {
+    						text-align: center;
+
+	    					a {
+	    						font-size: 13px;
+	    						font-weight: 300;
+	    						color: #fff;
+	    						line-height: 1.4;
+	    						text-transform: uppercase;
+	    						@include trans(0.4);
+
+	    						&:hover {
+	    							color: $color;
+	    						}
+	    					}
+	    				}
+	    			}
+	    		}
+	    	}
+
+	    	.re_search_box {
+	    		max-width: 335px;
+
+	    		.search_box {
+	                @include f_grow;
+
+	                form {
+	                    width: 100%;
+	                    @include dis_f;
+	                    @include f_align_i(center);
+
+	                    input {
+	                        @include f_grow;
+	                        border: none;
+	                        font-weight: 300;
+	                        font-size: 12px;
+	                        color: #9d9d9d;
+	                        padding: 11.8px 12px;
+	                        background-color: #f9f9f9;
+	                        max-width: 278px;
+	                    }
+
+	                    button {
+	                        border: none;
+	                        background-color: $color;
+	                        color: #fff;
+	                        font-size: 20.9px;
+	                        font-weight: 400;
+	                        padding: 10.6px 21.07px;
+	                        @include trans(0.4);
+	                        max-width: 57px;
+
+	                        &:hover {
+	                            background-color: $bg;
+	                        }
+	                    }
+	                }
+	            }
+	    	}
+
+	    	@include tablet {
+	    		.re_title_box {
+	    			margin: 0 auto;
+	    			margin-bottom: 15px;
+
+	    			.re_title {
+	    				padding-left: 0;
+	    			}
+	    		}
+
+	    		.re_cat_box {
+	    			margin-bottom: 15px;
+	    		}
+
+	    		.re_search_box {
+	    			margin: 0 auto;
+	    		}
+	    	}
+    	}
+    }
+
+    .product_wrapper {
+        @include dis_f;
+        @include f_wrap;
+        border-bottom: 1px solid #ebebeb;
+        margin-top: 34px;
+
+        .product_box_item {
+            overflow: hidden;
+            margin-bottom: 28px;
+
+            .product_item {
+            	box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+                &:hover {
+                    .product_img {
+                        img {
+                            @include transform(scale(1.1));
+                        }
+                    }
+
+                    .product_content {
+                        .product_name {
+                            a {
+                                color: $color;
+                            }
+                        }   
+                    }
+                }
+
+                .product_img {
+                    @include shine_hvr;
+
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 178px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            @include trans(0.4);
+                        }
+                    }
+                }
+
+                .product_content {
+                    border: 1px solid #e1e1e1;
+                    padding: 5px;
+
+                    .product_name {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.4;
+                        @include cut_line1;
+
+                        a {
+                            color: #242424;
+                            display: block;
+                            @include trans(0.4);
+                        }
+                    }
+
+                    .product_info {
+                        p {
+                            color: #494949;
+                            font-size: 13px;
+                            line-height: 1.4;
+                            @include cut_line(13, 1.4, 2);
+                            margin: 2px 0;
+
+                            img {
+                                margin-right: 5px;
+                                vertical-align: middle;
+                            }
+
+                            span {
+                                font-weight: 700;
+                                color: #d01c1c;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include normal_phone {
+            .product_box_item {
+                width: calc(100%);
+            }
+        }
+    }
+}

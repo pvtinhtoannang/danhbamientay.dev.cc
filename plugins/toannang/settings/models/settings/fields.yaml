@@ -142,8 +142,27 @@ tabs:
       type: propertytypebox
       span: auto
       tab: 'Trang chủ'
-    category:
-      label: 'Chuyên mục địa điểm du lịch'
-      type: categorybox
-      span: auto
+    categoryhome:
+      type: repeater
+      label: 'Chuyên mục trang chủ'
+      titleForm: 'Chuyên mục trang chủ'
       tab: 'Trang chủ'
+      form:
+        fields:
+            categorybox:
+              label: 'Tên chuyên mục'
+              type: categorybox
+              span: storm
+              cssClass: col-xs-4
+            image_1:
+              label: 'Quảng cáo 1'
+              type: mediafinder
+              mode: image
+              span: storm
+              cssClass: col-xs-4
+            image_2:
+              label: 'Quảng cáo 2'
+              type: mediafinder
+              mode: image
+              span: storm
+              cssClass: col-xs-4

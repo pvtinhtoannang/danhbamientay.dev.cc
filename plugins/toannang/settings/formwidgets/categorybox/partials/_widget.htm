@@ -1,11 +1,11 @@
 
-<select id="category" name="Settings[category]" class="form-control js-example-disabled-results" >
+<select  name="Settings[categoryhome][][categorybox]" class="form-control categorybox js-example-disabled-results" >
   <?php foreach ($all_category as $key => $category_item) {?>
     <option <?php if($key == $category) {?> selected="selected" <?php } ?> value="<?= $key ?>"><?= $category_item ?></option>
   <?php }  ?>
 </select>
 <script>
-  $("#category").select2({});
+  $(".categorybox").select2({});
 </script>
 <style >
 

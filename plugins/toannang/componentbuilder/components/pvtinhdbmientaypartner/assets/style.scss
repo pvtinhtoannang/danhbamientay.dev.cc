@@ -1,0 +1,60 @@
+@import '../../lp_danhbamientay_partner/assets/mixin.scss';
+
+.lp_danhbamientay_partner {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    font-family: 'Conv_HelveticaNeue';
+    background-color: #f9f9f9;
+
+    .partner_wrapper {
+        .partner_item {
+            margin-bottom: 27px;
+
+            a {
+                display: block;
+                width: 100%;
+                height: 130px;
+                @include shine_hvr;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .slick-dots {
+            position: relative;
+            bottom: unset;
+            
+            li {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+
+                button {
+                    width: 10px;
+                    height: 10px; 
+                    background: transparent;
+                    border: 1px solid #3f3f3f;
+                    padding: 0;
+                    border-radius: 100%;
+                    
+                    &:before {
+                        content: unset;
+                    }
+                }
+            }
+
+            li.slick-active {
+                button {
+                    background: $color;
+                    border-color: $color;
+                }
+            }
+        }
+    }
+}

@@ -37,6 +37,11 @@ class Plugin extends PluginBase
               'description'=>'danh mục bất động sản',
               'code' => 'propertytypebox'
             ], 
+            'Toannang\Settings\Formwidgets\CategoryBox'=>[
+              'label' => 'Chuyên mục địa điểm du lịch',
+              'description'=>'Chuyên mục địa điểm du lịch',
+              'code' => 'categorybox'
+            ], 
         ];
     }
     public function boot()

@@ -1,0 +1,14 @@
+<section id="lp_danhbamientay_partner">
+	<div class="lp_danhbamientay_partner">
+        <div class="container">
+            <div class="partner_wrapper row">
+                {% for brand in partner %}
+                {{ brand.images }}
+                <div class="partner_item col-md-4">
+                    <a href="javascript:;"><img src="{{ brand.image|media }}"  alt="{{ brand.image|media  }}"></a>
+                </div>" 
+                {% endfor %}
+            </div>
+        </div>
+	</div>
+</section> 

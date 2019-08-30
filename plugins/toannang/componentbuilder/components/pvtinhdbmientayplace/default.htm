@@ -1,54 +1,37 @@
+ 
 <section id="lp_danhbamientay_place">
+    {% set index = 1 %}
+    {% for item in content %} 
 	<div class="lp_danhbamientay_place">
         <div class="container">
             <div class="mientay_title_wrapper">
                 <div class="row">
                     <div class="col-md-3 col-sm-4 mientay_title_box">
-                        <h2 class="mientay_title">Địa điểm du lịch</h2>
+                        <h2 class="mientay_title">{{ item.item_place.title_section.name }}</h2>
                     </div>
                     <div class="col-md-8 col-sm-7 mientay_title_slider_box">
-                        <div class="mientay_title_slider place_slider ">
-                            <a href="#">Cần Thơ</a>
-                            <a href="#">Kiên Giang</a>
-                            <a href="#">Cà Mau</a>
-                            <a href="#">Hậu Giang</a>
-                            <a href="#">Tiền Giang</a>
-                            <a href="#">Bến Tre</a>
-                            <a href="#">An Giang</a>
-                            <a href="#">Bạc Liêu</a>
-                            <a href="#">Cần Thơ</a>
-                            <a href="#">Kiên Giang</a>
-                            <a href="#">Cà Mau</a>
-                            <a href="#">Hậu Giang</a>
-                            <a href="#">Tiền Giang</a>
-                            <a href="#">Bến Tre</a>
-                            <a href="#">An Giang</a>
+                        <div class="mientay_title_slider place_slider{{index}} ">
+                             {% for item in provinces %}
+                            <a href="#">{{ item.name }}</a>
+                            {% endfor %}
                         </div>
                     </div>
-                    <div class="col-md-1 col-sm-1 mientay_title_slider_arrow place_slider_arrow arrows-place"></div>
+                    <div class="col-md-1 col-sm-1 mientay_title_slider_arrow place_slider_arrow arrows-place{{ index }}"></div>
+                     
                 </div>
             </div>
             <div class="row place_wrapper content_wrapper">
                 <div class="col-md-3 left_wrapper">
                     <div class="left_box">
                         <div class="place_category_wrapper">
-                            <div class="place_category">
-                                <ul>
+                            <div class="place_category"> 
+                                <ul> 
+                                    {% for location in item.item_place.locations_list %}
                                     <li>
-                                        <a href="#">Địa điểm du lịch tâm linh</a>
+                                        <a href="#">{{ location.name }}</a>
                                     </li>
-                                    <li>
-                                        <a href="#">Vườn trái cây</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Địa điểm lịch sử</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Địa điểm văn hóa</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Danh lam thắng cảnh</a>
-                                    </li>
+                                    {% endfor %}
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -66,22 +49,32 @@
                 </div>
                 <div class="col-md-9 right_wrapper">
                     <div class="product_wrapper">
-                        <?php for($i=1;$i<=12;$i++): ?>
+                        {% for posts in item.item_place.list_place %}  
+
                         <div class="product_box_item">
                             <div class="product_item">
                                 <div class="product_img">
-                                    <a href="#"><img src="<?= $linklp ?>images/item<?= $i ?>.jpg"></a>
+                                    <a href="#">
+                                        {% if posts.images.path is empty %}
+                                            <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
+                                        {% else %}
+                                            <img src="{{ posts.images.thumb(360,180, {'mode':'crop'}) }}" alt="{{ posts.title }}">
+                                        {% endif %}
+                                    </a>
                                 </div> 
-
-                                <h3 class="product_name">
-                                    <a href="#">Tour Miền Tây - Khám phá con đường xuyên rừng tràm đẹp nhất Việt Nam</a>
-                                </h3>
+                                <div class="product_content content-product">
+                                    <h3 class="product_name medium-font">
+                                       <a href="#" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
+                                    </h3>    
+                                </div>                                
                             </div>
                         </div>
-                        <?php endfor; ?>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
 	</div>
+        {% set index = index + 1 %}
+    {% endfor %}
 </section> 

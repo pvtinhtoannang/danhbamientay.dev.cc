@@ -3,6 +3,7 @@ namespace Toannang\Settings\FormWidgets;
 use Backend\Classes\FormWidgetBase;
 use Config;
 use Toannang\Raovat\Models\Category;
+use toannang\Settings\Models\Settings;
 class PropertyTypeBox extends FormWidgetBase
 {
 
@@ -27,7 +28,7 @@ class PropertyTypeBox extends FormWidgetBase
   {
     $Category = Category::all()->lists('name','id');
     $this->vars['all_propertytype'] = $Category;
-    $this->vars['propertytype'] = $this->model->property_type;
+    $this->vars['propertytype'] = Settings::get('propertytype');
   }
 
   public function loadAssets()

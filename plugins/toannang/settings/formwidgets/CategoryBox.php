@@ -3,6 +3,7 @@ namespace Toannang\Settings\FormWidgets;
 use Backend\Classes\FormWidgetBase;
 use Config;
 use Toannang\Raovat\Models\Category;
+use toannang\Settings\Models\Settings;
 class CategoryBox extends FormWidgetBase
 {
 
@@ -27,7 +28,7 @@ class CategoryBox extends FormWidgetBase
   {
     $Category = Category::all()->lists('name','id');
     $this->vars['all_category'] = $Category;
-    $this->vars['category'] = $this->model->categories;
+    $this->vars['category'] = Settings::get('categorybox');
   }
 
   public function loadAssets()
