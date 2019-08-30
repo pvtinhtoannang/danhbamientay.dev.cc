@@ -3,121 +3,90 @@ items:
     -
         title: 'Bất động sản'
         type: url
-        url: /
+        url: /chuyen-muc/bat-dong-san
         code: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+            icon: ''
     -
         title: 'Địa điểm ăn uống'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/dia-diem-an-uong
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Địa điểm du lịch'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/dia-diem-du-lich
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Thiết bị công nghệ'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/thiet-bi-cong-nghe
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Oto xe máy'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/oto-xe-may
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Xây dựng'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/xay-dung
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Nông nghiệp'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/nong-nghiep
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
-        title: 'Tuyển dụng'
-        nesting: ''
+        title: 'Tuyển dụng - việc làm'
         type: url
-        url: /
+        url: /chuyen-muc/tuyen-dung-viec-lam
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''
     -
         title: 'Làm đẹp'
-        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/lam-dep
         code: ''
-        reference: ''
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        icon: ''
+            icon: ''

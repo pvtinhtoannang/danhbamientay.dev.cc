@@ -1,0 +1,111 @@
+<section class="pvtinh_dbmt_dangtin_thongtintindang">
+    <div class="container">
+        <div class="row">
+            <div class="content__post">
+                <div class="col-xs-12 col-md-6">
+                    <div class="gallery__post">
+                        <div class="gallery__main slider-for">
+                            {% for gallery in infopost.images_gallery %}
+                                <div class="img_main">
+                                    <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
+                                </div>
+                            {% endfor %}
+                            
+                        </div>
+
+                        <div class="gallery__thumb slider-nav">
+                            {% for gallery in infopost.images_gallery %}
+                                <div class="img_thumb">
+                                    <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6 right__post">
+                    <div class="info__post">
+                        <div class="title__post">
+                            <h1>{{ infopost.title }}</h1>
+                        </div>
+                        <div class="sub_info_post">
+                            <p class="date_post">{{ infopost.updated_at }}</p>
+                            <p class="category_post">Cùng chủ đề: <a href="">BẤT ĐỘNG SẢN</a></p>
+                        </div>
+                        <div class="description_post">
+                            {{ infopost.description|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info__author_comment__post">
+                <div class="col-xs-12 col-md-4">
+                    <div class="info__author">
+                        <div class="title__group">
+                            <p>THÔNG TIN CHỦ ĐĂNG</p>
+                        </div>
+                        <div class="content_info_author">
+                            <div class="list__info_author">
+                                <ul>
+                                    <li>Họ tên: <span>PHAN VĂN VỸ</span></li>
+                                    <li>Địa chỉ: P.Hưng Lợi, Q. Ninh Kiều, TP. Cần Thơ</li>
+                                    <li>Số điện thoại: <a href="tel:(029) 2224 3637">(029) 2224 3637</a></li>
+                                    <li>Email: info@toannang.com.vn</li>
+                                </ul>
+                            </div>
+                            <div class="button_subscribe">
+                                <a href="#"><span>ĐĂNG KÝ</span></a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="comment__post">
+                        <div class="title__comment_group">
+                            <p>BÌNH LUẬN ĐÁNH GIÁ</p>
+                        </div>
+
+                        <div class="list__comments">
+                            <ul>
+                                <?php for($i = 0; $i < 4; $i++): ?>
+                                <li>
+                                    <div class="info_user_comment">
+                                        <div class="name_user flex_item">
+                                            <div class="avatar_user">
+                                                <a href="#" title="">
+                                                    <img src="<?= $urlCom ?>/images/user.png">
+                                                </a>
+                                            </div>
+                                            <div class="name ">
+                                                <a href="#">xace</a>
+                                            </div>
+                                        </div>
+                                        <div class="comment_date flex_item">
+                                            <div class="date">
+                                                <i class="fa fa-calendar"></i>
+                                                <span>30/01/2019</span>    
+                                            </div>
+                                            <a href="#" class="edit_comment">Sửa</a>
+                                        </div>
+                                        <div class="reply flex_item"><a href="#"><i class="fa fa-reply" aria-hidden="true"></i> Trả lời</a></div>
+                                    </div> 
+                                    <div class="comment">
+                                        Sản phẩm đẹp 2X, chất lượng, đánh giá 10 sao sản phẩm
+                                    </div>                                     
+                                </li>
+                            <?php endfor; ?>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-2">
+                    <div class="box_img_ads_right">
+                        <a href="#" target="_blank">
+                            <img src="{{ 'pvtinhdbmientayinfopost/images/ads_right.jpg'|component }}" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 

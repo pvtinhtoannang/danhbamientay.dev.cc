@@ -4,7 +4,7 @@ items:
         title: 'Bất động sản'
         nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/bat-dong-san
         code: ''
         reference: ''
         cmsPage: ''
@@ -14,21 +14,171 @@ items:
             cssClass: ''
             isExternal: '0'
             icon: /house.png
+        items:
+            -
+                title: 'Mua bán'
+                type: url
+                url: /loai-hinh/bat-dong-san/mua-ban
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cho thuê'
+                type: url
+                url: /loai-hinh/bat-dong-san/cho-thue
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Sang nhượng'
+                type: url
+                url: /loai-hinh/bat-dong-san/sang-nhuong
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Dự án'
+                type: url
+                url: /loai-hinh/bat-dong-san/du-an
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
     -
         title: 'Địa điểm ăn uống'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/dia-diem-an-uong
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
             icon: /spoon.png
+        items:
+            -
+                title: 'Quán ăn gia đình'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-an-gia-dinh
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Quán ăn lề đường, vỉa hè'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-an-le-duong-via-he
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cafe, trà sữa'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/cafe-tra-sua
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Sinh tố'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/sinh-to
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Ăn vặt'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/an-vat
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Quán nhậu'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-nhau
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: Bánh
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/banh
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Khu ẩm thực'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/khu-am-thuc
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cơm văn phòng'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/com-van-phong
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Beer Club'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/beer-club
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
     -
         title: 'Địa điểm du lịch'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/dia-diem-du-lich
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -36,9 +186,13 @@ items:
             icon: /foodcover.png
     -
         title: 'Thiết bị công nghệ'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/thiet-bi-cong-nghe
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -46,9 +200,13 @@ items:
             icon: /screen.png
     -
         title: 'Oto Xe máy'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/oto-xe-may
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -56,9 +214,13 @@ items:
             icon: /car.png
     -
         title: 'Xây dựng'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/xay-dung
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -66,9 +228,13 @@ items:
             icon: /contruct.png
     -
         title: 'Nông nghiệp'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/nong-nghiep
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -76,9 +242,13 @@ items:
             icon: /aghi.png
     -
         title: 'Tuyển dụng - Việc làm'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/tuyen-dung-viec-lam
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -86,9 +256,13 @@ items:
             icon: /beauty.png
     -
         title: 'Làm đẹp'
+        nesting: ''
         type: url
-        url: /
+        url: /chuyen-muc/lam-dep
         code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

@@ -1,7 +1,8 @@
  
 <section id="lp_danhbamientay_place">
     {% set index = 1 %}
-    {% for item in content %} 
+    {% for item in content %}
+    {% set slug_place = item.item_place.title_section.slug %}
 	<div class="lp_danhbamientay_place">
         <div class="container">
             <div class="mientay_title_wrapper">
@@ -11,9 +12,9 @@
                     </div>
                     <div class="col-md-8 col-sm-7 mientay_title_slider_box">
                         <div class="mientay_title_slider place_slider{{index}} ">
-                             {% for item in provinces %}
-                            <a href="#">{{ item.name }}</a>
-                            {% endfor %}
+                             {% for item_province in provinces %}
+                            <a href="/dia-diem/{{ slug_place }}/{{ item_province.id }}">{{ item_province.name }}</a>
+                            {% endfor %} 
                         </div>
                     </div>
                     <div class="col-md-1 col-sm-1 mientay_title_slider_arrow place_slider_arrow arrows-place{{ index }}"></div>
@@ -28,7 +29,7 @@
                                 <ul> 
                                     {% for location in item.item_place.locations_list %}
                                     <li>
-                                        <a href="#">{{ location.name }}</a>
+                                        <a href="/loai-hinh/{{ slug_place }}/{{ location.slug}}">{{ location.name }}</a>
                                     </li>
                                     {% endfor %}
                                     

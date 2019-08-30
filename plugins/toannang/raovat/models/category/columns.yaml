@@ -9,10 +9,8 @@ columns:
         type: text
         searchable: true
         sortable: true
-    parent_id:
-        label: 'Danh mục cha'
-        type: partial
+    slug:
+        label: 'Đường dẫn tĩnh'
+        type: text
         searchable: true
         sortable: true
-        select: parent_id
-        path: ~/plugins/toannang/raovat/models/category/_category_column.htm

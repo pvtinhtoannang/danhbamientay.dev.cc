@@ -39,10 +39,10 @@ class Plugin extends PluginBase
           'code' => 'wardbox' 
         ],
 
-        'Toannang\Raovat\Formwidgets\PropertyTypeBox'=>[
+        'Toannang\Raovat\Formwidgets\PropertyTypeBoxPost'=>[
           'label' => 'Danh mục bất động sản',
           'description'=>'danh mục bất động sản',
-          'code' => 'propertytypebox'
+          'code' => 'propertytypeboxpost'
         ],  
         'Toannang\Raovat\Formwidgets\CategoryBox'=>[
           'label' => 'Chuyên mục',

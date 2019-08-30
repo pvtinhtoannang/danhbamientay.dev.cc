@@ -422,4 +422,9 @@
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchive' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchive.php',
   'RainLab\\Builder\\Classes\\ComponentHelper' => 'plugins\\rainlab\\builder\\classes\\ComponentHelper.php',
   'AnandPatel\\SeoExtension\\Models\\BlogPost' => 'plugins\\anandpatel\\seoextension\\models\\BlogPost.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveBDS' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveBDS.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveLoaiHinh' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveLoaiHinh.php',
+  'Toannang\\Raovat\\Formwidgets\\PropertyTypeBoxPost' => 'plugins\\toannang\\raovat\\formwidgets\\PropertyTypeBoxPost.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveAddress' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveAddress.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayInfoPost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayInfoPost.php',
 );

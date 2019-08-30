@@ -1,0 +1,10 @@
+1567161538a:1:{s:12:"dia-diem.htm";a:12:{s:8:"fileName";s:12:"dia-diem.htm";s:7:"content";s:232:"title = "Địa điểm"
+url = "/dia-diem/:category/:address"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[PvtinhDBMienTayArchiveAddress]
+==
+{% component 'PvtinhDBMienTayArchiveAddress' %}";s:5:"mtime";i:1567152016;s:6:"markup";s:47:"{% component 'PvtinhDBMienTayArchiveAddress' %}";s:4:"code";N;s:5:"title";s:14:"Địa điểm";s:3:"url";s:28:"/dia-diem/:category/:address";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:29:"PvtinhDBMienTayArchiveAddress";a:0:{}}}

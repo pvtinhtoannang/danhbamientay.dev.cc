@@ -10,6 +10,9 @@ use Toannang\Componentbuilder\Components\PvtinhDBMienTayDangTin;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayPlace;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayPartner;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchive;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveLoaiHinh;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveAddress;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayInfoPost;
 
 class Plugin extends PluginBase
 {
@@ -25,6 +28,9 @@ class Plugin extends PluginBase
             PvtinhDBMienTayPlace::class => 'PvtinhDBMienTayPlace',
             PvtinhDBMienTayPartner::class => 'PvtinhDBMienTayPartner',
             PvtinhDBMienTayArchive::class => 'PvtinhDBMienTayArchive',
+            PvtinhDBMienTayArchiveLoaiHinh::class => 'PvtinhDBMienTayArchiveLoaiHinh',
+            PvtinhDBMienTayArchiveAddress::class => 'PvtinhDBMienTayArchiveAddress',
+            PvtinhDBMienTayInfoPost::class => 'PvtinhDBMienTayInfoPost',
             
           ];
     }

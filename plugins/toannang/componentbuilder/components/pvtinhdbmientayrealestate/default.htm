@@ -8,10 +8,10 @@
                     </div>
                     <div class="col-md-8 col-sm-7 mientay_title_slider_box">
                         <div class="mientay_title_slider real_estate_slider menu-slider">
-                            {% for item in provinces %}
-                            <a href="#">{{ item.name }}</a>
-                            {% endfor %}
-                        </div>
+                            {% for item_province in provinces %}
+                            <a href="/dia-diem/bat-dong-san/{{ item_province.id }}">{{ item_province.name }}</a>
+                            {% endfor %}  
+                        </div> 
                     </div>
                     <div class="col-md-1 col-sm-1 mientay_title_slider_arrow real_estate_arrow"></div>
                 </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-9 right_wrapper">
                     <div class="product_wrapper">
-                        {% for posts in listpost %}                                                 
+                        {% for posts in listpost  %}                                                 
                         <div class="product_box_item">
                             <div class="product_item">
                                 <div class="product_img">
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="product_content">
                                     <h3 class="product_name inline-text">
-                                        <a href="#" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
+                                        <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
                                     </h3>
                                     <div class="product_info">
                                         <p>

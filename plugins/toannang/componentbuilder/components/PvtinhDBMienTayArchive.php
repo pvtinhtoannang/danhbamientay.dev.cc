@@ -28,6 +28,32 @@ class PvtinhDBMienTayArchive extends ComponentBase
         $this->addCss('components/pvtinhdbmientayarchive/assets/style.css');  
         $this->addJs('components/pvtinhdbmientayarchive/assets/script.js');
         $slug = $this->param('slug');
-        
+        $myid = Category::select('id', 'name')->where('slug','=', $slug)->first(); 
+        if(!empty($myid)){
+            $this->page['category_name'] = $myid->name;    
+        }
+        else{
+            $this->page['category_name'] = 'Chuyên mục';
+        }
+        $this->page['archive_info'] = $myid;
+        $this->page['listpost'] = Posts::select('toannang_raovat_posts.*', 'toannang_raovat_tinhthanhpho.name as province', 'toannang_raovat_quanhuyen.name as district', 'toannang_raovat_xaphuongthitran.name as ward')
+                ->where('toannang_raovat_categories.slug' , '=' , $slug)
+                ->join('toannang_raovat_post_category', 'toannang_raovat_post_category.posts_id', '=', 'toannang_raovat_posts.id')
+                ->join('toannang_raovat_categories', 'toannang_raovat_categories.id', '=', 'toannang_raovat_post_category.category_id')
+                ->leftJoin('toannang_raovat_tinhthanhpho','toannang_raovat_tinhthanhpho.id', '=', 'toannang_raovat_posts.province')
+                ->leftJoin('toannang_raovat_quanhuyen','toannang_raovat_quanhuyen.id', '=', 'toannang_raovat_posts.district')
+                ->leftJoin('toannang_raovat_xaphuongthitran','toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.ward')
+                ->paginate(16);
+        if($slug == 'bat-dong-san'){
+            $this->page['subcategory'] = PropertyType::select('name', 'slug')->get();
+            $this->page['isbds'] = 'true';
+        }
+        else{
+            $this->page['subcategory'] = Locations::select('name', 'slug')
+            ->where('category_id' , '=', $myid->id)
+            ->get();   
+            $this->page['isbds'] = 'false';
+        }
+
     }
 }

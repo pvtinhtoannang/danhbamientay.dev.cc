@@ -61,7 +61,7 @@ fields:
     property_type:
         label: 'Chọn danh mục bất động sản'
         span: left
-        type: propertytypebox
+        type: propertytypeboxpost
     province:
         label: 'Tỉnh / Thành phố: '
         span: right
