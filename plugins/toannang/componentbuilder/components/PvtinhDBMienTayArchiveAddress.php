@@ -42,16 +42,15 @@ class PvtinhDBMienTayArchiveAddress extends ComponentBase
             else{
                 $this->page['locations_name'] = 'Loại hình';
             }
-            $this->page['listpost'] = Posts::select('toannang_raovat_posts.*', 'toannang_raovat_tinhthanhpho.name as province', 'toannang_raovat_quanhuyen.name as district', 'toannang_raovat_xaphuongthitran.name as ward')
+            $results = Posts::select('toannang_raovat_posts.*', 'toannang_raovat_tinhthanhpho.name as province', 'toannang_raovat_quanhuyen.name as district', 'toannang_raovat_xaphuongthitran.name as ward')
             ->where('province' , '=' , $address)
             ->where('category_id', '=', $myid->id)
             ->join('toannang_raovat_post_category', 'toannang_raovat_post_category.posts_id', '=', 'toannang_raovat_posts.id')
             ->leftJoin('toannang_raovat_tinhthanhpho','toannang_raovat_tinhthanhpho.id', '=', 'toannang_raovat_posts.province')
             ->leftJoin('toannang_raovat_quanhuyen','toannang_raovat_quanhuyen.id', '=', 'toannang_raovat_posts.district')
             ->leftJoin('toannang_raovat_xaphuongthitran','toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.ward')
-            ->paginate(16);
-
-            
+            ->paginate(16);      
+            $this->page['listpost'] = $results;      
         }
         else{
 
@@ -68,14 +67,27 @@ class PvtinhDBMienTayArchiveAddress extends ComponentBase
             $this->page['subcategory'] = Locations::select('name', 'slug')
             ->where('category_id' , '=', $myid->id)
             ->get();   
-             $this->page['listpost'] = Posts::select('toannang_raovat_posts.*' )
+            $results = Posts::select('toannang_raovat_posts.*' )
                 ->where('province' , '=' , $address)
                 ->where('category_id', '=', $myid->id)
 
                 ->join('toannang_raovat_post_category', 'toannang_raovat_post_category.posts_id', '=', 'toannang_raovat_posts.id')
                 ->leftJoin('toannang_raovat_tinhthanhpho','toannang_raovat_tinhthanhpho.id', '=', 'toannang_raovat_posts.province')
                 ->paginate(16);
+            $this->page['listpost'] = $results;
         }
+        $page = array();
+
+        $page['address'] = $address;
+        $page['category']= $category;
+        $page['count'] = $results->count();
+        $page['current'] = $results->currentPage();
+        $page['hasmore'] = $results->hasMorePages();
+        $page['last'] = $results->lastPage();
+        $page['nextpage'] = $results->nextPageUrl();
+        $page['previous'] = $results->previousPageUrl();
+        $page['total'] = $results->total();
+        $this->page['pagination'] = $page;
 
     }
 }

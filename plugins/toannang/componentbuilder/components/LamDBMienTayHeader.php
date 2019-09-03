@@ -25,5 +25,12 @@ class LamDBMienTayHeader extends ComponentBase
         $this->page['hotline'] = Settings::get('hotline'); 
         $this->page['site_name'] = Settings::get('site_name');
         $this->page['logo'] = Settings::getLogo();
+
+        if(isset($_GET['keyword'])){
+            $this->page['keyword'] =  $_GET['keyword'];
+        }
+        else{
+            $this->page['keyword'] =  '';
+        }
     }
 }

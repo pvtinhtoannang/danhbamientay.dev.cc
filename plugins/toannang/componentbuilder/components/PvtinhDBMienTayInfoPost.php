@@ -26,14 +26,18 @@ class PvtinhDBMienTayInfoPost extends ComponentBase
     }
     public function onRun()
     {
+
         $this->addCss('components/pvtinhdbmientayinfopost/assets/style.css');
         $this->addJs('components/pvtinhdbmientayinfopost/assets/script.js'); 
         $slug   = $this->param('slug');
         $id     = $this->param('id');
-        
-        $this->page['infopost'] = Posts::select('toannang_raovat_posts.*')
+        $this->page['url'] = url()->full();
+        $this->page['infopost'] = Posts::select('toannang_raovat_posts.*', 'toannang_raovat_tinhthanhpho.name as province', 'toannang_raovat_quanhuyen.name as district', 'toannang_raovat_xaphuongthitran.name as ward')
         ->where('slug', '=', $slug)
         ->where('toannang_raovat_posts.id', '=', $id)
+         ->leftJoin('toannang_raovat_tinhthanhpho','toannang_raovat_tinhthanhpho.id', '=', 'toannang_raovat_posts.province')
+        ->leftJoin('toannang_raovat_quanhuyen','toannang_raovat_quanhuyen.id', '=', 'toannang_raovat_posts.district')
+        ->leftJoin('toannang_raovat_xaphuongthitran','toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.ward') 
         ->first();
 
         

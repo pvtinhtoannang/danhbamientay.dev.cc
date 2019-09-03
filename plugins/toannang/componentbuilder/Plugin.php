@@ -13,6 +13,7 @@ use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchive;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveLoaiHinh;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveAddress;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayInfoPost;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTaySearch;
 
 class Plugin extends PluginBase
 {
@@ -31,6 +32,7 @@ class Plugin extends PluginBase
             PvtinhDBMienTayArchiveLoaiHinh::class => 'PvtinhDBMienTayArchiveLoaiHinh',
             PvtinhDBMienTayArchiveAddress::class => 'PvtinhDBMienTayArchiveAddress',
             PvtinhDBMienTayInfoPost::class => 'PvtinhDBMienTayInfoPost',
+            PvtinhDBMienTaySearch::class => 'PvtinhDBMienTaySearch',
             
           ];
     }

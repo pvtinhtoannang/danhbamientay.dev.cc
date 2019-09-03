@@ -152,7 +152,12 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                         <div class=\"product_box_item\">
                             <div class=\"product_item\">
                                 <div class=\"product_img\">
-                                    <a href=\"#\">
+                                    <a href=\"/tin-dang/";
+                // line 58
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 58), "html", null, true);
+                echo "/";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 58), "html", null, true);
+                echo "\">
                                         ";
                 // line 59
                 if (twig_test_empty(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["posts"], "images", [], "any", false, false, false, 59), "path", [], "any", false, false, false, 59))) {
@@ -177,8 +182,12 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                                 </div> 
                                 <div class=\"product_content content-product\">
                                     <h3 class=\"product_name medium-font\">
-                                       <a href=\"#\" data-toggle=\"tooltip\" title=\"";
+                                       <a href=\"/tin-dang/";
                 // line 68
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 68), "html", null, true);
+                echo "/";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 68), "html", null, true);
+                echo "\" data-toggle=\"tooltip\" title=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 68), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 68), "html", null, true);
@@ -224,7 +233,7 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
 
     public function getDebugInfo()
     {
-        return array (  211 => 81,  205 => 80,  203 => 79,  196 => 74,  182 => 68,  176 => 64,  168 => 62,  160 => 60,  158 => 59,  147 => 53,  137 => 46,  129 => 41,  121 => 35,  108 => 32,  105 => 31,  101 => 30,  88 => 20,  83 => 17,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  49 => 6,  46 => 5,  41 => 4,  39 => 3,  35 => 1,);
+        return array (  220 => 81,  214 => 80,  212 => 79,  205 => 74,  187 => 68,  181 => 64,  173 => 62,  165 => 60,  163 => 59,  157 => 58,  147 => 53,  137 => 46,  129 => 41,  121 => 35,  108 => 32,  105 => 31,  101 => 30,  88 => 20,  83 => 17,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  49 => 6,  46 => 5,  41 => 4,  39 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -286,7 +295,7 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                         <div class=\"product_box_item\">
                             <div class=\"product_item\">
                                 <div class=\"product_img\">
-                                    <a href=\"#\">
+                                    <a href=\"/tin-dang/{{ posts.slug }}/{{ posts.id }}\">
                                         {% if posts.images.path is empty %}
                                             <img src=\"{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}\" alt=\"{{ posts.title }}\">
                                         {% else %}
@@ -296,7 +305,7 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                                 </div> 
                                 <div class=\"product_content content-product\">
                                     <h3 class=\"product_name medium-font\">
-                                       <a href=\"#\" data-toggle=\"tooltip\" title=\"{{ posts.title }}\">{{ posts.title }}</a>
+                                       <a href=\"/tin-dang/{{ posts.slug }}/{{ posts.id }}\" data-toggle=\"tooltip\" title=\"{{ posts.title }}\">{{ posts.title }}</a>
                                     </h3>    
                                 </div>                                
                             </div>

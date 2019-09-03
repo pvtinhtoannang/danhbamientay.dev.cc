@@ -23,13 +23,13 @@
                         <div class="col-md-1 col-sm-1 mientay_title_slider_arrow real_estate_arrow"></div> 
 	        			<div class="col-lg-3 col-md-3 col-xs-12 re_search_box">
 	        				<div class="search_box">
-	                            <form role="search" method="get" class="woocommerce-product-search" action="<?php //echo esc_url( home_url( '/'  ) ); ?>">
-	                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm kiếm nâng cao...." value="<?php //echo get_search_query(); ?>" name="s" title="<?php //echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
-	                                <input type="hidden" name="post_type" value="product" />
-	                                <button class="btn-search-nuhoang" type="submit" value="<?php //echo esc_attr_x( 'Search', 'submit button', 'woocommerce' ); ?>">
-	                                    <i class="fa fa-search"></i>
-	                                </button>
-	                            </form>
+	                            <form role="search"  method="get" class="" action="/tim-kiem">
+                                <input type="hidden" name="danh-muc" value="tat-ca-danh-muc">
+                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="{{ keyword }}" name="keyword" title="" autocomplete="off" />
+                                <button class="btn-search-nuhoang" type="submit" value="">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
 	                        </div>
 	        			</div>
         			</div>
@@ -41,7 +41,7 @@
                     <div class="product_box_item col-md-3 col-sm-4 col-xs-6">
                         <div class="product_item">
                             <div class="product_img">
-                                <a href="#">
+                                <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" title="{{ posts.title }}">
                                 	{% if posts.images.path is empty %}
                                         <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
                                     {% else %}
@@ -51,7 +51,7 @@
                             </div>
                             <div class="product_content">
                                 <h3 class="product_name"> 
-                                    <a href="#" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
+                                    <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
                                 </h3>
                                 {% if isbds == 'true' %}
                                 <div class="product_info">
@@ -91,6 +91,19 @@
                     </div>
                     {% endfor %}
                 </div>
+                {% if pagination.last > 1 %}
+                <div class="page_render"> 
+                    <div class="col-xs-12">
+                        <div class="pagination"> 
+                          <a href="{{ pagination.previous }}">&laquo;</a>
+                          {% for i in 1..pagination.last  %} 
+                            <a {% if pagination.current == i %} class="active" {% endif %} href="/chuyen-muc/{{ category_slug }}?page={{ i }}">{{ i }} </a>
+                          {% endfor %}
+                          <a href="{{ pagination.nextpage }}">&raquo;</a>
+                        </div>    
+                    </div>                    
+                </div>                 
+                {% endif %}
             </div>
         </div>
 	</div>

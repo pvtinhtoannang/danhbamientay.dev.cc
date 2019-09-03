@@ -1,0 +1,6 @@
+plugin:
+    name: 'toannang.profile::lang.plugin.name'
+    description: 'toannang.profile::lang.plugin.description'
+    author: toannang
+    icon: oc-icon-user-md
+    homepage: ''

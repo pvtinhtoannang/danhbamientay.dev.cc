@@ -55,7 +55,7 @@
                         <div class="product_box_item">
                             <div class="product_item">
                                 <div class="product_img">
-                                    <a href="#">
+                                    <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}">
                                         {% if posts.images.path is empty %}
                                             <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
                                         {% else %}
@@ -65,7 +65,7 @@
                                 </div> 
                                 <div class="product_content content-product">
                                     <h3 class="product_name medium-font">
-                                       <a href="#" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
+                                       <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
                                     </h3>    
                                 </div>                                
                             </div>

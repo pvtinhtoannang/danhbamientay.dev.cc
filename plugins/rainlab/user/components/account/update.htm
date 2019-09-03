@@ -1,4 +1,8 @@
 {{ form_ajax('onUpdate') }}
+    
+    {{ form_token() }}
+    {{ form_sessionKey() }}
+    
 
     <div class="form-group">
         <label for="accountName">Full Name</label>
@@ -18,6 +22,11 @@
     <div class="form-group">
         <label for="accountPasswordConfirm">Confirm New Password</label>
         <input name="password_confirmation" type="password" class="form-control" id="accountPasswordConfirm">
+    </div>
+
+    <div class="form-group">
+        <label for="accountName">Bio</label>
+        <input name="bio" type="text" class="form-control" id="accountBio" value="{{ user.bio }}">
     </div>
 
     <button type="submit" class="btn btn-default">Save</button>

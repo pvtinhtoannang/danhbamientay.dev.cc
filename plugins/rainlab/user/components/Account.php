@@ -357,6 +357,7 @@ class Account extends ComponentBase
      */
     public function onUpdate()
     {
+        
         if (!$user = $this->user()) {
             return;
         }
@@ -364,7 +365,7 @@ class Account extends ComponentBase
         if (Input::hasFile('avatar')) {
             $user->avatar = Input::file('avatar');
         }
-
+ 
         $user->fill(post());
         $user->save();
 

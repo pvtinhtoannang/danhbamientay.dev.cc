@@ -113,7 +113,7 @@
 	                        padding: 10.6px 21.07px;
 	                        @include trans(0.4);
 	                        max-width: 57px;
-
+                            border: 1px solid #2a922d;
 	                        &:hover {
 	                            background-color: $bg;
 	                        }
@@ -226,4 +226,19 @@
             }
         }
     }
+    .page_render{
+        .pagination {
+          display: inline-block;
+        }
+           
+        .pagination a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+        a.active{
+            color: #a88005;
+        }
+    } 
 }

@@ -20,23 +20,27 @@
                 <div class="col-md-3 left_wrapper">
                     <div class="left_box">
                         <div class="advance_search_wrapper">
-                            <form role="search" method="get" class="search-form" action="">
-                                <select name="property">
-                                    {% for item in propertytype %}
-                                        <option value="{{ item.id }}">{{ item.name }}</option>
+                            <!-- <form action="/tim-kiem" class="search-form"  > -->
+                            <form  data-request="onSave" action="/tim-kiem" class="search-form"  data-request-validate data-request-flash>
+                                <input type="hidden" name="danh-muc" value="bat-dong-san">
+                                <select name="loai-hinh">
+                                    {% for item in propertytype_home %}
+                                        <option value="{{ item.slug }}">{{ item.name }}{{ item.id }}</option>
                                     {% endfor %}
                                 </select>
-                                <select name="province" id="province">                                    
+                                <select name="tinh-thanh" id="province">
                                     {% for item in provinces %}
                                         <option value="{{ item.id }}">{{ item.name }}</option>
                                     {% endfor %}
                                 </select>
-                                <select name="district" id="district">
+                                <select required="required" name="quan-huyen" id="district">
                                     <option value="-1">Chọn quận / huyện</option>
-
                                 </select>  
-                                <input type="text" name="area" placeholder="Diện tích">
-                                <button type="submit">Tìm kiếm<i class="fa fa-paper-plane-o"></i></button>
+                                <span data-validate-for="quan-huyen"></span>
+                                <input type="number" name="dien-tich" placeholder="Diện tích" value="0">
+                                <span data-validate-for="dien-tich"></span>
+                                <button type="submit" class="btn-search">Tìm kiếm<i class="fa fa-paper-plane-o"></i></button>
+
                             </form>
                         </div>
                         <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
@@ -52,7 +56,7 @@
                         <div class="product_box_item">
                             <div class="product_item">
                                 <div class="product_img">
-                                    <a href="#" title="{{ posts.title }}">
+                                    <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" title="{{ posts.title }}">
                                         {% if posts.images.path is empty %}
                                             <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
                                         {% else %}

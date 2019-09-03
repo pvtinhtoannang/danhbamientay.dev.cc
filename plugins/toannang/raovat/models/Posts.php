@@ -23,7 +23,7 @@ class Posts extends Model
 
     /**
      * @var array Validation rules
-     */
+     */ 
     public $rules = [
     ];
 

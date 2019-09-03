@@ -1,0 +1,106 @@
+<section id="lp_danhbamientay_archive_real_estate">
+	<div class="lp_danhbamientay_archive_real_estate">
+        <div class="container">
+        	<div class="arc_realestate_title_wrapper">
+        		<div class="row">
+        			<div class="re_title_wrapper">
+	        			<div class="col-lg-9 col-md-9 col-xs-12 re_title_box">
+	        				<h2 class="re_title">
+	        					Tìm kiếm cho danh mục {{ categoryname.name }}
+	        				</h2>
+	        			</div>
+	        			
+	        			<div class="col-lg-3 col-md-3 col-xs-12 re_search_box">
+	        				<div class="search_box">
+	                            <form role="search"  method="get" class="" action="/tim-kiem">
+                                <input type="hidden" name="danh-muc" value="tat-ca-danh-muc">
+                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="{{ keyword }}" name="keyword" title="" autocomplete="off" />
+                                <button class="btn-search-nuhoang" type="submit" value="">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+	                        </div>
+	        			</div>
+        			</div>
+                    
+        		</div>
+        	</div>
+            <div class="row">  
+                <div class="col-xs-12">
+                    <div class="results-count">
+                        <span>Có {{ pagination.total }} kết quả tìm kiếm </span>
+                    </div>
+                </div>
+            	<div class="product_wrapper">
+
+                    {% for posts in listpost  %}
+                    <div class="product_box_item col-md-3 col-sm-4 col-xs-6">
+                        <div class="product_item">
+                            <div class="product_img">
+                                <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" title="{{ posts.title }}">
+                                	{% if posts.images.path is empty %}
+                                        <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
+                                    {% else %}
+                                        <img src="{{ posts.images.thumb(360,180, {'mode':'crop'}) }}" alt="{{ posts.title }}">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="product_content">
+                                <h3 class="product_name"> 
+                                    <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" data-toggle="tooltip" title="{{ posts.title }}">{{ posts.title }}</a>
+                                </h3>
+                                {% if isbds == 'true' %}
+                                <div class="product_info">
+                                    <p>
+                                        <img src="{{ 'pvtinhdbmientayarchive/images/money.png'|component }} " alt="money">
+                                        {% if posts.price == '0' %}
+                                            Giá: <span>Thương lượng</span>
+                                        {% else %}
+                                            Giá: <span>{{ posts.price|number_format }} VNĐ</span>
+                                        {% endif %}
+                                    </p>
+                                    <p>
+                                        <img src=" {{ 'pvtinhdbmientayarchive/images/ruler.png'|component }} " alt="ruler">
+                                        {% if posts.area == '0' %}
+                                            Diện tích: Đang cập nhật
+                                        {% else %}
+                                            Diện tích: {{ posts.area|number_format }}m2
+                                        {% endif %}
+                                    </p>
+                                    <p>
+                                        <img src="{{ 'pvtinhdbmientayarchive/images/map3.png'|component }}" alt="map3">
+                                        Khu vực: 
+                                        {% if posts.ward is not empty %}
+                                            {{ posts.ward }}, 
+                                        {% endif %}
+                                        {% if posts.district is not empty %}
+                                            {{ posts.district }},
+                                        {% endif %}
+                                        {% if posts.province is not empty %}
+                                            {{ posts.province }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div> 
+                {% if pagination.last > 1 %}
+                <div class="page_render"> 
+                    <div class="col-xs-12">
+                        <div class="pagination"> 
+                          <a href="{{ pagination.previous }}">&laquo;</a>
+                          {% for i in 1..pagination.last  %} 
+                            <a {% if pagination.current == i %} class="active" {% endif %} href="/chuyen-muc/{{ category_slug }}?page={{ i }}">{{ i }} </a>
+                          {% endfor %}
+                          <a href="{{ pagination.nextpage }}">&raquo;</a>
+                        </div>    
+                    </div>                    
+                </div>                 
+                {% endif %}
+            </div>
+        </div>
+	</div>
+</section> 

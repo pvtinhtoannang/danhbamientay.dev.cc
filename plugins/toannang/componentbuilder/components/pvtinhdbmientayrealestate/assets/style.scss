@@ -170,17 +170,19 @@
         }
         .medium-font{
           font-weight: 500;
+          text-align: center;
           a{
             display: block;
-             @include cut_line(14, 1.4, 3);
+             @include cut_line(14, 1.4, 2);
           }
         }
         .content-product{
-          min-height: 80px;
+          min-height: 50px;
         }
         .product_content {
           border: 1px solid #e1e1e1;
           padding: 5px;
+
           .product_info {
             p {
               color: #494949;

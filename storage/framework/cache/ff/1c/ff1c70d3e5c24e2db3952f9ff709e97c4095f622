@@ -1,4 +1,4 @@
-1567161538a:1:{s:13:"loai-hinh.htm";a:12:{s:8:"fileName";s:13:"loai-hinh.htm";s:7:"content";s:235:"title = "Loại hình"
+1567505858a:1:{s:13:"loai-hinh.htm";a:12:{s:8:"fileName";s:13:"loai-hinh.htm";s:7:"content";s:235:"title = "Loại hình"
 url = "/loai-hinh/:category/:location/"
 layout = "master"
 is_hidden = 0

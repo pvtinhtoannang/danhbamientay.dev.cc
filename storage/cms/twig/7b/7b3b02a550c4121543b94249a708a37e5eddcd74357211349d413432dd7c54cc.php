@@ -32,7 +32,9 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<section id=\"lp_danhbamientay_header\">
+        echo "<div id=\"fb-root\"></div>
+<script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2242396325982501&autoLogAppEvents=1\"></script>
+<section id=\"lp_danhbamientay_header\">
     <div class=\"lp_danhbamientay_header\">
         <div class=\"header_top_wrapper\">
             <div class=\"container\">
@@ -40,9 +42,9 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                     <div class=\"header_city_wrapper col-sm-4\">
                         <span class=\"icon icon-map\"></span>
                         ";
-        // line 8
+        // line 10
         if (($context["locations"] ?? null)) {
-            // line 9
+            // line 11
             echo "                        <marquee>";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["locations"] ?? null));
@@ -60,8 +62,8 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                 $context['loop']['last'] = 1 === $length;
             }
             foreach ($context['_seq'] as $context["_key"] => $context["location"]) {
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["location"], "name", [], "any", false, false, false, 9), "html", null, true);
-                if ( !twig_get_attribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 9)) {
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["location"], "name", [], "any", false, false, false, 11), "html", null, true);
+                if ( !twig_get_attribute($this->env, $this->source, $context["loop"], "last", [], "any", false, false, false, 11)) {
                     echo " - ";
                 }
                 ++$context['loop']['index0'];
@@ -79,11 +81,11 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
             echo "</marquee>
                         ";
         }
-        // line 11
+        // line 13
         echo "                    </div>
                     <div class=\"header_hotline_wrapper col-sm-4 hidden-xs\">
                         <a href=\"tel:";
-        // line 13
+        // line 15
         echo twig_escape_filter($this->env, ($context["hotline"] ?? null), "html", null, true);
         echo "\">Hotline: <span>";
         echo twig_escape_filter($this->env, ($context["hotline"] ?? null), "html", null, true);
@@ -91,30 +93,30 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                     </div>
                     <div class=\"header_function col-sm-4\">
                         ";
-        // line 16
+        // line 18
         if (($context["user"] ?? null)) {
-            // line 17
+            // line 19
             echo "                        <ul class=\"header_account\">
                           <li>
                             <a href=\"/tai-khoan\">Tài khoản: ";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "name", [], "any", false, false, false, 19), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "name", [], "any", false, false, false, 21), "html", null, true);
             echo "</a>
                           </li>
                         </ul>
 
                         ";
         }
-        // line 24
+        // line 26
         echo "                        ";
         if ( !($context["user"] ?? null)) {
-            // line 25
+            // line 27
             echo "                          <a href=\"/dang-ky\">Đăng ký</a>
                           <span>/</span>
                           <a href=\"/dang-nhap\">Đăng nhập</a>
                         ";
         }
-        // line 29
+        // line 31
         echo "                    </div>
                 </div>
             </div>
@@ -126,40 +128,43 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                         <div class=\"logo_box\">
                             <h1 class=\"header_comname\">
                                 <a href=\"";
-        // line 39
+        // line 41
         echo url("/");
         echo "\">
                                     ";
-        // line 40
+        // line 42
         if ((null === ($context["logo"] ?? null))) {
-            // line 41
+            // line 43
             echo "                                    ";
             echo twig_escape_filter($this->env, ($context["site_name"] ?? null), "html", null, true);
             echo "
                                     ";
         } else {
-            // line 43
+            // line 45
             echo "                                    <img src=\"";
             echo twig_escape_filter($this->env, ($context["logo"] ?? null), "html", null, true);
             echo "\" title=\"";
             echo twig_escape_filter($this->env, ($context["site_name"] ?? null), "html", null, true);
             echo "\"
                                          alt=\"";
-            // line 44
+            // line 46
             echo twig_escape_filter($this->env, ($context["site_name"] ?? null), "html", null, true);
             echo "\" class=\"img-responsive \"/>
                                     ";
         }
-        // line 46
+        // line 48
         echo "                                </a>
                             </h1>
                         </div>
                     </div>
                     <div class=\"col-md-6 col-sm-5 col-xs-12 search_wrapper\">
                         <div class=\"search_box\">
-                            <form role=\"search\" method=\"get\" class=\"woocommerce-product-search\" action=\"\">
-                                <input type=\"search\" class=\"search-field input-search-nuhoang\" placeholder=\"Tìm sản phẩm, thương hiệu và tên shop\" value=\"\" name=\"s\" title=\"\" autocomplete=\"off\" />
-                                <input type=\"hidden\" name=\"post_type\" value=\"product\" />
+                            <form role=\"search\"  method=\"get\" class=\"\" action=\"/tim-kiem\">
+                                <input type=\"hidden\" name=\"danh-muc\" value=\"tat-ca-danh-muc\">
+                                <input type=\"search\" class=\"search-field input-search-nuhoang\" placeholder=\"Tìm sản phẩm, thương hiệu và tên shop\" value=\"";
+        // line 56
+        echo twig_escape_filter($this->env, ($context["keyword"] ?? null), "html", null, true);
+        echo "\" name=\"keyword\" title=\"\" autocomplete=\"off\" />
                                 <button class=\"btn-search-nuhoang\" type=\"submit\" value=\"\">
                                     <i class=\"fa fa-search\"></i>
                                 </button>
@@ -169,7 +174,7 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                     <div class=\"col-md-3 col-sm-3 col-xs-12 post_article_wrapper\">
                         <div class=\"post_article_box\">
                             <a href=\"/dang-tin\">Đăng tin <img src=\"";
-        // line 63
+        // line 65
         echo call_user_func_array($this->env->getFilter('component')->getCallable(), ["lamdbmientayheader/images/checklist.png"]);
         echo "\" alt=\"checklist\"></a>
                         </div>
@@ -194,12 +199,14 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
 
     public function getDebugInfo()
     {
-        return array (  173 => 63,  154 => 46,  149 => 44,  142 => 43,  136 => 41,  134 => 40,  130 => 39,  118 => 29,  112 => 25,  109 => 24,  101 => 19,  97 => 17,  95 => 16,  87 => 13,  83 => 11,  46 => 9,  44 => 8,  35 => 1,);
+        return array (  178 => 65,  166 => 56,  156 => 48,  151 => 46,  144 => 45,  138 => 43,  136 => 42,  132 => 41,  120 => 31,  114 => 27,  111 => 26,  103 => 21,  99 => 19,  97 => 18,  89 => 15,  85 => 13,  48 => 11,  46 => 10,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<section id=\"lp_danhbamientay_header\">
+        return new Source("<div id=\"fb-root\"></div>
+<script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2242396325982501&autoLogAppEvents=1\"></script>
+<section id=\"lp_danhbamientay_header\">
     <div class=\"lp_danhbamientay_header\">
         <div class=\"header_top_wrapper\">
             <div class=\"container\">
@@ -250,9 +257,9 @@ class __TwigTemplate_158b2db0c0d257ee573611fbe3771f276137450deba485ff9c3772c4b2e
                     </div>
                     <div class=\"col-md-6 col-sm-5 col-xs-12 search_wrapper\">
                         <div class=\"search_box\">
-                            <form role=\"search\" method=\"get\" class=\"woocommerce-product-search\" action=\"\">
-                                <input type=\"search\" class=\"search-field input-search-nuhoang\" placeholder=\"Tìm sản phẩm, thương hiệu và tên shop\" value=\"\" name=\"s\" title=\"\" autocomplete=\"off\" />
-                                <input type=\"hidden\" name=\"post_type\" value=\"product\" />
+                            <form role=\"search\"  method=\"get\" class=\"\" action=\"/tim-kiem\">
+                                <input type=\"hidden\" name=\"danh-muc\" value=\"tat-ca-danh-muc\">
+                                <input type=\"search\" class=\"search-field input-search-nuhoang\" placeholder=\"Tìm sản phẩm, thương hiệu và tên shop\" value=\"{{ keyword }}\" name=\"keyword\" title=\"\" autocomplete=\"off\" />
                                 <button class=\"btn-search-nuhoang\" type=\"submit\" value=\"\">
                                     <i class=\"fa fa-search\"></i>
                                 </button>

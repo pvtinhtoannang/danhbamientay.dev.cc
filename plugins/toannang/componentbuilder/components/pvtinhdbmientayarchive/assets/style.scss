@@ -143,6 +143,7 @@
 	    	}
     	}
     }
+    
 
     .product_wrapper {
         @include dis_f;
@@ -227,4 +228,19 @@
             }
         }
     }
+    .page_render{
+        .pagination {
+          display: inline-block;
+        }
+           
+        .pagination a {
+          color: black;
+          float: left;
+          padding: 8px 16px;
+          text-decoration: none;
+        }
+        a.active{
+            color: #a88005;
+        }
+    } 
 }

@@ -227,6 +227,7 @@ $(document).ready(function() {
 	         $('#district').append('<option value="'+value.id+'" selected="">'+value.name+'</option>');       
 	      }); 
 	    });
-  });
- 
+  	});
+
+
 });

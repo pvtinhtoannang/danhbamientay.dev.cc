@@ -1,3 +1,5 @@
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2242396325982501&autoLogAppEvents=1"></script>
 <section id="lp_danhbamientay_header">
     <div class="lp_danhbamientay_header">
         <div class="header_top_wrapper">
@@ -49,9 +51,9 @@
                     </div>
                     <div class="col-md-6 col-sm-5 col-xs-12 search_wrapper">
                         <div class="search_box">
-                            <form role="search" method="get" class="woocommerce-product-search" action="">
-                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="" name="s" title="" autocomplete="off" />
-                                <input type="hidden" name="post_type" value="product" />
+                            <form role="search"  method="get" class="" action="/tim-kiem">
+                                <input type="hidden" name="danh-muc" value="tat-ca-danh-muc">
+                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="{{ keyword }}" name="keyword" title="" autocomplete="off" />
                                 <button class="btn-search-nuhoang" type="submit" value="">
                                     <i class="fa fa-search"></i>
                                 </button>

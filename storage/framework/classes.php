@@ -427,4 +427,7 @@
   'Toannang\\Raovat\\Formwidgets\\PropertyTypeBoxPost' => 'plugins\\toannang\\raovat\\formwidgets\\PropertyTypeBoxPost.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveAddress' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveAddress.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayInfoPost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayInfoPost.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTaySearch' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTaySearch.php',
+  'toannang\\profile\\Plugin' => 'plugins\\toannang\\profile\\Plugin.php',
+  'Flynsarmy\\SocialLogin\\FormWidgets\\LoginProviders' => 'plugins\\flynsarmy\\sociallogin\\formwidgets\\LoginProviders.php',
 );
