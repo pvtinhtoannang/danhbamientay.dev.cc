@@ -430,4 +430,8 @@
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTaySearch' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTaySearch.php',
   'toannang\\profile\\Plugin' => 'plugins\\toannang\\profile\\Plugin.php',
   'Flynsarmy\\SocialLogin\\FormWidgets\\LoginProviders' => 'plugins\\flynsarmy\\sociallogin\\formwidgets\\LoginProviders.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTaySidebarAccount' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTaySidebarAccount.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayAccount' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayAccount.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayChangePassword' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayChangePassword.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayMyPost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayMyPost.php',
 );

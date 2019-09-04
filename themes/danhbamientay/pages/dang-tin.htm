@@ -12,7 +12,20 @@ redirect = "dang-nhap"
 [PvtinhDBMienTayBreadCrumb]
 
 [PvtinhDBMienTayDangTin]
+
+[PvtinhDBMienTaySidebarAccount]
 ==
 {% component 'session' %}
 {% component 'PvtinhDBMienTayBreadCrumb' %}
-{% component 'PvtinhDBMienTayDangTin' %}
+<section class="pvtinh-dbmientay-dang-tin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				{% component 'PvtinhDBMienTaySidebarAccount' %}
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9">
+				{% component 'PvtinhDBMienTayDangTin' %}
+			</div>
+		</div>
+	</div>
+</section>

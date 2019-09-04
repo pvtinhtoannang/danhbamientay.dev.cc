@@ -32,64 +32,32 @@ class __TwigTemplate_b113867fd628140c1458a1e85ac6fd0a1e0acb9d5d7a195084e11b0b33a
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        echo "<div class=\"pvtinh_account_dbmien\">
-  <div class=\"container\">
-  ";
-        // line 3
-        if ( !($context["user"] ?? null)) {
-            // line 4
-            echo "      <div class=\"row\">
-        <div class=\"col-xs-12 col-sm-6\">
-          <h3 class=\"title_form\">Đăng nhập</h3>
-          <div class=\"form_account \">
-              ";
-            // line 8
-            $context['__cms_partial_params'] = [];
-            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["account"] ?? null) . "::signin")            , $context['__cms_partial_params']            , true            );
-            unset($context['__cms_partial_params']);
-            // line 9
-            echo "          </div>
-        </div>
-        <div class=\"col-xs-12 col-sm-6\">
-          <h3 class=\"title_form\">Hoặc đăng nhập với</h3>
-          <div class=\"form_account \">
-              ";
-            // line 14
-            $context['__cms_partial_params'] = [];
-            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["account"] ?? null) . "::signin")            , $context['__cms_partial_params']            , true            );
-            unset($context['__cms_partial_params']);
-            // line 15
-            echo "          </div>
-        </div>
-      </div>
-
-  ";
-        } else {
-            // line 20
-            echo "      <h3 class=\"title_form\">Tài khoản</h3>
-      <div class=\"form_account \">
-        ";
-            // line 22
-            $context['__cms_partial_params'] = [];
-            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["account"] ?? null) . "::activation_check")            , $context['__cms_partial_params']            , true            );
-            unset($context['__cms_partial_params']);
-            // line 23
-            echo "        ";
-            $context['__cms_partial_params'] = [];
-            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["account"] ?? null) . "::update")            , $context['__cms_partial_params']            , true            );
-            unset($context['__cms_partial_params']);
-            // line 24
-            echo "        ";
-            $context['__cms_partial_params'] = [];
-            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["account"] ?? null) . "::deactivate_link")            , $context['__cms_partial_params']            , true            );
-            unset($context['__cms_partial_params']);
-            // line 25
-            echo "      </div>
-  ";
-        }
-        // line 27
-        echo "  </div>
-</div>";
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("session"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 2
+        echo "<section class=\"pvtinh-dbmientay-dang-tin\">
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-xs-12 col-sm-4 col-md-3\"> 
+\t\t\t\t";
+        // line 6
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTaySidebarAccount"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 7
+        echo "\t\t\t</div>
+\t\t\t<div class=\"col-xs-12 col-sm-8 col-md-9\"> 
+\t\t\t\t";
+        // line 9
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTayAccount"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 10
+        echo "\t\t\t</div>
+\t\t</div>
+\t</div>
+</section>";
     }
 
     public function getTemplateName()
@@ -104,38 +72,23 @@ class __TwigTemplate_b113867fd628140c1458a1e85ac6fd0a1e0acb9d5d7a195084e11b0b33a
 
     public function getDebugInfo()
     {
-        return array (  91 => 27,  87 => 25,  82 => 24,  77 => 23,  73 => 22,  69 => 20,  62 => 15,  58 => 14,  51 => 9,  47 => 8,  41 => 4,  39 => 3,  35 => 1,);
+        return array (  57 => 10,  53 => 9,  49 => 7,  45 => 6,  39 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"pvtinh_account_dbmien\">
-  <div class=\"container\">
-  {% if not user %}
-      <div class=\"row\">
-        <div class=\"col-xs-12 col-sm-6\">
-          <h3 class=\"title_form\">Đăng nhập</h3>
-          <div class=\"form_account \">
-              {% partial account ~ '::signin' %}
-          </div>
-        </div>
-        <div class=\"col-xs-12 col-sm-6\">
-          <h3 class=\"title_form\">Hoặc đăng nhập với</h3>
-          <div class=\"form_account \">
-              {% partial account ~ '::signin' %}
-          </div>
-        </div>
-      </div>
-
-  {% else %}
-      <h3 class=\"title_form\">Tài khoản</h3>
-      <div class=\"form_account \">
-        {% partial account ~ '::activation_check' %}
-        {% partial account ~ '::update' %}
-        {% partial account ~ '::deactivate_link' %}
-      </div>
-  {% endif %}
-  </div>
-</div>", "C:\\Program Files (x86)\\Ampps\\www\\dev\\danhbamientay.dev.cc/themes/danhbamientay/pages/tai-khoan.htm", "");
+        return new Source("{% component 'session' %}
+<section class=\"pvtinh-dbmientay-dang-tin\">
+\t<div class=\"container\">
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-xs-12 col-sm-4 col-md-3\"> 
+\t\t\t\t{% component 'PvtinhDBMienTaySidebarAccount' %}
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-12 col-sm-8 col-md-9\"> 
+\t\t\t\t{% component 'PvtinhDBMienTayAccount' %}
+\t\t\t</div>
+\t\t</div>
+\t</div>
+</section>", "C:\\Program Files (x86)\\Ampps\\www\\dev\\danhbamientay.dev.cc/themes/danhbamientay/pages/tai-khoan.htm", "");
     }
 }

@@ -14,6 +14,10 @@ use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveLoaiHinh;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveAddress;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayInfoPost;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTaySearch;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTaySidebarAccount;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayAccount;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayChangePassword;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayMyPost;
 
 class Plugin extends PluginBase
 {
@@ -33,6 +37,10 @@ class Plugin extends PluginBase
             PvtinhDBMienTayArchiveAddress::class => 'PvtinhDBMienTayArchiveAddress',
             PvtinhDBMienTayInfoPost::class => 'PvtinhDBMienTayInfoPost',
             PvtinhDBMienTaySearch::class => 'PvtinhDBMienTaySearch',
+            PvtinhDBMienTaySidebarAccount::class => 'PvtinhDBMienTaySidebarAccount',
+            PvtinhDBMienTayAccount::class => 'PvtinhDBMienTayAccount',
+            PvtinhDBMienTayChangePassword::class => 'PvtinhDBMienTayChangePassword',
+            PvtinhDBMienTayMyPost::class => 'PvtinhDBMienTayMyPost',
             
           ];
     }

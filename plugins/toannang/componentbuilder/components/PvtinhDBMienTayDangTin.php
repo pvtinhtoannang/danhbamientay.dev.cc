@@ -96,13 +96,15 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 
                 if (Input::file('files-images')) {
                     $image = Input::file('files-images');
+                    
                     $post->images = $image[0];
+                    
                     foreach ($image as $files) {
                         $post->images_gallery = $files;    
                     }
                 }                
                 $post->save();
-                return \Redirect::to('/dang-tin/');
+                // return \Redirect::to('/dang-tin/');
             }
         }   
         catch (Exception $ex) {

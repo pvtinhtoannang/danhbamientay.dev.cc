@@ -1,0 +1,38 @@
+<h2 class="text-dark text-center title-form">DANH SÁCH TIN ĐĂNG</h2>
+
+<div class="table-responsive">
+	<table id="example" class="display table table-striped" style="width:100%">
+		<thead>
+		    <tr >
+		    	<th>Ảnh đại diện</th>
+		        <th>Tiêu đề</th>
+		        <th>Danh mục</th>
+		        <th>Giá</th>		        
+		        <th>Cập nhật lần cuối</th>
+		        <th>Chức năng</th>
+		    </tr>
+		</thead>
+		<tbody>
+			{% for posts in listpost  %} 
+		    <tr>
+		        <td><img src="{{ posts.images.thumb(100,100, {'mode':'crop'}) }}" alt="{{ posts.title }}"></td>
+		        <td>{{ posts.title }}</td>
+		        <td>{{ posts.category_name }}</td>
+		        <td>{{ posts.price }}</td>
+		        <td>{{ posts.updated_at }}</td>
+		        <td><a href="#"><i class="fa fa-edit"></i></a>  <a href="#"><i class="fa fa-trash"></i></a></td>
+		    </tr>
+		    {% endfor %}
+		</tbody>
+		<tfoot>
+		    <tr>
+		        <th>Ảnh đại diện</th>
+		        <th>Tiêu đề</th>
+		        <th>Danh mục</th>
+		        <th>Loại hình</th>		        
+		        <th>Cập nhật lần cuối</th>
+		        <th>Chức năng</th> 
+		    </tr>
+		</tfoot>
+		</table>
+</div>

@@ -230,7 +230,7 @@ class Account extends ComponentBase
                 throw new ApplicationException(Lang::get(/*Registrations are currently disabled.*/'rainlab.user::lang.account.registration_disabled'));
             }
 
-            /*
+            /* 
              * Validate input
              */
             $data = post();

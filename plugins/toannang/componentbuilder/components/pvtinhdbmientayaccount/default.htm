@@ -1,0 +1,53 @@
+<h2 class="text-dark text-center title-form">Cập nhật tài khoản</h2>
+<form data-request="onSave" data-request-validate data-request-flash   class="postform" data-request-success="formEditAccount();">   
+{{ form_open({ request: 'onSave' }) }}
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+				<label for="name">Họ tên cá nhân / Tên doanh nghiệp: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn nên nhập chính xác tên của bạn hoặc tên doanh nghiệp của bạn để người dùng có thể tìm thấy bạn"></span></label>
+				<input type="text" name="name" value="{{ user.name }}" class="input-dbmt" placeholder="Nhập họ và tên của bạn: ">
+				<span class="error-label" data-validate-for="name"></span>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+				<label for="email">Email: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn nên nhập chính xác email. Email dùng để đăng nhập vào website cũng như giúp bạn lấy lại mật khẩu khi cần."></span></label>
+				<input type="email" name="email" value="{{ user.email }}" class="input-dbmt" placeholder="Nhập email của bạn: ">
+				<span class="error-label" data-validate-for="email"></span>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+				<label for="website">Website: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Mọi người có thể tìm tới và tăng lượt truy cập cho website của bạn"></span></label>
+				<input type="text" name="website" value="{{ user.website }}" class="input-dbmt" placeholder="Nhập website của bạn ">
+				<span class="error-label" data-validate-for="website"></span>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6">
+			<div class="form-group">
+				<label for="phone_number">Số điện thoại: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Số điện thoại giúp mọi người có thể liên lạc đến bạn"></span></label>
+				<input type="text" name="phone_number" value="{{ user.phone_number }}" class="input-dbmt" placeholder="Nhập số điện thoại của bạn: ">
+				<span class="error-label" data-validate-for="phone_number"></span>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="form-group">
+				<label for="address">Địa chỉ: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Địa chỉ giúp mọi người có thể tìm đến bạn"></span></label>
+				<input type="text" name="address" value="{{ user.address }}" class="input-dbmt" placeholder="Nhập địa chỉ của bạn: ">
+			</div>
+		</div>
+		
+		<div class="col-xs-12 col-sm-12 col-md-12">
+			<div class="form-group">
+				<label for="bio">Mô tả doanh nghiệp: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Địa chỉ giúp mọi người có thể tìm đến bạn, bạn nên nhập mô tả ít nhất 200 kí tự!"></span></label>
+				<textarea name="bio" id="bio" class="input-dbmt" rows="10" placeholder="Mô tả doanh nghiệp của bạn">{{ user.bio }}</textarea>  
+				<span class="error-label" data-validate-for="bio"></span>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<button type="submit" class="button-bdmt " data-attach-loading> Cập nhật </button>
+		</div>
+	</div>
+{{ form_close() }}
+</form>	

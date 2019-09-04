@@ -41,7 +41,7 @@ class Plugin extends PluginBase
     				'type'		=>	'textarea',
     				'span'		=>	'full',
     				'size'		=>	'large',
-    				'tab'		=>	'Thông tin doanh nghiệp'c
+    				'tab'		=>	'Thông tin doanh nghiệp'
     			],
     		]);
     	});

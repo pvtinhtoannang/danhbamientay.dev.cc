@@ -1,0 +1,30 @@
+<h2 class="text-dark text-center title-form">Cập nhật tài khoản</h2>
+<form data-request="onSave" data-request-validate data-request-flash  class="postform" data-request-success="formEditAccount();">  
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3">
+			<div class="form-group">
+				<label for="passwordold">Mật khẩu cũ: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Mật khẩu hiện tại của bạn để chúng tôi xác nhận lại bạn đang đổi mật khẩu"></span></label>
+				<input type="password" name="passwordold" value="" class="input-dbmt" placeholder="Nhập mật khẩu hiện tại">
+				<span class="error-label" data-validate-for="passwordold"></span>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3">
+			<div class="form-group">
+				<label for="password">Mật khẩu mới: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Mật khẩu bạn muốn thay đổi"></span></label>
+				<input type="password" name="password" class="input-dbmt" placeholder="Nhập password của bạn: ">
+				<span class="error-label" data-validate-for="password"></span>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-sm-6 col-md-6 col-md-offset-3">
+			<div class="form-group">
+				<label for="newpassword">Xác nhận mật khẩu: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Xác nhận lại lần nữa để chắc chắn bạn nhập đúng mật khẩu cần thay đổi"></span></label>
+				<input type="password" name="password_confirmation" class="input-dbmt" placeholder="Nhập lại mật khẩu mới">
+				<span class="error-label" data-validate-for="password_confirmation"></span>
+			</div>
+		</div>
+		<div class="col-xs-12">
+			<button type="submit" class="button-bdmt " data-attach-loading> Cập nhật </button>
+		</div>
+	</div> 
+</form>	
