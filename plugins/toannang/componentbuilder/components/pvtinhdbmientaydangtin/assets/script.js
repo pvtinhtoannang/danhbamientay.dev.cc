@@ -127,7 +127,7 @@ $('#content').each(function () {
 
 $('#category').on('select2:select', function (e) {
   	var id = $(this).val();
-  	if(id == 1){
+  	if(id == '1'){
 		var url = 'frontend-get-property';
 		$('#area-box').css('opacity', '1');
   	}

@@ -33,6 +33,7 @@ function onStart(){
                         'assets/css/style.css',
                 ]|theme }}" rel="stylesheet">
         {% styles %}
+        <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}
@@ -43,8 +44,7 @@ function onStart(){
     {% component 'LamDBMienTayFooter' %}
 
         <!-- Scripts -->
-        <script src="{{ ['assets/js/jquery-3.2.1.min.js',
-                'assets/include/mmenu/jquery.mmenu.all.min.js',
+        <script src="{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
                 'assets/include/slick/slick.js',
                 'assets/include/wow/wow.js',
                 'assets/js/bootstrap.js',

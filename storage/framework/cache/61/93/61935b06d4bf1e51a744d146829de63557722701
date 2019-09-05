@@ -1,4 +1,4 @@
-1567593148a:1:{s:12:"tin-dang.htm";a:12:{s:8:"fileName";s:12:"tin-dang.htm";s:7:"content";s:207:"title = "Tin đăng"
+1567672387a:1:{s:12:"tin-dang.htm";a:12:{s:8:"fileName";s:12:"tin-dang.htm";s:7:"content";s:207:"title = "Tin đăng"
 url = "/tin-dang/:slug/:id"
 layout = "master"
 is_hidden = 0

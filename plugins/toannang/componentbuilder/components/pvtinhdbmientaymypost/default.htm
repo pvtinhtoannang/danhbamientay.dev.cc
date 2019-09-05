@@ -4,35 +4,60 @@
 	<table id="example" class="display table table-striped" style="width:100%">
 		<thead>
 		    <tr >
-		    	<th>Ảnh đại diện</th>
-		        <th>Tiêu đề</th>
-		        <th>Danh mục</th>
-		        <th>Giá</th>		        
-		        <th>Cập nhật lần cuối</th>
-		        <th>Chức năng</th>
+		    	<th style="width: 10%">Ảnh đại diện</th>
+		        <th style="width: 20%">Tiêu đề</th>
+		        <th style="width: 10%">Danh mục</th>
+		        <th style="width: 5%">Giá</th>		        
+		        <th style="width: 12%">Cập nhật lần cuối</th>
+		        <th style="width: 8%">Chức năng</th>
 		    </tr>
 		</thead>
 		<tbody>
 			{% for posts in listpost  %} 
 		    <tr>
-		        <td><img src="{{ posts.images.thumb(100,100, {'mode':'crop'}) }}" alt="{{ posts.title }}"></td>
+		        <td><img src="{{ posts.images.thumb(100,80, {'mode':'crop'}) }}" alt="{{ posts.title }}"></td>
 		        <td>{{ posts.title }}</td>
 		        <td>{{ posts.category_name }}</td>
 		        <td>{{ posts.price }}</td>
 		        <td>{{ posts.updated_at }}</td>
-		        <td><a href="#"><i class="fa fa-edit"></i></a>  <a href="#"><i class="fa fa-trash"></i></a></td>
+		        <td class="function">
+		        	<button class="btn-function">
+		        		<a class="btn-function" href="/chinh-sua-tin-dang/{{ posts.slug }}/{{ posts.id }}" data-toggle="tooltip" title="Chỉnh sửa bài đăng '{{ posts.title }}' "><i class="fa fa-edit" > </i></a>  	
+		        	</button>
+		        	{% set pagecurrent = '/danh-sach-tin-dang?page=' %}
+
+		        	{{ form_ajax('onDelete', {redirect: pagecurrent~pagination.current  ,data: { id: posts.id }, confirm: 'Bạn có chắc chắn muốn xoá?' }) }}
+		        	<button type="submit" class="btn-function"  data-toggle="tooltip" title="Xoá bài đăng '{{ posts.title }}' ">
+		        		<i class="fa fa-trash"></i>
+		        	</button>
+		        	 
+		        	{{ form_close() }}
+		        </td>
 		    </tr>
 		    {% endfor %}
 		</tbody>
 		<tfoot>
 		    <tr>
-		        <th>Ảnh đại diện</th>
-		        <th>Tiêu đề</th>
-		        <th>Danh mục</th>
-		        <th>Loại hình</th>		        
-		        <th>Cập nhật lần cuối</th>
-		        <th>Chức năng</th> 
+		    	<th style="width: 10%">Ảnh đại diện</th>
+		        <th style="width: 20%">Tiêu đề</th>
+		        <th style="width: 10%">Danh mục</th>
+		        <th style="width: 5%">Giá</th>		        
+		        <th style="width: 12%">Cập nhật lần cuối</th>
+		        <th style="width: 8%">Chức năng</th>
 		    </tr>
 		</tfoot>
-		</table>
+	</table>
+	{% if pagination.last > 1 %}
+    <div class="page_render"> 
+        <div class="col-xs-12">
+            <div class="pagination"> 
+              <a href="{{ pagination.previous }}">&laquo;</a>
+              {% for i in 1..pagination.last  %} 
+                <a {% if pagination.current == i %} class="active" {% endif %} href="/danh-sach-tin-dang?page={{ i }}">{{ i }} </a>
+              {% endfor %}
+              <a href="{{ pagination.nextpage }}">&raquo;</a>
+            </div>    
+        </div>                    
+    </div>                 
+    {% endif %}
 </div>

@@ -1,4 +1,4 @@
-1567593148a:1:{s:10:"master.htm";a:8:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:2107:"description = "Standard Layout"
+1567672387a:1:{s:10:"master.htm";a:8:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:2135:"description = "Standard Layout"
 
 [LamDBMienTayHeader]
 
@@ -33,6 +33,7 @@ function onStart(){
                         'assets/css/style.css',
                 ]|theme }}" rel="stylesheet">
         {% styles %}
+        <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}
@@ -43,8 +44,7 @@ function onStart(){
     {% component 'LamDBMienTayFooter' %}
 
         <!-- Scripts -->
-        <script src="{{ ['assets/js/jquery-3.2.1.min.js',
-                'assets/include/mmenu/jquery.mmenu.all.min.js',
+        <script src="{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
                 'assets/include/slick/slick.js',
                 'assets/include/wow/wow.js',
                 'assets/js/bootstrap.js',
@@ -56,7 +56,7 @@ function onStart(){
 
     </body>
 </html>
-";s:5:"mtime";i:1567127410;s:6:"markup";s:1907:"<!DOCTYPE html>
+";s:5:"mtime";i:1567654921;s:6:"markup";s:1935:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -79,6 +79,7 @@ function onStart(){
                         'assets/css/style.css',
                 ]|theme }}" rel="stylesheet">
         {% styles %}
+        <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}
@@ -89,8 +90,7 @@ function onStart(){
     {% component 'LamDBMienTayFooter' %}
 
         <!-- Scripts -->
-        <script src="{{ ['assets/js/jquery-3.2.1.min.js',
-                'assets/include/mmenu/jquery.mmenu.all.min.js',
+        <script src="{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
                 'assets/include/slick/slick.js',
                 'assets/include/wow/wow.js',
                 'assets/js/bootstrap.js',

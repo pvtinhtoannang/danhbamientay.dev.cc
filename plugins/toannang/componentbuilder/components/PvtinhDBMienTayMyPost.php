@@ -45,14 +45,25 @@ class PvtinhDBMienTayMyPost extends ComponentBase
                 ->join('toannang_raovat_post_category', 'toannang_raovat_post_category.posts_id', '=', 'toannang_raovat_posts.id')
                 ->join('toannang_raovat_categories', 'toannang_raovat_categories.id', '=', 'toannang_raovat_post_category.category_id') 
                 ->orderBy('toannang_raovat_posts.id', 'DESC')
-                ->paginate(50);
+                ->paginate(10);
         $this->page['listpost'] = $results;
+        $page = array();
+        $page['count'] = $results->count();
+        $page['current'] = $results->currentPage();
+        $page['hasmore'] = $results->hasMorePages();
+        $page['last'] = $results->lastPage();
+        $page['nextpage'] = $results->nextPageUrl();
+        $page['previous'] = $results->previousPageUrl();
+        $page['total'] = $results->total();
+        $this->page['pagination'] = $page;
     }
 
  
 
-    public function onSubmit()
+    public function onDelete()
     {
-         
+        $data  = post();
+        $id = $data['id'];
+        Posts::where('id', '=', $id)->delete(); 
     }
 }

@@ -65,32 +65,35 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 24
-        echo "    </head>
+        echo "        <script src=\"";
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
+        echo "\"> </script>
+    </head>
     <body>
     ";
-        // line 26
+        // line 27
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("LamDBMienTayHeader"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 27
+        // line 28
         echo "        <!-- Content -->
         <section id=\"layout-content\">
             ";
-        // line 29
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 30
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 31
         echo "        </section>
     ";
-        // line 31
+        // line 32
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("LamDBMienTayFooter"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 32
+        // line 33
         echo "
         <!-- Scripts -->
         <script src=\"";
-        // line 34
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/js/jquery-3.2.1.min.js", 1 => "assets/include/mmenu/jquery.mmenu.all.min.js", 2 => "assets/include/slick/slick.js", 3 => "assets/include/wow/wow.js", 4 => "assets/js/bootstrap.js", 5 => "assets/jquery.fancybox.min.js", 6 => "assets/js/index.js"]);
+        // line 35
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/include/mmenu/jquery.mmenu.all.min.js", 1 => "assets/include/slick/slick.js", 2 => "assets/include/wow/wow.js", 3 => "assets/js/bootstrap.js", 4 => "assets/jquery.fancybox.min.js", 5 => "assets/js/index.js"]);
         // line 41
         echo "\"></script>
         ";
@@ -131,7 +134,7 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
 
     public function getDebugInfo()
     {
-        return array (  117 => 44,  113 => 43,  98 => 42,  95 => 41,  93 => 34,  89 => 32,  85 => 31,  82 => 30,  80 => 29,  76 => 27,  72 => 26,  68 => 24,  65 => 23,  62 => 22,  60 => 12,  56 => 11,  49 => 7,  45 => 6,  41 => 5,  35 => 1,);
+        return array (  120 => 44,  116 => 43,  101 => 42,  98 => 41,  96 => 35,  92 => 33,  88 => 32,  85 => 31,  83 => 30,  79 => 28,  75 => 27,  68 => 24,  65 => 23,  62 => 22,  60 => 12,  56 => 11,  49 => 7,  45 => 6,  41 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -159,6 +162,7 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
                         'assets/css/style.css',
                 ]|theme }}\" rel=\"stylesheet\">
         {% styles %}
+        <script src=\"{{ 'assets/js/jquery-3.2.1.min.js'|theme }}\"> </script>
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}
@@ -169,8 +173,7 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
     {% component 'LamDBMienTayFooter' %}
 
         <!-- Scripts -->
-        <script src=\"{{ ['assets/js/jquery-3.2.1.min.js',
-                'assets/include/mmenu/jquery.mmenu.all.min.js',
+        <script src=\"{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
                 'assets/include/slick/slick.js',
                 'assets/include/wow/wow.js',
                 'assets/js/bootstrap.js',

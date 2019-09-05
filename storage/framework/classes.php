@@ -434,4 +434,6 @@
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayAccount' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayAccount.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayChangePassword' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayChangePassword.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayMyPost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayMyPost.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayChinhSuaTinDang' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayChinhSuaTinDang.php',
+  'Toannang\\RaoVat\\Models\\PropertyType' => 'plugins\\toannang\\raovat\\models\\PropertyType.php',
 );

@@ -1,0 +1,212 @@
+<h2 class="text-dark text-center title-form">CẬP NHẬT TIN ĐĂNG</h2>
+	<input type="hidden" name="" id="gallery_images_url"  
+	value="{% for image in post.images_gallery %} {{ image.path}}{% if loop.last == false %}{{ ',' }}{% endif %}{% endfor %}">
+	<input type="hidden" name="" id="gallery_images_file_name"  
+	value="{% for image in post.images_gallery %} {{ image.file_name}}{% if loop.last == false %}{{ ',' }}{% endif %}{% endfor %}">
+	<input type="hidden" name="" id="gallery_images_type"  
+	value="{% for image in post.images_gallery %} {{ image.content_type}}{% if loop.last == false %}{{ ',' }}{% endif %}{% endfor %}">
+	<form data-request="onSave" data-request-validate data-request-flash  data-request-files class="postform" data-request-success="formSubmit();">   
+		{{ form_open({ request: 'onSave', files: true }) }}
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				  <div class="form-group">
+				    <label for="category">Chọn danh mục: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn vui lòng chọn vào danh mục, các loại hình tương ứng sẽ hiển thị vào ô loại hình/địa điểm "></span></label>
+				     <select class="category input-dbmt" id="category" name="category">
+				     	{% for category in category_all %}
+					  		<option {% if post.category_id==category.id %} selected="selected" {% endif %} value="{{ category.id }}">{{ category.name }}</option> 
+					  	{% endfor %}  
+					</select>
+				  </div>
+			</div> 
+			<div class="col-xs-12 col-sm-6 col-md-6">
+			  	<div class="form-group">
+			    	<label for="locations">Chọn loại hình/địa điểm: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Dưới đây là các loại hình thuộc các danh mục bạn vừa chọn"></span></label>
+			     	<select class="location_id input-dbmt" name="location_id" id="location_id"> 
+			     		{% for property in propertyType %}
+					  		<option value="{{ property.id }}">{{ property.name }}</option> 
+					  	{% endfor %}
+					</select>
+			  	</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="form-group">
+			    	<label for="category">Tiêu đề tin đăng:  <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Tiêu đề tin đăng phải từ 8 - 255 kí tự, bạn vui lòng nhập các ký tự hợp lệ để bài đăng của bạn được sự quan tâm nhiều nhất"></span></label>
+			     	<input type="text" placeholder="Nhập tiêu đề tin đăng" name="title" class="input-dbmt" value="{{ post.title }}">
+			     	<span class="error-label" data-validate-for="title"></span>
+			  	</div>
+			</div>
+			
+			<div class="col-xs-12">
+				<div class="form-group">
+			    	<label for="description">Mô tả tin đăng: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Nhập mô tả tin đăng của bạn, phần này sẽ mô tả sơ lượt về tin đăng của bạn để thu hút người xem"></span></label>
+			     	<textarea id="description" placeholder="Nhập mô tả tin đăng" name="description" rows="5" class="input-dbmt">{{ post.description }}</textarea>
+			     	<span class="error-label" data-validate-for="description"></span>  
+			  	</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="form-group">
+			    	<label for="content">Nội dung tin đăng:  <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn vui lòng nhập nội dung chính của bài đăng"></span></label>
+			     	<textarea id="content" placeholder="Nhập nội dung tin đăng" name="content" class="input-dbmt">{{ post.content }}</textarea>  
+			     	<span class="error-label" data-validate-for="content"></span>
+			  	</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+			    	<label for="price">Nhập giá (đ): <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Giá của tin đăng phải là số nguyên dương, bạn nên nhập đúng mức giá để mọi người có thể tìm bài đăng của bạn chính xác nhất"></span></label>
+			     	<input type="number" id="price" placeholder="Nhập giá" name="price" min="0" value="{{ post.price }}" class="input-dbmt">
+			     	<span class="error-label" data-validate-for="price"></span>
+			  	</div>
+			</div>
+
+			<div class="col-xs-6">
+				<div class="form-group" id="area-box" {% if post.category_id != 1 %} style="opacity: 0" {% else %} style="opacity: 1" {% endif %}>
+			    	<label for="area">Diện tích (m <sup> <small>2</small> </sup>): <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Nếu bạn đang chọn chuyên mục bất động sản, vui lòng nhập diện tích bất động sản bạn đang sở hữu để mọi người có thể tìm kiếm nhanh nhất"></span></label>
+			     	<input type="number" min="0" value="{{ post.area }}" placeholder="Diện tích" name="area" id="area" class="input-dbmt">
+			     	<span class="error-label" data-validate-for="area"></span>
+			  	</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 col-md-12">
+						<div class="form-group">
+					    	<label for="category">Thêm ảnh: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn có thể thêm tối đa 5 ảnh cho bài đăng, mỗi ảnh tối đa 2MB và bạn có thể đăng các định dạng ảnh như: 'jpg', 'jpeg', 'png', 'gif', 'bmp'."></span>
+					    		<small></small></label>
+					     	    <input id="uploader" type="file" name="files-images">
+					  	</div>
+					</div>
+					<div class="col-xs-12">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="form-group">
+									<label for="address">Nhập địa chỉ: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn vui lòng nhập địa chỉ là số phòng, số nhà tên đường hoặc khu bạn ở sau đó chọn tiếp vào phần tỉnh thành phố, quận huyện, phường xã"></span></label>
+						     		<input type="text" placeholder="42 đường B23, Khu Dân Cư 91B ...." class="input-dbmt" name="address" value="{{ post.address }}" id="address" >
+					     		</div>
+							</select>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="form-group">
+							    	<label for="province">Chọn Tỉnh/Thành phố</label> <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn chọn Tỉnh / Thành phố sau đó Quận / Huyện tương ứng sẽ xuất hiện bên dưới"></span>
+							     	<select class="input-dbmt province" id="province" name="province">
+							     		<option value="-1">Chọn Tỉnh/Thành phố</option>
+							     		{% for province in provinces %}
+									  		<option {% if post.idprovince == province.id %} selected="selected" {% endif %} value="{{ province.id }}">{{ province.name }}</option> 
+									  	{% endfor %}
+									</select>
+							  	</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="form-group">
+							    	<label for="district">Chọn Quận/Huyện</label> <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn chọn Quận/ huyện sau đó Phường xã tương ứng sẽ xuất hiện bên dưới"></span>
+							     	<select class="district input-dbmt" id="district" name="district">
+							     		<option value="-1">Chọn Quận / Huyện</option>
+							     		{% for district in districts %}
+									  		<option {% if post.iddistrict == district.id %} selected="selected" {% endif %} value="{{ district.id }}">{{ district.name }}</option> 
+									  	{% endfor %}
+									</select>
+							  	</div>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-md-6">
+								<div class="form-group">
+							    	<label for="ward">Chọn Phường/Xã/Thị trấn</label>
+							     	<select class="ward input-dbmt" id="ward" name="ward">
+							     		<option value="-1">Chọn Phường / Xã </option>
+							     		{% for ward in wards %}
+									  		<option {% if post.idward == ward.id %} selected="selected" {% endif %} value="{{ ward.id }}">{{ ward.name }}</option> 
+									  	{% endfor %}
+									</select>
+							  	</div>
+							</div>	
+						</div> 
+					</div>
+				</div>	
+			</div>	
+			<div class="col-xs-12 text-center">
+				<button type="submit" class="button-bdmt " data-attach-loading>
+					Đăng tin
+				</button>	
+			</div>
+
+		</div>	
+		{{ form_close() }}
+	</form>
+<script >
+	$(document).ready(function(){
+		$('input[name="files-images"]').fileuploader({
+			    extensions: ['jpg', 'jpeg', 'png', 'gif', 'bmp'],
+				changeInput: ' ',
+				fileMaxSize: 2,
+				limit: 5,
+				maxSize: 2,
+				theme: 'thumbnails',
+				enableApi: true,
+				addMore: true,
+				files: [
+					{% for image in post.images_gallery %}
+						{
+							name: '{{ image.file_name}}',
+							type: '{{ image.content_type}}',
+							file: '{{ image.path}}'
+						}, 
+					{% endfor %}
+				],
+				thumbnails: {
+					box: '<div class="fileuploader-items">' +
+							  '<ul class="fileuploader-items-list">' +
+								  '<li class="fileuploader-thumbnails-input"><div class="fileuploader-thumbnails-input-inner">+</div></li>' +
+							  '</ul>' +
+						  '</div>',
+					item: '<li class="fileuploader-item">' +
+							   '<div class="fileuploader-item-inner">' +
+								   '<div class="thumbnail-holder">${image}</div>' +
+								   '<div class="actions-holder">' +
+								   '<a class="fileuploader-action fileuploader-action-sort" title="${captions.sort}"><i></i></a>' +
+										  '<a class="fileuploader-action fileuploader-action-remove" title="${captions.remove}"><i class="remove"></i></a>' +
+									   '<span class="fileuploader-action-popup"></span>' +
+								   '</div>' +
+									  '<div class="progress-holder">${progressBar}</div>' +
+							   '</div>' +
+						   '</li>',
+					item2: '<li class="fileuploader-item">' +
+							   '<div class="fileuploader-item-inner">' +
+								   '<div class="thumbnail-holder">${image}</div>' +
+								   '<div class="actions-holder">' +
+										   '<a class="fileuploader-action fileuploader-action-sort" title="${captions.sort}"><i></i></a>' +
+										   '<a class="fileuploader-action fileuploader-action-remove" title="${captions.remove}"><i class="remove"></i></a>' +
+										   '<span class="fileuploader-action-popup"></span>' +
+								   '</div>' +
+							   '</div>' +
+						   '</li>',
+					startImageRenderer: true,
+					canvasImage: false,
+					_selectors: {
+						list: '.fileuploader-items-list',
+						item: '.fileuploader-item',
+						start: '.fileuploader-action-start',
+						retry: '.fileuploader-action-retry',
+						remove: '.fileuploader-action-remove',
+						sorter: '.fileuploader-action-sort'
+					},
+					onItemShow: function(item, listEl) {
+						var plusInput = listEl.find('.fileuploader-thumbnails-input');
+						
+						plusInput.insertAfter(item.html);
+						
+						if(item.format == 'image') {
+							item.html.find('.fileuploader-item-icon').hide();
+						}
+					}
+				},
+				afterRender: function(listEl, parentEl, newInputEl, inputEl) {
+					var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+						api = $.fileuploader.getInstance(inputEl.get(0));
+				
+					plusInput.on('click', function() {
+						api.open();
+					});
+				},
+			});
+	});
+	
+
+
+</script>

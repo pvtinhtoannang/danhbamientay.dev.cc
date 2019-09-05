@@ -5,6 +5,8 @@ use toannang\Settings\Models\Settings;
 use DB;
 use Toannang\RaoVat\Models\Locations;
 use Toannang\RaoVat\Models\Posts;
+use Toannang\RaoVat\Models\PropertyType;
+
 use System\Models\File;
 use Lang;
 use Auth;
@@ -82,7 +84,7 @@ class PvtinhDBMienTayDangTin extends ComponentBase
             else{
                 $post               = new Posts();
                 $post->title        = $data['title'];
-                $post->slug         = str_slug($data['title']);
+                $post->slug         = str_slug($data['title']); 
                 $post->description  = $data['description'];
                 $post->content      = $data['content'];
                 $post->price        = $data['price'];
@@ -90,10 +92,19 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 $post->province     = $data['province'];
                 $post->district     = $data['district'];
                 $post->ward         = $data['ward']; 
-                $post->locations    = $data['location_id'];
-                $post->categories   = $data['category'];
-                $post->user         = Auth::user()->id;
+                $post->meta_title   = $data['title'];
+                $post->meta_description = $data['description'];
                 
+                $post->address   = $data['address'];
+                
+                $post->user         = Auth::user()->id;
+                if($data['category'] == 1){
+                    $propertyType = PropertyType::select('slug')->where('id','=', $data['location_id'])->first();
+                    $post->property_type = $propertyType->slug;
+                }
+                else{
+                    $post->locations    = $data['location_id'];
+                }
                 if (Input::file('files-images')) {
                     $image = Input::file('files-images');
                     
@@ -104,7 +115,7 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                     }
                 }                
                 $post->save();
-                // return \Redirect::to('/dang-tin/');
+                return \Redirect::to('/dang-tin/');
             }
         }   
         catch (Exception $ex) {
