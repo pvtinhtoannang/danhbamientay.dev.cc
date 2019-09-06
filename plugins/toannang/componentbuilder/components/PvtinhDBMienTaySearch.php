@@ -101,30 +101,32 @@ class PvtinhDBMienTaySearch extends ComponentBase
                 return;
             }
             if(!empty($_GET['danh-muc']) || ($_GET['danh-muc'] != 'tat-ca-danh-muc')){
+                
+                $this->page['danhmuc'] = $_GET['danh-muc'];
                 if(isset($_GET['keyword'])){
-                     $keyword = $_GET['keyword'];
-
-                $results = Posts::select('toannang_raovat_posts.*', 
-                        'toannang_raovat_tinhthanhpho.name as province', 
-                        'toannang_raovat_quanhuyen.name as district', 
-                        'toannang_raovat_xaphuongthitran.name as ward')
-                        ->leftJoin('toannang_raovat_quanhuyen', 'toannang_raovat_quanhuyen.id', '=', 'district')
-                        ->leftJoin('toannang_raovat_tinhthanhpho', 'toannang_raovat_tinhthanhpho.id', '=', 'province')
-                        ->leftJoin('toannang_raovat_xaphuongthitran', 'toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.district')
-                        ->where('toannang_raovat_posts.title', 'like', '%'.$keyword.'%')
-                        ->paginate(16);
-                        
-                        $this->page['listpost'] = $results;
-                        $page = array();
-                        $page['count'] = $results->count();
-                        $page['current'] = $results->currentPage();
-                        $page['hasmore'] = $results->hasMorePages();
-                        $page['last'] = $results->lastPage();
-                        $page['nextpage'] = $results->nextPageUrl();
-                        $page['previous'] = $results->previousPageUrl();
-                        $page['total'] = $results->total();
-                        $this->page['pagination'] = $page;
-                        $this->page['isbds'] = 'false';
+                    $keyword = $_GET['keyword'];
+                    $this->page['keyword'] = $_GET['keyword'];
+                    $results = Posts::select('toannang_raovat_posts.*', 
+                    'toannang_raovat_tinhthanhpho.name as province', 
+                    'toannang_raovat_quanhuyen.name as district', 
+                    'toannang_raovat_xaphuongthitran.name as ward')
+                    ->leftJoin('toannang_raovat_quanhuyen', 'toannang_raovat_quanhuyen.id', '=', 'district')
+                    ->leftJoin('toannang_raovat_tinhthanhpho', 'toannang_raovat_tinhthanhpho.id', '=', 'province')
+                    ->leftJoin('toannang_raovat_xaphuongthitran', 'toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.district')
+                    ->where('toannang_raovat_posts.title', 'like', '%'.$keyword.'%')
+                    ->paginate(16);
+                    
+                    $this->page['listpost'] = $results;
+                    $page = array();
+                    $page['count'] = $results->count();
+                    $page['current'] = $results->currentPage();
+                    $page['hasmore'] = $results->hasMorePages();
+                    $page['last'] = $results->lastPage();
+                    $page['nextpage'] = $results->nextPageUrl();
+                    $page['previous'] = $results->previousPageUrl();
+                    $page['total'] = $results->total();
+                    $this->page['pagination'] = $page;
+                    $this->page['isbds'] = 'false';
                 }
                
             }else{

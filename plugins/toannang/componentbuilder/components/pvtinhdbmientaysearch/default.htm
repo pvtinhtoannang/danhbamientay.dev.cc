@@ -93,7 +93,7 @@
                         <div class="pagination"> 
                           <a href="{{ pagination.previous }}">&laquo;</a>
                           {% for i in 1..pagination.last  %} 
-                            <a {% if pagination.current == i %} class="active" {% endif %} href="/chuyen-muc/{{ category_slug }}?page={{ i }}">{{ i }} </a>
+                            <a {% if pagination.current == i %} class="active" {% endif %} href="/tim-kiem?danh-muc={{ danhmuc }}&keyword={{ keyword }}&page={{ i }}">{{ i }} </a>
                           {% endfor %}
                           <a href="{{ pagination.nextpage }}">&raquo;</a>
                         </div>    
