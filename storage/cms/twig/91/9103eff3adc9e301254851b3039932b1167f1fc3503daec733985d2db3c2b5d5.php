@@ -41,16 +41,17 @@ class __TwigTemplate_f01182a71b713ae0a1b11c9e3f8ae2214cd8b1d859d7163e179addc8eab
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["partner"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["brand"]) {
-            // line 6
-            echo "                ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["brand"], "images", [], "any", false, false, false, 6), "html", null, true);
-            echo "
+            echo " 
                 <div class=\"partner_item col-md-4\">
-                    <a href=\"javascript:;\"><img src=\"";
-            // line 8
-            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["brand"], "image", [], "any", false, false, false, 8));
+                    <a title=\"";
+            // line 7
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["brand"], "name", [], "any", false, false, false, 7), "html", null, true);
+            echo "\" target=\"_blank\"  href=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["brand"], "link", [], "any", false, false, false, 7), "html", null, true);
+            echo "\"><img src=\"";
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["brand"], "image", [], "any", false, false, false, 7));
             echo "\"  alt=\"";
-            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["brand"], "image", [], "any", false, false, false, 8));
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, $context["brand"], "image", [], "any", false, false, false, 7));
             echo "\"></a>
                 </div>\" 
                 ";
@@ -58,7 +59,7 @@ class __TwigTemplate_f01182a71b713ae0a1b11c9e3f8ae2214cd8b1d859d7163e179addc8eab
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['brand'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 11
+        // line 10
         echo "            </div>
         </div>
 \t</div>
@@ -77,7 +78,7 @@ class __TwigTemplate_f01182a71b713ae0a1b11c9e3f8ae2214cd8b1d859d7163e179addc8eab
 
     public function getDebugInfo()
     {
-        return array (  62 => 11,  51 => 8,  45 => 6,  41 => 5,  35 => 1,);
+        return array (  63 => 10,  48 => 7,  41 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -86,10 +87,9 @@ class __TwigTemplate_f01182a71b713ae0a1b11c9e3f8ae2214cd8b1d859d7163e179addc8eab
 \t<div class=\"lp_danhbamientay_partner\">
         <div class=\"container\">
             <div class=\"partner_wrapper row\">
-                {% for brand in partner %}
-                {{ brand.images }}
+                {% for brand in partner %} 
                 <div class=\"partner_item col-md-4\">
-                    <a href=\"javascript:;\"><img src=\"{{ brand.image|media }}\"  alt=\"{{ brand.image|media  }}\"></a>
+                    <a title=\"{{ brand.name }}\" target=\"_blank\"  href=\"{{ brand.link }}\"><img src=\"{{ brand.image|media }}\"  alt=\"{{ brand.image|media  }}\"></a>
                 </div>\" 
                 {% endfor %}
             </div>

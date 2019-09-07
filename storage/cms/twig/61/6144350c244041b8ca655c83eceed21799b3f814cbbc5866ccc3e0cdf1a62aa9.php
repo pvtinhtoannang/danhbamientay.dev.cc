@@ -45,8 +45,8 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
             // line 5
             echo "    ";
             $context["slug_place"] = twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 5), "title_section", [], "any", false, false, false, 5), "slug", [], "any", false, false, false, 5);
-            // line 6
-            echo "\t<div class=\"lp_danhbamientay_place\">
+            echo " 
+\t<div class=\"lp_danhbamientay_place\">
         <div class=\"container\">
             <div class=\"mientay_title_wrapper\">
                 <div class=\"row\">
@@ -122,30 +122,45 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                                 </ul>
                             </div>
                         </div>
+                         
+
                         <div class=\"dbmt_ads_wrapper hidden-sm hidden-xs\">
-                            <a href=\"#\">
+                            <a href=\"";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 42), "category_home", [], "any", false, false, false, 42), "link_1", [], "any", false, false, false, 42), "html", null, true);
+            echo "\" target=\"_blank\" title=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 42), "title_section", [], "any", false, false, false, 42), "name", [], "any", false, false, false, 42), "html", null, true);
+            echo "\">
                                 <img src=\"";
-            // line 41
-            echo call_user_func_array($this->env->getFilter('component')->getCallable(), ["pvtinhdbmientayplace/images/qc2.jpg"]);
+            // line 43
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 43), "category_home", [], "any", false, false, false, 43), "image_1", [], "any", false, false, false, 43));
+            echo "\" alt=\"";
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 43), "category_home", [], "any", false, false, false, 43), "image_1", [], "any", false, false, false, 43));
             echo "\">
                             </a>
                         </div>
                         <div class=\"dbmt_ads_wrapper hidden-sm hidden-xs\">
-                            <a href=\"#\">
+                            <a target=\"_blank\" title=\"";
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 47), "title_section", [], "any", false, false, false, 47), "name", [], "any", false, false, false, 47), "html", null, true);
+            echo "\" href=\"\" >
                                 <img src=\"";
-            // line 46
-            echo call_user_func_array($this->env->getFilter('component')->getCallable(), ["pvtinhdbmientayplace/images/qc3.jpg"]);
+            // line 48
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 48), "category_home", [], "any", false, false, false, 48), "image_2", [], "any", false, false, false, 48));
+            echo "\" alt=\"";
+            echo $this->extensions['System\Twig\Extension']->mediaFilter(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 48), "category_home", [], "any", false, false, false, 48), "image_2", [], "any", false, false, false, 48));
             echo "\">
                             </a>
                         </div>
+                        
                     </div>
-                </div>
+                </div> 
                 <div class=\"col-md-9 right_wrapper\">
                     <div class=\"product_wrapper\">
                         ";
-            // line 53
+            // line 56
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 53), "list_place", [], "any", false, false, false, 53));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "item_place", [], "any", false, false, false, 56), "list_place", [], "any", false, false, false, 56));
             foreach ($context['_seq'] as $context["_key"] => $context["posts"]) {
                 echo "  
 
@@ -153,44 +168,44 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                             <div class=\"product_item\">
                                 <div class=\"product_img\">
                                     <a href=\"/tin-dang/";
-                // line 58
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 58), "html", null, true);
+                // line 61
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 61), "html", null, true);
                 echo "/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 61), "html", null, true);
                 echo "\">
                                         ";
-                // line 59
-                if (twig_test_empty(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["posts"], "images", [], "any", false, false, false, 59), "path", [], "any", false, false, false, 59))) {
-                    // line 60
+                // line 62
+                if (twig_test_empty(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["posts"], "images", [], "any", false, false, false, 62), "path", [], "any", false, false, false, 62))) {
+                    // line 63
                     echo "                                            <img src=\"";
                     echo call_user_func_array($this->env->getFilter('component')->getCallable(), ["pvtinhdbmientayrealestate/images/no-image.jpg"]);
                     echo "\" alt=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 60), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 63), "html", null, true);
                     echo "\">
                                         ";
                 } else {
-                    // line 62
+                    // line 65
                     echo "                                            <img src=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["posts"], "images", [], "any", false, false, false, 62), "thumb", [0 => 360, 1 => 180, 2 => ["mode" => "crop"]], "method", false, false, false, 62), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["posts"], "images", [], "any", false, false, false, 65), "thumb", [0 => 360, 1 => 180, 2 => ["mode" => "crop"]], "method", false, false, false, 65), "html", null, true);
                     echo "\" alt=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 62), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 65), "html", null, true);
                     echo "\">
                                         ";
                 }
-                // line 64
+                // line 67
                 echo "                                    </a>
                                 </div> 
                                 <div class=\"product_content content-product\">
                                     <h3 class=\"product_name medium-font\">
                                        <a href=\"/tin-dang/";
-                // line 68
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 68), "html", null, true);
+                // line 71
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "slug", [], "any", false, false, false, 71), "html", null, true);
                 echo "/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 68), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "id", [], "any", false, false, false, 71), "html", null, true);
                 echo "\" data-toggle=\"tooltip\" title=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 68), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 71), "html", null, true);
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 68), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["posts"], "title", [], "any", false, false, false, 71), "html", null, true);
                 echo "</a>
                                     </h3>    
                                 </div>                                
@@ -201,22 +216,22 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['posts'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 74
+            // line 77
             echo "                    </div>
                 </div>
             </div>
         </div>
 \t</div>
         ";
-            // line 79
+            // line 82
             $context["index"] = (($context["index"] ?? null) + 1);
-            // line 80
+            // line 83
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 81
+        // line 84
         echo "</section> 
 ";
     }
@@ -233,7 +248,7 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
 
     public function getDebugInfo()
     {
-        return array (  220 => 81,  214 => 80,  212 => 79,  205 => 74,  187 => 68,  181 => 64,  173 => 62,  165 => 60,  163 => 59,  157 => 58,  147 => 53,  137 => 46,  129 => 41,  121 => 35,  108 => 32,  105 => 31,  101 => 30,  88 => 20,  83 => 17,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  49 => 6,  46 => 5,  41 => 4,  39 => 3,  35 => 1,);
+        return array (  235 => 84,  229 => 83,  227 => 82,  220 => 77,  202 => 71,  196 => 67,  188 => 65,  180 => 63,  178 => 62,  172 => 61,  162 => 56,  149 => 48,  145 => 47,  136 => 43,  130 => 42,  121 => 35,  108 => 32,  105 => 31,  101 => 30,  88 => 20,  83 => 17,  70 => 16,  66 => 15,  62 => 14,  56 => 11,  46 => 5,  41 => 4,  39 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -242,7 +257,7 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
 <section id=\"lp_danhbamientay_place\">
     {% set index = 1 %}
     {% for item in content %}
-    {% set slug_place = item.item_place.title_section.slug %}
+    {% set slug_place = item.item_place.title_section.slug %} 
 \t<div class=\"lp_danhbamientay_place\">
         <div class=\"container\">
             <div class=\"mientay_title_wrapper\">
@@ -276,18 +291,21 @@ class __TwigTemplate_48b72c5b2d53797ec7a941629e307cd0aceb52f92adc056154d4833bca2
                                 </ul>
                             </div>
                         </div>
+                         
+
                         <div class=\"dbmt_ads_wrapper hidden-sm hidden-xs\">
-                            <a href=\"#\">
-                                <img src=\"{{ 'pvtinhdbmientayplace/images/qc2.jpg'|component }}\">
+                            <a href=\"{{ item.item_place.category_home.link_1 }}\" target=\"_blank\" title=\"{{ item.item_place.title_section.name }}\">
+                                <img src=\"{{ item.item_place.category_home.image_1|media }}\" alt=\"{{ item.item_place.category_home.image_1|media }}\">
                             </a>
                         </div>
                         <div class=\"dbmt_ads_wrapper hidden-sm hidden-xs\">
-                            <a href=\"#\">
-                                <img src=\"{{ 'pvtinhdbmientayplace/images/qc3.jpg'|component }}\">
+                            <a target=\"_blank\" title=\"{{ item.item_place.title_section.name }}\" href=\"\" >
+                                <img src=\"{{ item.item_place.category_home.image_2|media }}\" alt=\"{{ item.item_place.category_home.image_2|media }}\">
                             </a>
                         </div>
+                        
                     </div>
-                </div>
+                </div> 
                 <div class=\"col-md-9 right_wrapper\">
                     <div class=\"product_wrapper\">
                         {% for posts in item.item_place.list_place %}  

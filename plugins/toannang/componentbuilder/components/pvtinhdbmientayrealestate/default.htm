@@ -44,9 +44,11 @@
                             </form>
                         </div>
                         <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
-                            <a href="#">
-                                <img src="{{ 'pvtinhdbmientayrealestate/images/qc1.jpg'|component }} ">
+                            {% for item in banner_item %} 
+                            <a href="{{ item.link }}" target="_blank" title="{{ item.name }}">
+                                <img src="{{ item.image|media }}" alt="{{ item.name }}">
                             </a>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -59,7 +61,7 @@
                                     <a href="/tin-dang/{{ posts.slug }}/{{ posts.id }}" title="{{ posts.title }}">
                                         {% if posts.images.path is empty %}
                                             <img src="{{ 'pvtinhdbmientayrealestate/images/no-image.jpg'|component }}" alt="{{ posts.title }}">
-                                        {% else %}
+                                        {% else %} 
                                             <img src="{{ posts.images.thumb(360,180, {'mode':'crop'}) }}" alt="{{ posts.title }}">
                                         {% endif %}
                                         

@@ -436,4 +436,7 @@
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayMyPost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayMyPost.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayChinhSuaTinDang' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayChinhSuaTinDang.php',
   'Toannang\\RaoVat\\Models\\PropertyType' => 'plugins\\toannang\\raovat\\models\\PropertyType.php',
+  'RainLab\\Blog\\FormWidgets\\BlogMarkdown' => 'plugins\\rainlab\\blog\\formwidgets\\BlogMarkdown.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTaySinglePost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTaySinglePost.php',
+  'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveNews' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveNews.php',
 );

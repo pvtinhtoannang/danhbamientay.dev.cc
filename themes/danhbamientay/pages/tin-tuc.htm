@@ -1,0 +1,11 @@
+title = "Tin tức"
+url = "/tin-tuc/:slug"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[PvtinhDBMienTaySinglePost]
+==
+{% component 'PvtinhDBMienTaySinglePost' %}
+{% set post = blogPost.post %}

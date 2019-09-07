@@ -2,10 +2,9 @@
 	<div class="lp_danhbamientay_partner">
         <div class="container">
             <div class="partner_wrapper row">
-                {% for brand in partner %}
-                {{ brand.images }}
+                {% for brand in partner %} 
                 <div class="partner_item col-md-4">
-                    <a href="javascript:;"><img src="{{ brand.image|media }}"  alt="{{ brand.image|media  }}"></a>
+                    <a title="{{ brand.name }}" target="_blank"  href="{{ brand.link }}"><img src="{{ brand.image|media }}"  alt="{{ brand.image|media  }}"></a>
                 </div>" 
                 {% endfor %}
             </div>

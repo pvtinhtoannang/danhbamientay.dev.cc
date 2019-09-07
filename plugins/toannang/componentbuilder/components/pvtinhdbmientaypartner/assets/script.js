@@ -1,8 +1,7 @@
 $(document).ready(function() {
-	$('.partner_wrapper').slick({
+	$('.lp_danhbamientay_partner .partner_wrapper').slick({
 	  	dots: true,
-	  	arrows: false,
-	  	infinite: true,
+	  	arrows: false, 
 	  	autoplay:true,
 	  	autoplaySpeed:300, 
   		slidesToScroll: 1,
@@ -25,7 +24,7 @@ $(document).ready(function() {
 		    {
 		      breakpoint: 576,
 		      settings: {
-		        slidesPerRow: 2,
+		        slidesPerRow: 2, 
 		      }
 		    }
 	  	]

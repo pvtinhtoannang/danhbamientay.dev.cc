@@ -10,6 +10,7 @@ use Toannang\Raovat\Models\District;
 use Toannang\Raovat\Models\Locations;
 use Toannang\Raovat\Models\Category; 
 use Illuminate\Pagination\Paginator;
+use RainLab\Blog\Models\Post;
 class PvtinhDBMienTayArchive extends ComponentBase
 {
     public function componentDetails()
@@ -21,7 +22,7 @@ class PvtinhDBMienTayArchive extends ComponentBase
     }
 
     public function defineProperties()
-    {
+    { 
         return [];
     }
 
@@ -74,6 +75,9 @@ class PvtinhDBMienTayArchive extends ComponentBase
             ->get();   
             $this->page['isbds'] = 'false';
         }
+
+        $news = Post::select('rainlab_blog_posts.*')->paginate(4);
+        $this->page['newslist'] = $news;
 
     }
 }

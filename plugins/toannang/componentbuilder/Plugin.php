@@ -19,6 +19,8 @@ use Toannang\Componentbuilder\Components\PvtinhDBMienTayAccount;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayChangePassword;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayMyPost;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayChinhSuaTinDang;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTaySinglePost;
+use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveNews;
 
 class Plugin extends PluginBase
 {
@@ -43,6 +45,8 @@ class Plugin extends PluginBase
             PvtinhDBMienTayChangePassword::class => 'PvtinhDBMienTayChangePassword',
             PvtinhDBMienTayMyPost::class => 'PvtinhDBMienTayMyPost',
             PvtinhDBMienTayChinhSuaTinDang::class => 'PvtinhDBMienTayChinhSuaTinDang',
+            PvtinhDBMienTaySinglePost::class => 'PvtinhDBMienTaySinglePost',
+            PvtinhDBMienTayArchiveNews::class => 'PvtinhDBMienTayArchiveNews',
             
           ];
     }

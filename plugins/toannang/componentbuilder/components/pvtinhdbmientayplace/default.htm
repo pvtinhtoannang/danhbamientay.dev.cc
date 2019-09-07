@@ -2,7 +2,7 @@
 <section id="lp_danhbamientay_place">
     {% set index = 1 %}
     {% for item in content %}
-    {% set slug_place = item.item_place.title_section.slug %}
+    {% set slug_place = item.item_place.title_section.slug %} 
 	<div class="lp_danhbamientay_place">
         <div class="container">
             <div class="mientay_title_wrapper">
@@ -36,18 +36,21 @@
                                 </ul>
                             </div>
                         </div>
+                         
+
                         <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
-                            <a href="#">
-                                <img src="{{ 'pvtinhdbmientayplace/images/qc2.jpg'|component }}">
+                            <a href="{{ item.item_place.category_home.link_1 }}" target="_blank" title="{{ item.item_place.title_section.name }}">
+                                <img src="{{ item.item_place.category_home.image_1|media }}" alt="{{ item.item_place.category_home.image_1|media }}">
                             </a>
                         </div>
                         <div class="dbmt_ads_wrapper hidden-sm hidden-xs">
-                            <a href="#">
-                                <img src="{{ 'pvtinhdbmientayplace/images/qc3.jpg'|component }}">
+                            <a target="_blank" title="{{ item.item_place.title_section.name }}" href="" >
+                                <img src="{{ item.item_place.category_home.image_2|media }}" alt="{{ item.item_place.category_home.image_2|media }}">
                             </a>
                         </div>
+                        
                     </div>
-                </div>
+                </div> 
                 <div class="col-md-9 right_wrapper">
                     <div class="product_wrapper">
                         {% for posts in item.item_place.list_place %}  

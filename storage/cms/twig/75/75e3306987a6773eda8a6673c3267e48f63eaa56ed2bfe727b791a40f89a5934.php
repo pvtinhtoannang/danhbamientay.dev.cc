@@ -286,6 +286,8 @@ class __TwigTemplate_a3c5184c58598c6934e603dac28edd00c2a6a5ce1fcc7080bae27962c3e
         echo "            </div>
         </div>
 \t</div>
+
+    
 </section> ";
     }
 
@@ -419,6 +421,8 @@ class __TwigTemplate_a3c5184c58598c6934e603dac28edd00c2a6a5ce1fcc7080bae27962c3e
             </div>
         </div>
 \t</div>
+
+    
 </section> ", "C:\\Program Files (x86)\\Ampps\\www\\dev\\danhbamientay.dev.cc/plugins/toannang/componentbuilder/components/pvtinhdbmientayarchive/default.htm", "");
     }
 }

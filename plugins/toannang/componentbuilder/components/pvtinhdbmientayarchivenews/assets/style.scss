@@ -1,0 +1,111 @@
+@import 'mixin.scss';
+ 
+.lp_danhbamientay_news {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50; 
+    width: 100%; 
+    background-color: #f9f9f9;
+    padding-bottom: 52px;
+    padding-top: 10px;
+    
+    .news_title {
+        font-size: 30px;
+        font-weight: 700;
+        color: $bg;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1.4;
+    }
+
+    .news_wrapper {
+        margin-top: 22px;
+        @include dis_f();
+        @include f_wrap();
+        
+        .news_box_item {
+            margin-bottom: 20px;
+            .news_item {
+                &:hover {
+                    
+                    .news_content {
+                        .news_name {
+                            a {
+                                color: $color;
+                            }
+                        }
+                    }
+                }
+                .news_img { 
+
+                    a {
+                        width: 100%;
+                        height: 231px;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                           
+                        }
+                    }
+                }
+
+                .news_content {
+                    padding-top: 7px;
+                    
+                    .news_name {
+                        a {
+                            color: #000;
+                            font-weight: 700;
+                            font-size: 16px;
+                            @include cut_line(16, 1.3, 2);
+                            display: block;
+                            @include trans(0.4);
+                        }
+                    }
+
+                    .news_date {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #000;
+                        line-height: 1.4; 
+                    }
+
+                    .news_des {
+                        font-size: 15px;
+                        font-weight: 300;
+                        color: #444444;
+                        @include cut_line(15, 1.3, 5);
+                        margin-bottom: 25px;
+                    }
+
+                    .news_more {
+                        a {
+                            display: inline-block;
+                            width: 128px;
+                            font-weight: 500;
+                            color: #fff;
+                            font-size: 14px;
+                            padding: 10.3px 0;
+                            background-color: $bg;
+                            border-radius: 2px;
+                            text-align: center;
+                            @include trans(0.4);
+
+                            &:hover {
+                                background-color: $color;
+                            }
+
+                            i {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

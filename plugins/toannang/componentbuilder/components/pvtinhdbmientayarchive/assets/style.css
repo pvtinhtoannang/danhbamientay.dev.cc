@@ -164,7 +164,7 @@
               -webkit-box-orient: vertical;
               overflow: hidden;
               text-overflow: ellipsis;
-              height: 36.4px; }
+              max-height: 36.4px; }
           .lp_danhbamientay_archive_real_estate .product_wrapper .product_box_item .product_item .product_content .product_info p {
             color: #494949;
             font-size: 13px;

@@ -35,6 +35,10 @@ class __TwigTemplate_2e3e5f3c83bdf7454c5e393b7c859e4de73a4e3b38bfb15eda83e19cefe
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTayArchive"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
+        // line 2
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("PvtinhDBMienTayArchiveNews"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
     }
 
     public function getTemplateName()
@@ -49,11 +53,12 @@ class __TwigTemplate_2e3e5f3c83bdf7454c5e393b7c859e4de73a4e3b38bfb15eda83e19cefe
 
     public function getDebugInfo()
     {
-        return array (  35 => 1,);
+        return array (  39 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% component 'PvtinhDBMienTayArchive' %}", "C:\\Program Files (x86)\\Ampps\\www\\dev\\danhbamientay.dev.cc/themes/danhbamientay/pages/chuyen-muc.htm", "");
+        return new Source("{% component 'PvtinhDBMienTayArchive' %}
+{% component 'PvtinhDBMienTayArchiveNews' %}", "C:\\Program Files (x86)\\Ampps\\www\\dev\\danhbamientay.dev.cc/themes/danhbamientay/pages/chuyen-muc.htm", "");
     }
 }

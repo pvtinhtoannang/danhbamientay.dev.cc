@@ -22,7 +22,7 @@
 @mixin dis_f() {
 	display: -webkit-box;
   	display: -moz-box;
-	display: -ms-flexbox;
+	   display: -ms-flexbox;
   	display: -webkit-flex;
   	display: flex;
 }
@@ -102,7 +102,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: ($fontSize * $lineHeight * $line)+px;
+  max-height: ($fontSize * $lineHeight * $line)+px;
 }
 
 @mixin cut_line1() {

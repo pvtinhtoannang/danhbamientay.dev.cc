@@ -1,0 +1,47 @@
+@import 'mixin.scss';
+
+.pvtinhdbmientaysinglepost {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    padding: 90px 0;
+     
+    h1{
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #616161;
+    } 
+    .info-post{
+        border-bottom: 1px solid #616161;
+        padding: 30px 0;
+        ul{
+            @include dis_f();
+            @include f_wrap();
+            @include f_just(center);
+            li{
+                font-size: 16px;
+                padding: 0 10px;
+            }
+        }
+    }
+    .description{
+        .excerpt{
+            padding: 30px 0;
+            text-align: center;
+            display: block;
+        }
+        .content{
+            line-height: 2em;
+            font-size: 18px;
+            text-align: justify;
+            p{
+                padding-bottom: 15px;
+            }
+
+        }
+    }
+}
