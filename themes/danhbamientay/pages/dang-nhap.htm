@@ -10,6 +10,27 @@ redirect = "tai-khoan"
 paramCode = "code"
 forceSecure = 0
 ==
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '526242978202571',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v4.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <div class="pvtinh_account_dbmientay">
   <div class="container">
   {% if not user %}
@@ -24,12 +45,20 @@ forceSecure = 0
               
               <ul class="account_link">
                 <li>Bạn chưa có tài khoản? <a href="/dang-ky" title="Đăng ký">Tạo tài khoản</a>  </li>
-                <li><a href="#">Quên mật khẩu?</a></li>
+                <li><a href="/quen-mat-khau">Quên mật khẩu?</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6">
+            <div class="login_form">
+              <label for="">Đăng nhập với Google</label>
+              <div class="g-signin2" data-width="290" data-onsuccess="onSignIn" data-longtitle="true"></div>
+              <a href="#" onclick="signOut();">Sign out</a>
+              <p>Hoặc</p>
+              <label for="">Đăng nhập với Facebook</label>
 
+              <div class="fb-login-button" data-width="290" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            </div>              
           </div>
         </div>
       </div>

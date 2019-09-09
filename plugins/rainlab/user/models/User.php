@@ -39,6 +39,8 @@ class User extends UserBase
         'avatar' => 'System\Models\File', 
     ];
 
+    // public $hasOne = [''];
+
     /**
      * @var array The attributes that are mass assignable.
      */

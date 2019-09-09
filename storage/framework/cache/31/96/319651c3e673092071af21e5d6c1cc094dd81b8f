@@ -1,4 +1,4 @@
-1567830379a:1:{s:22:"chinh-sua-tin-dang.htm";a:14:{s:8:"fileName";s:22:"chinh-sua-tin-dang.htm";s:7:"content";s:661:"title = "Chỉnh sửa tin đăng"
+1568039049a:1:{s:22:"chinh-sua-tin-dang.htm";a:14:{s:8:"fileName";s:22:"chinh-sua-tin-dang.htm";s:7:"content";s:661:"title = "Chỉnh sửa tin đăng"
 url = "/chinh-sua-tin-dang/:slug/:id"
 layout = "master"
 is_hidden = 0

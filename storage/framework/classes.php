@@ -439,4 +439,7 @@
   'RainLab\\Blog\\FormWidgets\\BlogMarkdown' => 'plugins\\rainlab\\blog\\formwidgets\\BlogMarkdown.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTaySinglePost' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTaySinglePost.php',
   'Toannang\\Componentbuilder\\Components\\PvtinhDBMienTayArchiveNews' => 'plugins\\toannang\\componentbuilder\\components\\PvtinhDBMienTayArchiveNews.php',
+  'system\\Controllers\\mailtemplates' => 'modules\\system\\controllers\\mailtemplates.php',
+  'system\\Controllers\\mailbrandsettings' => 'modules\\system\\controllers\\mailbrandsettings.php',
+  'Toannang\\Profile\\Models\\Profile' => 'plugins\\toannang\\profile\\models\\Profile.php',
 );

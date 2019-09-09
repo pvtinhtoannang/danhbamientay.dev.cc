@@ -1,4 +1,4 @@
-1567830379a:1:{s:10:"master.htm";a:8:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:2135:"description = "Standard Layout"
+1568039050a:1:{s:10:"master.htm";a:8:{s:8:"fileName";s:10:"master.htm";s:7:"content";s:2349:"description = "Standard Layout"
 
 [LamDBMienTayHeader]
 
@@ -34,6 +34,8 @@ function onStart(){
                 ]|theme }}" rel="stylesheet">
         {% styles %}
         <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="231854363690-35rtmknjscg3ih8ettcb66v57ucpm7as.apps.googleusercontent.com">
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}
@@ -56,7 +58,7 @@ function onStart(){
 
     </body>
 </html>
-";s:5:"mtime";i:1567654921;s:6:"markup";s:1935:"<!DOCTYPE html>
+";s:5:"mtime";i:1568002750;s:6:"markup";s:2149:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -80,6 +82,8 @@ function onStart(){
                 ]|theme }}" rel="stylesheet">
         {% styles %}
         <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <meta name="google-signin-client_id" content="231854363690-35rtmknjscg3ih8ettcb66v57ucpm7as.apps.googleusercontent.com">
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}

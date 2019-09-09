@@ -68,36 +68,38 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
         echo "        <script src=\"";
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/jquery-3.2.1.min.js");
         echo "\"> </script>
+        <script src=\"https://apis.google.com/js/platform.js\" async defer></script>
+        <meta name=\"google-signin-client_id\" content=\"231854363690-35rtmknjscg3ih8ettcb66v57ucpm7as.apps.googleusercontent.com\">
     </head>
     <body>
     ";
-        // line 27
+        // line 29
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("LamDBMienTayHeader"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 28
+        // line 30
         echo "        <!-- Content -->
         <section id=\"layout-content\">
             ";
-        // line 30
+        // line 32
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 31
+        // line 33
         echo "        </section>
     ";
-        // line 32
+        // line 34
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("LamDBMienTayFooter"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 33
+        // line 35
         echo "
         <!-- Scripts -->
         <script src=\"";
-        // line 35
+        // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/include/mmenu/jquery.mmenu.all.min.js", 1 => "assets/include/slick/slick.js", 2 => "assets/include/wow/wow.js", 3 => "assets/js/bootstrap.js", 4 => "assets/jquery.fancybox.min.js", 5 => "assets/js/index.js"]);
-        // line 41
+        // line 43
         echo "\"></script>
         ";
-        // line 42
+        // line 44
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -112,11 +114,11 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 43
+        // line 45
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 44
+        // line 46
         echo "
     </body>
 </html>";
@@ -134,7 +136,7 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
 
     public function getDebugInfo()
     {
-        return array (  120 => 44,  116 => 43,  101 => 42,  98 => 41,  96 => 35,  92 => 33,  88 => 32,  85 => 31,  83 => 30,  79 => 28,  75 => 27,  68 => 24,  65 => 23,  62 => 22,  60 => 12,  56 => 11,  49 => 7,  45 => 6,  41 => 5,  35 => 1,);
+        return array (  122 => 46,  118 => 45,  103 => 44,  100 => 43,  98 => 37,  94 => 35,  90 => 34,  87 => 33,  85 => 32,  81 => 30,  77 => 29,  68 => 24,  65 => 23,  62 => 22,  60 => 12,  56 => 11,  49 => 7,  45 => 6,  41 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -163,6 +165,8 @@ class __TwigTemplate_9b8daebf55413258e8b5c58f08de9d74b13a98ff92857ea0edc7d0e59d0
                 ]|theme }}\" rel=\"stylesheet\">
         {% styles %}
         <script src=\"{{ 'assets/js/jquery-3.2.1.min.js'|theme }}\"> </script>
+        <script src=\"https://apis.google.com/js/platform.js\" async defer></script>
+        <meta name=\"google-signin-client_id\" content=\"231854363690-35rtmknjscg3ih8ettcb66v57ucpm7as.apps.googleusercontent.com\">
     </head>
     <body>
     {% component 'LamDBMienTayHeader' %}

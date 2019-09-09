@@ -535,4 +535,30 @@ class Account extends ComponentBase
 
         return Redirect::secure(Request::path());
     }
+
+
+    protected function onSubmitLoginFormGoogle(){
+        $data = post();
+
+
+        //ID
+        $data['profile']['Eea'];
+
+        //full name
+        $data['profile']['ig'];
+
+        //frist name
+        $data['profile']['ofa'];
+
+        //last name
+        $data['profile']['wea'];
+
+        //link avatar
+        $data['profile']['Paa'];
+
+        //email
+        $data['profile']['U3'];
+
+        
+    }
 }

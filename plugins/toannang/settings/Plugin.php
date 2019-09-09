@@ -29,7 +29,7 @@ class Plugin extends PluginBase
                 'permissions' => ['toannang.settings.access_settings']
             ] 
         ];
-    }
+    }   
     public function registerFormWidgets(){
         return[
             'Toannang\Settings\Formwidgets\PropertyTypeBox'=>[

@@ -1,4 +1,4 @@
-1567830277a:1:{s:11:"tin-tuc.htm";a:12:{s:8:"fileName";s:11:"tin-tuc.htm";s:7:"content";s:239:"title = "Tin tức"
+1568039050a:1:{s:11:"tin-tuc.htm";a:12:{s:8:"fileName";s:11:"tin-tuc.htm";s:7:"content";s:239:"title = "Tin tức"
 url = "/tin-tuc/:slug"
 layout = "master"
 is_hidden = 0
