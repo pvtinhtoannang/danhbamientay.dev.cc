@@ -1,25 +1,30 @@
 <div class="box-user">
-	<input type="hidden" value="{{ user.avatar.path }}" name="pathimage" id="pathimage">
-	<input type="hidden" value="{{ user.avatar.file_name }}" name="filename" id="filename">
-	<input type="hidden" value="{{ user.avatar.content_type }}" name="content_type" id="content_type"> 
-	<div class="form-group avatar-form">
-	  
-		{{ form_open({ request: 'onSubmit', files: true }) }}
-		{{ form_token() }}
-		{{ form_sessionKey() }}
-				<input type="hidden" name="_handler" value="onSubmit">
-			<div id="image-preview" style="background-image: url({{ user.avatar.getThumb(200, 200, ['mode','crop'])  }})">
-				<label id="image-label" for="avatar">Ảnh đại diện</label>
-				<input type="file" name="avatar" id="avatar">
-			</div>				
-				<button type="submit" class="button-bdmt btn-user-avatar">TẢI ẢNH LÊN</button>
-			{{ form_close() }} 
-	</div>
-	<ul class="list-user">
-		<li class="text-dark"><i class="fa fa-user"></i><a href="/tai-khoan" class="text-dark" title="Tài khoản">Trang cá nhân</a></li>
-		<li class="text-dark"><i class="fa fa-plus"></i><a href="/dang-tin" class="text-dark" title="Đăng tin">Đăng tin</a></li>
-		<li class="text-dark"><i class="fa fa-key"></i><a href="/doi-mat-khau" class="text-dark" title="Đổi mật khẩu">Đổi mật khẩu</a></li>
-		<li class="text-dark"><i class="fa fa-list"></i><a href="/danh-sach-tin-dang" class="text-dark" title="Danh sách tin đăng">Danh sách tin đăng</a></li>
-		<li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" href="/dang-xuat" class="text-dark" title="Đăng xuất">Đăng xuất</a></li>
-	</ul>	 
+    <input type="hidden" value="{{ user.avatar.path }}" name="pathimage" id="pathimage">
+    <input type="hidden" value="{{ user.avatar.file_name }}" name="filename" id="filename">
+    <input type="hidden" value="{{ user.avatar.content_type }}" name="content_type" id="content_type">
+    <div class="form-group avatar-form">
+        {{ form_open({ request: 'onSubmit', files: true }) }}
+        {{ form_token() }}
+        {{ form_sessionKey() }}
+        <input type="hidden" name="_handler" value="onSubmit">
+        <div id="image-preview" style="background-image: url(' {{ user.avatar.getThumb(200,200,['mode','crop'])  }}')">
+            <label id="image-label" for="avatar">Ảnh đại diện</label>
+            <input type="file" name="avatar" id="avatar">
+        </div>
+        <button type="submit" class="button-bdmt btn-user-avatar">TẢI ẢNH LÊN</button>
+        {{ form_close() }}
+    </div>
+
+    <ul class="list-user">
+        <li class="text-dark"><i class="fa fa-user"></i><a href="/tai-khoan" class="text-dark" title="Tài khoản">Trang
+            cá nhân</a></li>
+        <li class="text-dark"><i class="fa fa-plus"></i><a href="/dang-tin" class="text-dark" title="Đăng tin">Đăng
+            tin</a></li>
+        <li class="text-dark"><i class="fa fa-key"></i><a href="/doi-mat-khau" class="text-dark" title="Đổi mật khẩu">Đổi
+            mật khẩu</a></li>
+        <li class="text-dark"><i class="fa fa-list"></i><a href="/danh-sach-tin-dang" class="text-dark"
+                                                           title="Danh sách tin đăng">Danh sách tin đăng</a></li>
+        <li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" href="/dang-xuat"
+                                                               class="text-dark" title="Đăng xuất">Đăng xuất</a></li>
+    </ul>
 </div>   

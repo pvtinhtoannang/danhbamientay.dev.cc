@@ -15,7 +15,7 @@ use Cms\Classes\Page;
 use Cms\Classes\ComponentBase;
 use RainLab\User\Models\Settings as UserSettings;
 use Exception;
-
+use Toannang\Profile\Models\Profile;
 /**
  * Account component
  *
@@ -540,9 +540,8 @@ class Account extends ComponentBase
     protected function onSubmitLoginFormGoogle(){
         $data = post();
 
-
         //ID
-        $data['profile']['Eea'];
+
 
         //full name
         $data['profile']['ig'];
@@ -558,7 +557,12 @@ class Account extends ComponentBase
 
         //email
         $data['profile']['U3'];
+        $user = Auth::getUser();
+        $profile = Profile::getFromUser($user);
 
-        
+        $profile->id_social =  $data['profile']['Eea'];
+        $profile->link_avatar = $data['profile']['Paa'];
+        $profile->type_social = 'google';
+        $profile->save();
     }
 }

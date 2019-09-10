@@ -42,12 +42,9 @@ security = "all"
 
 
     {% else %}
-
-        {% partial account ~ '::activation_check' %}
-
-        {% partial account ~ '::update' %}
-
-        {% partial account ~ '::deactivate_link' %}
+    <div class="account_form">
+      <p class="account_title">Bạn đã đăng ký thành công. Cập nhật tài khoản <a href="/tai-khoan" title="Tài khoản">tại đây</a></p>
+    </div>
 
     {% endif %}
   </div>

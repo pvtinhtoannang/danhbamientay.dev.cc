@@ -1,0 +1,13 @@
+1568108811a:1:{s:11:"tin-tuc.htm";a:12:{s:8:"fileName";s:11:"tin-tuc.htm";s:7:"content";s:239:"title = "Tin tức"
+url = "/tin-tuc/:slug"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[PvtinhDBMienTaySinglePost]
+==
+{% component 'PvtinhDBMienTaySinglePost' %}
+{% set post = blogPost.post %}
+";s:5:"mtime";i:1568097872;s:6:"markup";s:75:"{% component 'PvtinhDBMienTaySinglePost' %}
+{% set post = blogPost.post %}";s:4:"code";N;s:5:"title";s:9:"Tin tức";s:3:"url";s:14:"/tin-tuc/:slug";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:25:"PvtinhDBMienTaySinglePost";a:0:{}}}

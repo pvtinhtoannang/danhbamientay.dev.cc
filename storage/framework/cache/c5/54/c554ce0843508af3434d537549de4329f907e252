@@ -1,0 +1,147 @@
+1568108811a:1:{s:13:"dang-nhap.htm";a:12:{s:8:"fileName";s:13:"dang-nhap.htm";s:7:"content";s:2365:"title = "Đăng nhập"
+url = "/dang-nhap"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[account]
+redirect = "tai-khoan"
+paramCode = "code"
+forceSecure = 0
+==
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '526242978202571',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v4.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="pvtinh_account_dbmientay">
+  <div class="container">
+  {% if not user %}
+  <div class="row">
+    <div class="col-md-offset-2 col-md-7">
+      <div class="account_form ">
+        <h3 class="account_title">ĐĂNG NHẬP</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="login_form">
+              {% partial account ~ '::signin' %}
+              
+              <ul class="account_link">
+                <li>Bạn chưa có tài khoản? <a href="/dang-ky" title="Đăng ký">Tạo tài khoản</a>  </li>
+                <li><a href="/quen-mat-khau">Quên mật khẩu?</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="login_form">
+              <label for="">Đăng nhập với Google</label>
+              <div class="g-signin2" data-width="290" data-onsuccess="onSignIn" data-longtitle="true"></div>
+              <a href="#" onclick="signOut();">Sign out</a>
+              <p>Hoặc</p>
+              <label for="">Đăng nhập với Facebook</label>
+
+              <div class="fb-login-button" data-width="290" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% else %}
+
+      {% partial account ~ '::activation_check' %}
+
+      {% partial account ~ '::update' %}
+
+      {% partial account ~ '::deactivate_link' %}
+
+  {% endif %}
+
+  </div>
+</div>";s:5:"mtime";i:1568097872;s:6:"markup";s:2160:"<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '526242978202571',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v4.0'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="pvtinh_account_dbmientay">
+  <div class="container">
+  {% if not user %}
+  <div class="row">
+    <div class="col-md-offset-2 col-md-7">
+      <div class="account_form ">
+        <h3 class="account_title">ĐĂNG NHẬP</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="login_form">
+              {% partial account ~ '::signin' %}
+              
+              <ul class="account_link">
+                <li>Bạn chưa có tài khoản? <a href="/dang-ky" title="Đăng ký">Tạo tài khoản</a>  </li>
+                <li><a href="/quen-mat-khau">Quên mật khẩu?</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="login_form">
+              <label for="">Đăng nhập với Google</label>
+              <div class="g-signin2" data-width="290" data-onsuccess="onSignIn" data-longtitle="true"></div>
+              <a href="#" onclick="signOut();">Sign out</a>
+              <p>Hoặc</p>
+              <label for="">Đăng nhập với Facebook</label>
+
+              <div class="fb-login-button" data-width="290" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+            </div>              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  {% else %}
+
+      {% partial account ~ '::activation_check' %}
+
+      {% partial account ~ '::update' %}
+
+      {% partial account ~ '::deactivate_link' %}
+
+  {% endif %}
+
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:13:"Đăng nhập";s:3:"url";s:10:"/dang-nhap";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"account";a:3:{s:8:"redirect";s:9:"tai-khoan";s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}}}

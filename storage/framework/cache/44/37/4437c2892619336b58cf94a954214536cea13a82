@@ -1,0 +1,87 @@
+1568108811a:1:{s:11:"dang-ky.htm";a:13:{s:8:"fileName";s:11:"dang-ky.htm";s:7:"content";s:1320:"title = "Đăng ký"
+url = "/dang-ky"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[account]
+paramCode = "code"
+forceSecure = 0
+
+[session]
+security = "all"
+==
+{% component 'session' %}
+
+<div class="pvtinh_account_dbmientay">
+  <div class="container">
+    {% if not user %}
+    <div class="row">
+      <div class="col-md-offset-2 col-md-7">
+        <div class="account_form ">
+          <h3 class="account_title">ĐĂNG KÝ</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="login_form">
+                {% partial account ~ '::register' %}
+
+                <ul class="account_link">
+                  <li>Bạn đã có tài khoản? <a href="/dang-nhap" title="Đăng nhập">Đăng nhập</a>  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {% else %}
+    <div class="account_form">
+      <p class="account_title">Bạn đã đăng ký thành công. Cập nhật tài khoản <a href="/tai-khoan" title="Tài khoản">tại đây</a></p>
+    </div>
+
+    {% endif %}
+  </div>
+</div>";s:5:"mtime";i:1568104338;s:6:"markup";s:1113:"{% component 'session' %}
+
+<div class="pvtinh_account_dbmientay">
+  <div class="container">
+    {% if not user %}
+    <div class="row">
+      <div class="col-md-offset-2 col-md-7">
+        <div class="account_form ">
+          <h3 class="account_title">ĐĂNG KÝ</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="login_form">
+                {% partial account ~ '::register' %}
+
+                <ul class="account_link">
+                  <li>Bạn đã có tài khoản? <a href="/dang-nhap" title="Đăng nhập">Đăng nhập</a>  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {% else %}
+    <div class="account_form">
+      <p class="account_title">Bạn đã đăng ký thành công. Cập nhật tài khoản <a href="/tai-khoan" title="Tài khoản">tại đây</a></p>
+    </div>
+
+    {% endif %}
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:10:"Đăng ký";s:3:"url";s:8:"/dang-ky";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:7:"account";a:2:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}s:7:"session";a:1:{s:8:"security";s:3:"all";}}}

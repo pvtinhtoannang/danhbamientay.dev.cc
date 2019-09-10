@@ -5,6 +5,7 @@ use toannang\Settings\Models\Settings;
 use DB;
 use Toannang\RaoVat\Models\Locations;
 use Toannang\RaoVat\Models\Posts;
+use Toannang\Profile\Models\Profile;
 use System\Models\File;
 use Lang;
 use Auth;
@@ -80,12 +81,19 @@ class PvtinhDBMienTayAccount extends ComponentBase
                 ->where('id', $user->id)
                 ->update([
                     'name' => Input::get('name'),
-                    'email' => Input::get('email'),
-                    'phone_number' => Input::get('phone_number'),
-                    'address' => Input::get('address'),
-                    'bio' => Input::get('bio')
+                    'email' => Input::get('email')
                 ]);
-
+                $profile = Profile::getFromUser($user);
+                if(!empty($profile)){
+                    $profile->website = Input::get('website');
+                    $profile->phone_number = Input::get('phone_number');
+                    $profile->address = Input::get('address');
+                    $profile->bio = Input::get('bio');
+                    $profile->save();
+                }
+                else{
+                    echo 'Chưa tạo profile cần tạo profile';
+                }
             }
         }   
         catch (Exception $ex) {

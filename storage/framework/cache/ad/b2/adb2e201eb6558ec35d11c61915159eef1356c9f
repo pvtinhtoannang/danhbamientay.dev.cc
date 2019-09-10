@@ -1,0 +1,10 @@
+1568108811a:1:{s:13:"loai-hinh.htm";a:12:{s:8:"fileName";s:13:"loai-hinh.htm";s:7:"content";s:235:"title = "Loại hình"
+url = "/loai-hinh/:category/:location/"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[PvtinhDBMienTayArchiveLoaiHinh]
+==
+{% component 'PvtinhDBMienTayArchiveLoaiHinh' %}";s:5:"mtime";i:1568097872;s:6:"markup";s:48:"{% component 'PvtinhDBMienTayArchiveLoaiHinh' %}";s:4:"code";N;s:5:"title";s:12:"Loại hình";s:3:"url";s:31:"/loai-hinh/:category/:location/";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:30:"PvtinhDBMienTayArchiveLoaiHinh";a:0:{}}}

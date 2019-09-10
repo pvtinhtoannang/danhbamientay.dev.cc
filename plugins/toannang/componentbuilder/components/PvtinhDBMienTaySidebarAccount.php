@@ -1,6 +1,6 @@
 <?php namespace Toannang\Componentbuilder\Components;
 
-use Cms\Classes\ComponentBase; 
+use Cms\Classes\ComponentBase;
 use toannang\Settings\Models\Settings;
 use DB;
 use Toannang\RaoVat\Models\Locations;
@@ -18,15 +18,16 @@ use Validator;
 use ValidationException;
 use ApplicationException;
 use Session;
-use Exception; 
+use Exception;
 
-use Rainlab\User\Models\User;
+use Rainlab\User\Models\User as UserModel;
+
 class PvtinhDBMienTaySidebarAccount extends ComponentBase
 {
     public function componentDetails()
     {
         return [
-            'name'        => 'Sidebar Account',
+            'name' => 'Sidebar Account',
             'description' => 'Menu tài khoản'
         ];
     }
@@ -35,31 +36,24 @@ class PvtinhDBMienTaySidebarAccount extends ComponentBase
     {
         return [];
     }
+
     public function onRun()
     {
         $this->addCss(['components/pvtinhdbmientaysidebaraccount/assets/style.css']);
-        $this->addJs(['components/pvtinhdbmientaysidebaraccount/assets/script.js']); 
- 
+        $this->addJs(['components/pvtinhdbmientaysidebaraccount/assets/script.js']);
+
     }
 
- 
 
     public function onSubmit()
     {
-        $user = Auth::getUser();  
-
-        if (Input::file('avatar')) {
-            $image = Input::file('avatar');
-            $userupdate = User::where('id', $user->id)->first();     
-
-            $userupdate->avatar = $image; 
-
-            $userupdate->update(); 
-        }  
-        else {
-            echo 'khog co file';
+        $user = Auth::getUser();
+        $image = Input::file('avatar');
+        if (!empty($image)) {
+            $user->avatar = $image;
+            $user->update();
+        } else {
+            return;
         }
-
-        // return Redirect('\tai-khoan');
     }
 }

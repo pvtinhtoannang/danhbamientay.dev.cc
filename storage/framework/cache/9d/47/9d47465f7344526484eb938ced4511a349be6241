@@ -1,0 +1,271 @@
+1568108011a:1:{s:13:"danh-muc.yaml";a:7:{s:8:"fileName";s:13:"danh-muc.yaml";s:7:"content";s:7726:"name: 'Danh mục'
+items:
+    -
+        title: 'Bất động sản'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/bat-dong-san
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /house.png
+        items:
+            -
+                title: 'Mua bán'
+                type: url
+                url: /loai-hinh/bat-dong-san/mua-ban
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cho thuê'
+                type: url
+                url: /loai-hinh/bat-dong-san/cho-thue
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Sang nhượng'
+                type: url
+                url: /loai-hinh/bat-dong-san/sang-nhuong
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Dự án'
+                type: url
+                url: /loai-hinh/bat-dong-san/du-an
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+    -
+        title: 'Địa điểm ăn uống'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/dia-diem-an-uong
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /spoon.png
+        items:
+            -
+                title: 'Quán ăn gia đình'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-an-gia-dinh
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Quán ăn lề đường, vỉa hè'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-an-le-duong-via-he
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cafe, trà sữa'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/cafe-tra-sua
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Sinh tố'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/sinh-to
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Ăn vặt'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/an-vat
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Quán nhậu'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/quan-nhau
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: Bánh
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/banh
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Khu ẩm thực'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/khu-am-thuc
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Cơm văn phòng'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/com-van-phong
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+            -
+                title: 'Beer Club'
+                type: url
+                url: /loai-hinh/dia-diem-an-uong/beer-club
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+                    icon: ''
+    -
+        title: 'Địa điểm du lịch'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/dia-diem-du-lich
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /foodcover.png
+    -
+        title: 'Thiết bị công nghệ'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/thiet-bi-cong-nghe
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /screen.png
+    -
+        title: 'Oto Xe máy'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/oto-xe-may
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /car.png
+    -
+        title: 'Xây dựng'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/xay-dung
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /contruct.png
+    -
+        title: 'Nông nghiệp'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/nong-nghiep
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /aghi.png
+    -
+        title: 'Tuyển dụng - Việc làm'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/tuyen-dung-viec-lam
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /beauty.png
+    -
+        title: 'Làm đẹp'
+        nesting: ''
+        type: url
+        url: /chuyen-muc/lam-dep
+        code: ''
+        reference: ''
+        cmsPage: ''
+        replace: ''
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+            icon: /beauty.png
+";s:5:"mtime";i:1568097872;s:6:"markup";N;s:4:"code";N;s:4:"name";s:10:"Danh mục";s:5:"items";a:9:{i:0;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:19:"Bất động sản";s:5:"items";a:4:{i:0;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:8:"Mua bán";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:31:"/loai-hinh/bat-dong-san/mua-ban";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:1;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:9:"Cho thuê";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:32:"/loai-hinh/bat-dong-san/cho-thue";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:2;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:14:"Sang nhượng";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:35:"/loai-hinh/bat-dong-san/sang-nhuong";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:3;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:8:"Dự án";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:29:"/loai-hinh/bat-dong-san/du-an";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:24:"/chuyen-muc/bat-dong-san";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:10:"/house.png";}}i:1;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:25:"Địa điểm ăn uống";s:5:"items";a:10:{i:0;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:20:"Quán ăn gia đình";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:44:"/loai-hinh/dia-diem-an-uong/quan-an-gia-dinh";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:1;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:35:"Quán ăn lề đường, vỉa hè";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:51:"/loai-hinh/dia-diem-an-uong/quan-an-le-duong-via-he";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:2;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:16:"Cafe, trà sữa";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:40:"/loai-hinh/dia-diem-an-uong/cafe-tra-sua";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:3;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:9:"Sinh tố";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:35:"/loai-hinh/dia-diem-an-uong/sinh-to";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:4;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:9:"Ăn vặt";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:34:"/loai-hinh/dia-diem-an-uong/an-vat";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:5;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:12:"Quán nhậu";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:37:"/loai-hinh/dia-diem-an-uong/quan-nhau";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:6;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:5:"Bánh";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:32:"/loai-hinh/dia-diem-an-uong/banh";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:7;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:15:"Khu ẩm thực";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:39:"/loai-hinh/dia-diem-an-uong/khu-am-thuc";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:8;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:16:"Cơm văn phòng";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:41:"/loai-hinh/dia-diem-an-uong/com-van-phong";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}i:9;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:9:"Beer Club";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";N;s:4:"type";s:3:"url";s:3:"url";s:37:"/loai-hinh/dia-diem-an-uong/beer-club";s:4:"code";s:0:"";s:9:"reference";N;s:7:"replace";N;s:7:"cmsPage";N;s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:0:"";}}}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:28:"/chuyen-muc/dia-diem-an-uong";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:10:"/spoon.png";}}i:2;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:24:"Địa điểm du lịch";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:28:"/chuyen-muc/dia-diem-du-lich";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:14:"/foodcover.png";}}i:3;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:25:"Thiết bị công nghệ";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:30:"/chuyen-muc/thiet-bi-cong-nghe";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:11:"/screen.png";}}i:4;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:11:"Oto Xe máy";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:22:"/chuyen-muc/oto-xe-may";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:8:"/car.png";}}i:5;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:11:"Xây dựng";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:20:"/chuyen-muc/xay-dung";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:13:"/contruct.png";}}i:6;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:14:"Nông nghiệp";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:23:"/chuyen-muc/nong-nghiep";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:9:"/aghi.png";}}i:7;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:28:"Tuyển dụng - Việc làm";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:31:"/chuyen-muc/tuyen-dung-viec-lam";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:11:"/beauty.png";}}i:8;O:30:"RainLab\Pages\Classes\MenuItem":13:{s:5:"title";s:11:"Làm đẹp";s:5:"items";a:0:{}s:6:"parent";N;s:7:"nesting";s:0:"";s:4:"type";s:3:"url";s:3:"url";s:19:"/chuyen-muc/lam-dep";s:4:"code";s:0:"";s:9:"reference";s:0:"";s:7:"replace";s:0:"";s:7:"cmsPage";s:0:"";s:6:"exists";b:0;s:8:"fillable";a:9:{i:0;s:5:"title";i:1;s:7:"nesting";i:2;s:4:"type";i:3;s:3:"url";i:4;s:4:"code";i:5;s:9:"reference";i:6;s:7:"cmsPage";i:7;s:7:"replace";i:8;s:7:"viewBag";}s:7:"viewBag";a:4:{s:8:"isHidden";s:1:"0";s:8:"cssClass";s:0:"";s:10:"isExternal";s:1:"0";s:4:"icon";s:11:"/beauty.png";}}}}}

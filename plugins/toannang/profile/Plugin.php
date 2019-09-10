@@ -3,6 +3,7 @@
 use System\Classes\PluginBase;
 use Rainlab\User\Models\User as UserModel;
 use Rainlab\User\Controllers\Users as UserController;
+use Toannang\Profile\Models\Profile as ProfileModel;
 class Plugin extends PluginBase
 {
     public function registerComponents()
@@ -20,8 +21,17 @@ class Plugin extends PluginBase
 			$model->hasOne['profile'] = ['Toannang\Profile\Models\Profile']; 
 		});
 
+
 		UserController::extendFormFields(function ($form, $model, $context)
 		{
+		    if(!$model instanceof UserModel){
+		        return;
+            }
+		    if(!$model->exists){
+		        return;
+            }
+            ProfileModel::getFromUser($model);
+
 			$form->addTabFields([
 				'profile[website]'=>[
 					'label'=>'Website',

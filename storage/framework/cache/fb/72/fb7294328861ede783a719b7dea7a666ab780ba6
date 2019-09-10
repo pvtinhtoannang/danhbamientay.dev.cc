@@ -1,0 +1,33 @@
+1568108811a:1:{s:17:"quen-mat-khau.htm";a:12:{s:8:"fileName";s:17:"quen-mat-khau.htm";s:7:"content";s:532:"title = "Quên mật khẩu"
+url = "/quen-mat-khau"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[resetPassword]
+paramCode = "code"
+==
+<div class="pvtinh_account_dbmientay">
+  <div class="container"> 
+    <div class="col-md-offset-2 col-md-7">
+      <div class="account_form ">
+        <h3 class="account_title">QUÊN MẬT KHẨU</h3>  
+        <div class="login_form">
+          {% component 'resetPassword' %}  
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>";s:5:"mtime";i:1568097872;s:6:"markup";s:353:"<div class="pvtinh_account_dbmientay">
+  <div class="container"> 
+    <div class="col-md-offset-2 col-md-7">
+      <div class="account_form ">
+        <h3 class="account_title">QUÊN MẬT KHẨU</h3>  
+        <div class="login_form">
+          {% component 'resetPassword' %}  
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:18:"Quên mật khẩu";s:3:"url";s:14:"/quen-mat-khau";s:6:"layout";s:6:"master";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:13:"resetPassword";a:1:{s:9:"paramCode";s:4:"code";}}}
