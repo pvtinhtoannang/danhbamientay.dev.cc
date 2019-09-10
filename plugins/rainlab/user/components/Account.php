@@ -1,5 +1,5 @@
 <?php namespace RainLab\User\Components;
-
+use Hash;
 use Lang;
 use Auth;
 use Mail;
@@ -16,6 +16,8 @@ use Cms\Classes\ComponentBase;
 use RainLab\User\Models\Settings as UserSettings;
 use Exception;
 use Toannang\Profile\Models\Profile;
+use Rainlab\User\Models\User as UserModel;
+
 /**
  * Account component
  *
@@ -27,38 +29,38 @@ class Account extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => /*Account*/'rainlab.user::lang.account.account',
-            'description' => /*User management form.*/'rainlab.user::lang.account.account_desc'
+            'name' => /*Account*/ 'rainlab.user::lang.account.account',
+            'description' => /*User management form.*/ 'rainlab.user::lang.account.account_desc'
         ];
     }
 
     public function defineProperties()
     {
-        return [ 
+        return [
             'redirect' => [
-                'title'       => /*Redirect to*/'rainlab.user::lang.account.redirect_to',
-                'description' => /*Page name to redirect to after update, sign in or registration.*/'rainlab.user::lang.account.redirect_to_desc',
-                'type'        => 'dropdown',
-                'default'     => ''
+                'title' => /*Redirect to*/ 'rainlab.user::lang.account.redirect_to',
+                'description' => /*Page name to redirect to after update, sign in or registration.*/ 'rainlab.user::lang.account.redirect_to_desc',
+                'type' => 'dropdown',
+                'default' => ''
             ],
             'paramCode' => [
-                'title'       => /*Activation Code Param*/'rainlab.user::lang.account.code_param',
+                'title' => /*Activation Code Param*/ 'rainlab.user::lang.account.code_param',
                 'description' => /*The page URL parameter used for the registration activation code*/ 'rainlab.user::lang.account.code_param_desc',
-                'type'        => 'string',
-                'default'     => 'code'
+                'type' => 'string',
+                'default' => 'code'
             ],
             'forceSecure' => [
-                'title'       => /*Force secure protocol*/'rainlab.user::lang.account.force_secure',
-                'description' => /*Always redirect the URL with the HTTPS schema.*/'rainlab.user::lang.account.force_secure_desc',
-                'type'        => 'checkbox',
-                'default'     => 0
+                'title' => /*Force secure protocol*/ 'rainlab.user::lang.account.force_secure',
+                'description' => /*Always redirect the URL with the HTTPS schema.*/ 'rainlab.user::lang.account.force_secure_desc',
+                'type' => 'checkbox',
+                'default' => 0
             ],
         ];
     }
 
     public function getRedirectOptions()
     {
-        return [''=>'- refresh page -', '0' => '- no redirect -'] + Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
+        return ['' => '- refresh page -', '0' => '- no redirect -'] + Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
     /**
@@ -132,8 +134,8 @@ class Account extends ComponentBase
     public function loginAttributeLabel()
     {
         return Lang::get($this->loginAttribute() == UserSettings::LOGIN_EMAIL
-            ? /*Email*/'rainlab.user::lang.login.attribute_email'
-            : /*Username*/'rainlab.user::lang.login.attribute_username'
+            ? /*Email*/ 'rainlab.user::lang.login.attribute_email'
+            : /*Username*/ 'rainlab.user::lang.login.attribute_username'
         );
     }
 
@@ -186,7 +188,7 @@ class Account extends ComponentBase
                 'password.between' => 'Mật khẩu phải có độ dài từ 8 đến 255 kí tự!'
 
             ];
-            $validation = Validator::make($data, $rules,$messages);
+            $validation = Validator::make($data, $rules, $messages);
             if ($validation->fails()) {
                 throw new ValidationException($validation);
             }
@@ -195,7 +197,7 @@ class Account extends ComponentBase
              * Authenticate user
              */
             $credentials = [
-                'login'    => array_get($data, 'login'),
+                'login' => array_get($data, 'login'),
                 'password' => array_get($data, 'password')
             ];
 
@@ -204,7 +206,7 @@ class Account extends ComponentBase
             $user = Auth::authenticate($credentials, true);
             if ($user->isBanned()) {
                 Auth::logout();
-                throw new AuthException(/*Sorry, this user is currently not activated. Please contact us for further assistance.*/'rainlab.user::lang.account.banned');
+                throw new AuthException(/*Sorry, this user is currently not activated. Please contact us for further assistance.*/ 'rainlab.user::lang.account.banned');
             }
 
             /*
@@ -213,8 +215,7 @@ class Account extends ComponentBase
             if ($redirect = $this->makeRedirection(true)) {
                 return $redirect;
             }
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             if (Request::ajax()) throw $ex;
             else Flash::error($ex->getMessage());
         }
@@ -227,7 +228,7 @@ class Account extends ComponentBase
     {
         try {
             if (!$this->canRegister()) {
-                throw new ApplicationException(Lang::get(/*Registrations are currently disabled.*/'rainlab.user::lang.account.registration_disabled'));
+                throw new ApplicationException(Lang::get(/*Registrations are currently disabled.*/ 'rainlab.user::lang.account.registration_disabled'));
             }
 
             /* 
@@ -240,16 +241,16 @@ class Account extends ComponentBase
             }
 
             $rules = [
-                'email'    => 'required|email|between:6,255',
+                'email' => 'required|email|between:6,255',
                 'password' => 'required|between:8,255|confirmed',
-                'name'     => 'required'
+                'name' => 'required'
             ];
 
             if ($this->loginAttribute() == UserSettings::LOGIN_USERNAME) {
                 $rules['username'] = 'required|between:6,255';
             }
             $messages = [
-                'name.required' =>  'Vui lòng nhập tên của bạn!',
+                'name.required' => 'Vui lòng nhập tên của bạn!',
                 'email.required' => 'Vui lòng nhập email!',
                 'email.between' => 'Tài khoản hoặc email phải có độ dài từ 6 đến 225 kí tự!',
                 'email.email' => 'Email không hợp lệ!',
@@ -282,7 +283,7 @@ class Account extends ComponentBase
             if ($userActivation) {
                 $this->sendActivationEmail($user);
 
-                Flash::success(Lang::get(/*An activation email has been sent to your email address.*/'rainlab.user::lang.account.activation_email_sent'));
+                Flash::success(Lang::get(/*An activation email has been sent to your email address.*/ 'rainlab.user::lang.account.activation_email_sent'));
             }
 
             /*
@@ -298,8 +299,7 @@ class Account extends ComponentBase
             if ($redirect = $this->makeRedirection(true)) {
                 return $redirect;
             }
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             if (Request::ajax()) throw $ex;
             else Flash::error($ex->getMessage());
         }
@@ -307,14 +307,14 @@ class Account extends ComponentBase
 
     /**
      * Activate the user
-     * @param  string $code Activation code
+     * @param string $code Activation code
      */
     public function onActivate($code = null)
     {
         try {
             $code = post('code', $code);
 
-            $errorFields = ['code' => Lang::get(/*Invalid activation code supplied.*/'rainlab.user::lang.account.invalid_activation_code')];
+            $errorFields = ['code' => Lang::get(/*Invalid activation code supplied.*/ 'rainlab.user::lang.account.invalid_activation_code')];
 
             /*
              * Break up the code parts
@@ -338,15 +338,14 @@ class Account extends ComponentBase
                 throw new ValidationException($errorFields);
             }
 
-            Flash::success(Lang::get(/*Successfully activated your account.*/'rainlab.user::lang.account.success_activation'));
+            Flash::success(Lang::get(/*Successfully activated your account.*/ 'rainlab.user::lang.account.success_activation'));
 
             /*
              * Sign in the user
              */
             Auth::login($user);
 
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             if (Request::ajax()) throw $ex;
             else Flash::error($ex->getMessage());
         }
@@ -357,7 +356,7 @@ class Account extends ComponentBase
      */
     public function onUpdate()
     {
-        
+
         if (!$user = $this->user()) {
             return;
         }
@@ -365,7 +364,7 @@ class Account extends ComponentBase
         if (Input::hasFile('avatar')) {
             $user->avatar = Input::file('avatar');
         }
- 
+
         $user->fill(post());
         $user->save();
 
@@ -376,7 +375,7 @@ class Account extends ComponentBase
             Auth::login($user->reload(), true);
         }
 
-        Flash::success(post('flash', Lang::get(/*Settings successfully saved!*/'rainlab.user::lang.account.success_saved')));
+        Flash::success(post('flash', Lang::get(/*Settings successfully saved!*/ 'rainlab.user::lang.account.success_saved')));
 
         /*
          * Redirect
@@ -404,7 +403,7 @@ class Account extends ComponentBase
         Auth::logout();
         $user->delete();
 
-        Flash::success(post('flash', Lang::get(/*Successfully deactivated your account. Sorry to see you go!*/'rainlab.user::lang.account.success_deactivation')));
+        Flash::success(post('flash', Lang::get(/*Successfully deactivated your account. Sorry to see you go!*/ 'rainlab.user::lang.account.success_deactivation')));
 
         /*
          * Redirect
@@ -421,19 +420,18 @@ class Account extends ComponentBase
     {
         try {
             if (!$user = $this->user()) {
-                throw new ApplicationException(Lang::get(/*You must be logged in first!*/'rainlab.user::lang.account.login_first'));
+                throw new ApplicationException(Lang::get(/*You must be logged in first!*/ 'rainlab.user::lang.account.login_first'));
             }
 
             if ($user->is_activated) {
-                throw new ApplicationException(Lang::get(/*Your account is already activated!*/'rainlab.user::lang.account.already_active'));
+                throw new ApplicationException(Lang::get(/*Your account is already activated!*/ 'rainlab.user::lang.account.already_active'));
             }
 
-            Flash::success(Lang::get(/*An activation email has been sent to your email address.*/'rainlab.user::lang.account.activation_email_sent'));
+            Flash::success(Lang::get(/*An activation email has been sent to your email address.*/ 'rainlab.user::lang.account.activation_email_sent'));
 
             $this->sendActivationEmail($user);
 
-        }
-        catch (Exception $ex) {
+        } catch (Exception $ex) {
             if (Request::ajax()) throw $ex;
             else Flash::error($ex->getMessage());
         }
@@ -462,8 +460,7 @@ class Account extends ComponentBase
 
         if ($pageName = $this->property('activationPage')) {
             $url = $this->pageUrl($pageName, $params);
-        }
-        else {
+        } else {
             $url = $this->currentPageUrl($params);
         }
 
@@ -476,7 +473,7 @@ class Account extends ComponentBase
 
     /**
      * Sends the activation email to a user
-     * @param  User $user
+     * @param User $user
      * @return void
      */
     protected function sendActivationEmail($user)
@@ -491,7 +488,7 @@ class Account extends ComponentBase
             'code' => $code
         ];
 
-        Mail::send('rainlab.user::mail.activate', $data, function($message) use ($user) {
+        Mail::send('rainlab.user::mail.activate', $data, function ($message) use ($user) {
             $message->to($user->email, $user->name);
         });
     }
@@ -537,10 +534,10 @@ class Account extends ComponentBase
     }
 
 
-    protected function onSubmitLoginFormGoogle(){
+    protected function onSubmitLoginFormGoogle()
+    {
+        echo 'vao day';
         $data = post();
-
-        //ID
 
 
         //full name
@@ -557,12 +554,23 @@ class Account extends ComponentBase
 
         //email
         $data['profile']['U3'];
+        $user = Auth::register([
+            'name' => $data['profile']['ig'],
+            'email' => $data['profile']['U3'],
+            'username' => $data['profile']['U3'],
+            'is_activated' => '1',
+            'password' => 'changeme',
+            'password_confirmation' => 'changeme',
+        ], true);
+        $loggedIn = Auth::check();
+
+
         $user = Auth::getUser();
         $profile = Profile::getFromUser($user);
-
-        $profile->id_social =  $data['profile']['Eea'];
+        $profile->id_social = $data['profile']['Eea'];
         $profile->link_avatar = $data['profile']['Paa'];
         $profile->type_social = 'google';
         $profile->save();
+        return Redirect('\tai-khoan');
     }
 }
