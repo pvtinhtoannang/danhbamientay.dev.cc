@@ -1,3 +1,7 @@
+RewriteEngine On
+# Force https
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <IfModule mod_rewrite.c>
 
     <IfModule mod_negotiation.c>

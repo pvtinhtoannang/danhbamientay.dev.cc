@@ -33,7 +33,11 @@ class PvtinhDBMienTayArchive extends ComponentBase
         $this->addCss('components/pvtinhdbmientayarchive/assets/style.css');  
         $this->addJs('components/pvtinhdbmientayarchive/assets/script.js');
         $slug = $this->param('slug');
-        $myid = Category::select('id', 'name')->where('slug','=', $slug)->first(); 
+        $this->page['page_link'] = '/chuyen-muc/'.$slug;
+        $myid = Category::select('id', 'name', 'meta_description', 'meta_title')->where('slug','=', $slug)->first();
+        $this->page['meta_description'] = $myid->meta_description;
+        $this->page['meta_title'] = $myid->meta_title;
+        $this->page['title'] = $myid->name;
         if(!empty($myid)){
             $this->page['category_name'] = $myid->name;
             $this->page['category_slug'] = $slug;    

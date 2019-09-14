@@ -1,5 +1,6 @@
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2242396325982501&autoLogAppEvents=1"></script>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2242396325982501&autoLogAppEvents=1"></script>
 <section id="lp_danhbamientay_header">
     <div class="lp_danhbamientay_header">
         <div class="header_top_wrapper">
@@ -8,7 +9,9 @@
                     <div class="header_city_wrapper col-sm-4">
                         <span class="icon icon-map"></span>
                         {% if locations %}
-                        <marquee>{% for location in locations %}{{ location.name }}{% if not loop.last%} - {% endif %}{% endfor %}</marquee>
+                        <marquee>{% for location in locations %}{{ location.name }}{% if not loop.last%} - {% endif %}{%
+                            endfor %}
+                        </marquee>
                         {% endif %}
                     </div>
                     <div class="header_hotline_wrapper col-sm-4 hidden-xs">
@@ -17,16 +20,16 @@
                     <div class="header_function col-sm-4">
                         {% if user %}
                         <ul class="header_account">
-                          <li>
-                            <a href="/tai-khoan">Tài khoản: {{ user.name }}</a>
-                          </li>
+                            <li>
+                                <a href="/tai-khoan">Tài khoản: {{ user.name }}</a>
+                            </li>
                         </ul>
 
                         {% endif %}
                         {% if not user %}
-                          <a href="/dang-ky">Đăng ký</a>
-                          <span>/</span>
-                          <a href="/dang-nhap">Đăng nhập</a>
+                        <a href="/dang-ky">Đăng ký</a>
+                        <span>/</span>
+                        <a href="/dang-nhap">Đăng nhập</a>
                         {% endif %}
                     </div>
                 </div>
@@ -38,7 +41,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 logo_wrapper">
                         <div class="logo_box">
                             <h1 class="header_comname">
-                                <a href="{{ url('/') }}">
+                                <a href="{{ url('/') }}" title="{{ site_name }}">
                                     {% if logo is null %}
                                     {{ site_name }}
                                     {% else %}
@@ -51,9 +54,11 @@
                     </div>
                     <div class="col-md-6 col-sm-5 col-xs-12 search_wrapper">
                         <div class="search_box">
-                            <form role="search"  method="get" class="" action="/tim-kiem">
+                            <form role="search" method="get" class="" action="/tim-kiem">
                                 <input type="hidden" name="danh-muc" value="tat-ca-danh-muc">
-                                <input type="search" class="search-field input-search-nuhoang" placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="{{ keyword }}" name="keyword" title="" autocomplete="off" />
+                                <input type="search" class="search-field input-search-nuhoang"
+                                       placeholder="Tìm sản phẩm, thương hiệu và tên shop" value="{{ keyword }}"
+                                       name="keyword" title="" autocomplete="off"/>
                                 <button class="btn-search-nuhoang" type="submit" value="">
                                     <i class="fa fa-search"></i>
                                 </button>
@@ -62,7 +67,8 @@
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-12 post_article_wrapper">
                         <div class="post_article_box">
-                            <a href="/dang-tin">Đăng tin <img src="{{ 'lamdbmientayheader/images/checklist.png'|component }}" alt="checklist"></a>
+                            <a href="/dang-tin">Đăng tin <img
+                                    src="{{ 'lamdbmientayheader/images/checklist.png'|component }}" alt="checklist"></a>
                         </div>
                     </div>
                 </div>

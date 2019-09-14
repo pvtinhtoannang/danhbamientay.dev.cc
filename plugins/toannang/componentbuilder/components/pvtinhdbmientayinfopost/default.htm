@@ -92,7 +92,8 @@
                     <div class="info__author">
                         <div class="title__group">
                             <p>THÔNG TIN CHỦ ĐĂNG</p>
-                        </div> 
+                        </div>
+                        {% if infopost.user.email is not empty %}
                         <div class="content_info_author"> 
                             <div class="list__info_author">
                                 <ul>
@@ -107,6 +108,16 @@
                                 <a href="#"><span>ĐĂNG KÝ</span></a>
                             </div>     
                         </div>
+                        {% else %}
+                        <div class="content_info_author">
+                            <div class="list__info_author">
+                                <ul>
+                                    <li>Tài khoản của chủ đăng này hiện tạm dừng hoạt động!</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-7">

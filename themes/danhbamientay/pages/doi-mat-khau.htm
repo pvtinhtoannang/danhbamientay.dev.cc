@@ -1,28 +1,28 @@
-title = "Đổi mật khẩu"
-url = "/doi-mat-khau"
-layout = "master"
-is_hidden = 0
-robot_index = "index"
-robot_follow = "follow"
-
-[session]
-security = "user"
-redirect = "dang-nhap"
-
-[PvtinhDBMienTayChangePassword]
-
-[PvtinhDBMienTaySidebarAccount]
-==
-{% component 'session' %}
-<section class="pvtinh-dbmientay-dang-tin">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-3">
-				{% component 'PvtinhDBMienTaySidebarAccount' %}
-			</div>
-			<div class="col-xs-12 col-sm-8 col-md-9"> 
-				{% component 'PvtinhDBMienTayChangePassword' %}
-			</div>
-		</div>
-	</div>
+title = "Đổi mật khẩu"
+url = "/doi-mat-khau"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "user"
+redirect = "dang-nhap"
+
+[PvtinhDBMienTayChangePassword]
+
+[PvtinhDBMienTaySidebarAccount]
+==
+{% component 'session' %}
+<section class="pvtinh-dbmientay-dang-tin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				{% component 'PvtinhDBMienTaySidebarAccount' %}
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9"> 
+				{% component 'PvtinhDBMienTayChangePassword' %}
+			</div>
+		</div>
+	</div>
 </section>

@@ -21,7 +21,7 @@ use Toannang\Componentbuilder\Components\PvtinhDBMienTayMyPost;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayChinhSuaTinDang;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTaySinglePost;
 use Toannang\Componentbuilder\Components\PvtinhDBMienTayArchiveNews;
-
+use Toannang\Componentbuilder\Components\PvtinhDBMienTaySidebarNews;
 class Plugin extends PluginBase
 {
     public function registerComponents()
@@ -47,7 +47,8 @@ class Plugin extends PluginBase
             PvtinhDBMienTayChinhSuaTinDang::class => 'PvtinhDBMienTayChinhSuaTinDang',
             PvtinhDBMienTaySinglePost::class => 'PvtinhDBMienTaySinglePost',
             PvtinhDBMienTayArchiveNews::class => 'PvtinhDBMienTayArchiveNews',
-            
+            PvtinhDBMienTaySidebarNews::class => 'PvtinhDBMienTaySidebarNews',
+
           ];
     }
 
@@ -67,6 +68,6 @@ class Plugin extends PluginBase
     {
         $realpath    = str_replace('\\', '/', __DIR__);
         $whatIwanted = str_replace($_SERVER['DOCUMENT_ROOT'], '', $realpath);
-        return url($whatIwanted.'/components/'.$text);
+        return url('/plugins/toannang/componentbuilder'.'/components/'.$text);
     }
 }

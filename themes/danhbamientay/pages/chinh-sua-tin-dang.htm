@@ -1,28 +1,28 @@
-title = "Chỉnh sửa tin đăng"
-url = "/chinh-sua-tin-dang/:slug/:id"
-layout = "master"
-is_hidden = 0
-robot_index = "index"
-robot_follow = "follow"
-
-[session]
-security = "user"
-redirect = "dang-nhap"
-
-[PvtinhDBMienTaySidebarAccount]
-
-[PvtinhDBMienTayChinhSuaTinDang]
-==
-{% component 'session' %}
-<section class="pvtinh-dbmientay-dang-tin">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-3"> 
-				 {% component 'PvtinhDBMienTaySidebarAccount' %}
-			</div>
-			<div class="col-xs-12 col-sm-8 col-md-9">  
-				{% component 'PvtinhDBMienTayChinhSuaTinDang' %}
-			</div>
-		</div>
-	</div>
+title = "Chỉnh sửa tin đăng"
+url = "/chinh-sua-tin-dang/:slug/:id"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "user"
+redirect = "dang-nhap"
+
+[PvtinhDBMienTaySidebarAccount]
+
+[PvtinhDBMienTayChinhSuaTinDang]
+==
+{% component 'session' %}
+<section class="pvtinh-dbmientay-dang-tin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3"> 
+				 {% component 'PvtinhDBMienTaySidebarAccount' %}
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9">  
+				{% component 'PvtinhDBMienTayChinhSuaTinDang' %}
+			</div>
+		</div>
+	</div>
 </section>

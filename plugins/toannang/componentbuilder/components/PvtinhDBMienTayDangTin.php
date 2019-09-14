@@ -94,7 +94,7 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 $post->ward         = $data['ward']; 
                 $post->meta_title   = $data['title'];
                 $post->meta_description = $data['description'];
-                
+                $post->categories = $data['category'];
                 $post->address   = $data['address'];
                 
                 $post->user         = Auth::user()->id;
@@ -115,7 +115,8 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                     }
                 }                
                 $post->save();
-                return \Redirect::to('/dang-tin/');
+//                return \Redirect::to('/dang-tin/');
+                return $post;
             }
         }   
         catch (Exception $ex) {

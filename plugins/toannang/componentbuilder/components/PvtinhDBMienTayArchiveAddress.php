@@ -29,9 +29,11 @@ class PvtinhDBMienTayArchiveAddress extends ComponentBase
         $this->addJs('components/pvtinhdbmientayarchiveaddress/assets/script.js');
         $category = $this->param('category');
         $address = $this->param('address');
-        $myid = Category::select('id', 'name')->where('slug','=', $category)->first();
-        
-
+        $myid = Category::select('id', 'name','meta_title', 'meta_description')->where('slug','=', $category)->first();
+        $this->page['meta_description'] = $myid->meta_description;
+        $this->page['meta_title'] = $myid->meta_title;
+        $this->page['title'] = $myid->name;
+        $this->page['page_link'] = '/dia-diem/'.$category.'/'.$address;
         if($category == 'bat-dong-san'){
             $this->page['isbds'] = 'true';
             $locations_name = Province::select('id', 'name')->where('id','=', $address)->first();

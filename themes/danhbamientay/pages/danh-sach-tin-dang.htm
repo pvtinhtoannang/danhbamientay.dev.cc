@@ -1,28 +1,28 @@
-title = "Danh sách tin đăng"
-url = "/danh-sach-tin-dang"
-layout = "master"
-is_hidden = 0
-robot_index = "index"
-robot_follow = "follow"
-
-[session]
-security = "user"
-redirect = "dang-nhap"
-
-[PvtinhDBMienTaySidebarAccount]
-
-[PvtinhDBMienTayMyPost]
-==
-{% component 'session' %}
-<section class="pvtinh-dbmientay-dang-tin">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-4 col-md-3"> 
-				{% component 'PvtinhDBMienTaySidebarAccount' %}
-			</div>
-			<div class="col-xs-12 col-sm-8 col-md-9"> 
-{% component 'PvtinhDBMienTayMyPost' %}
-			</div>
-		</div>
-	</div>
+title = "Danh sách tin đăng"
+url = "/danh-sach-tin-dang"
+layout = "master"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[session]
+security = "user"
+redirect = "dang-nhap"
+
+[PvtinhDBMienTaySidebarAccount]
+
+[PvtinhDBMienTayMyPost]
+==
+{% component 'session' %}
+<section class="pvtinh-dbmientay-dang-tin">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-3"> 
+				{% component 'PvtinhDBMienTaySidebarAccount' %}
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9"> 
+{% component 'PvtinhDBMienTayMyPost' %}
+			</div>
+		</div>
+	</div>
 </section>

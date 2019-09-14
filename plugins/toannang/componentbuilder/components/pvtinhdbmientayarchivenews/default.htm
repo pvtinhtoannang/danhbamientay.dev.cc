@@ -15,7 +15,7 @@
                         {% endfor %}
                         <div class="news_content">
                             <div class="news_name">
-                                <a href="/tin-tuc/{{ item.slug }}">{{ item.title }}</a>
+                                <a href="/tin-tuc/{{ item.slug }}" title="{{ item.title }}">{{ item.title }}</a>
                             </div>
                             <div class="news_date">
                                 {{ item.created_at|date("d/m/Y") }}
@@ -24,7 +24,7 @@
                                 <p>{{ item.excerpt }}</p>
                             </div>
                             <div class="news_more">
-                                <a href="#">XEM THÊM <i class="fa fa-angle-double-right"></i></a>
+                                <a href="/tin-tuc/{{ item.slug }}"  title="{{ item.title }}">XEM THÊM <i class="fa fa-angle-double-right"></i></a>
                             </div>
                         </div>
                     </div>

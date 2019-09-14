@@ -2,7 +2,7 @@
 	<div class="lp_danhbamientay_breadcrumb" style="background-image: url('{{ 'pvtinhdbmientaybreadcrumb/images/bg_breadcrumb.jpg'|component }}')">
         <div class="container">
             <div class="dbmt_breadcrumb">
-            	<a href="/" title="Trang chủ" >Trang chủ</a><span> >> </span><span>{{ this.page.title }}</span>
+            	<a href="/" title="Trang chủ" >Trang chủ</a><span> >> </span><span>{{ this.page.title }}</span> {% if title is not empty %} <span> >> {{ post.title }} </span> {% endif %}
             </div>
         </div>
 	</div>

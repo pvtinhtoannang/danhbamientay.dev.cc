@@ -6,6 +6,29 @@ robot_index = "index"
 robot_follow = "follow"
 
 [PvtinhDBMienTaySinglePost]
+
+[PvtinhDBMienTaySidebarNews]
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
 ==
-{% component 'PvtinhDBMienTaySinglePost' %}
-{% set post = blogPost.post %}
+{% set post = blogPost.post %}
+ 
+
+<section>
+    <div class="pvtinhdbmientaysinglepost">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    {% component 'PvtinhDBMienTaySinglePost' %}
+                </div>
+                <div class="col-xs-12 col-md-3">
+                {% component 'PvtinhDBMienTaySidebarNews' %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

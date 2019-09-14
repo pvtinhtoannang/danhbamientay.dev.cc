@@ -1,4 +1,4 @@
-1568108811a:1:{s:12:"dang-tin.htm";a:15:{s:8:"fileName";s:12:"dang-tin.htm";s:7:"content";s:683:"title = "Đăng tin"
+1568356259a:1:{s:12:"dang-tin.htm";a:15:{s:8:"fileName";s:12:"dang-tin.htm";s:7:"content";s:683:"title = "Đăng tin"
 url = "/dang-tin"
 layout = "master"
 is_hidden = 0
@@ -28,7 +28,7 @@ redirect = "dang-nhap"
 			</div>
 		</div>
 	</div>
-</section>";s:5:"mtime";i:1568097872;s:6:"markup";s:406:"{% component 'session' %}
+</section>";s:5:"mtime";i:1568342628;s:6:"markup";s:406:"{% component 'session' %}
 {% component 'PvtinhDBMienTayBreadCrumb' %}
 <section class="pvtinh-dbmientay-dang-tin">
 	<div class="container">

@@ -9,10 +9,11 @@
 				<span class="error-label" data-validate-for="name"></span>
 			</div>
 		</div>
+
 		<div class="col-xs-12 col-sm-6 col-md-6">
 			<div class="form-group">
 				<label for="email">Email: <span class="fa fa-question-circle text-primary" data-toggle="tooltip" title="Bạn nên nhập chính xác email. Email dùng để đăng nhập vào website cũng như giúp bạn lấy lại mật khẩu khi cần."></span></label>
-				<input type="email" name="email" value="{{ user.profile.email }}" class="input-dbmt" placeholder="Nhập email của bạn: ">
+				<input type="email" name="email" value="{{ user.email }}" class="input-dbmt" placeholder="Nhập email của bạn: ">
 				<span class="error-label" data-validate-for="email"></span>
 			</div>
 		</div>

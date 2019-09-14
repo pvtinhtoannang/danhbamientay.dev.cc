@@ -55,10 +55,11 @@ class PvtinhDBMienTayRealEstate extends ComponentBase
             ->leftJoin('toannang_raovat_tinhthanhpho','toannang_raovat_tinhthanhpho.id', '=', 'toannang_raovat_posts.province')
             ->leftJoin('toannang_raovat_quanhuyen','toannang_raovat_quanhuyen.id', '=', 'toannang_raovat_posts.district')
             ->leftJoin('toannang_raovat_xaphuongthitran','toannang_raovat_xaphuongthitran.id', '=', 'toannang_raovat_posts.ward')
+            ->orderby('toannang_raovat_posts.id', 'DESC')
             ->paginate($paginate);
 
         $this->page['propertytype_home'] = DB::table('toannang_raovat_property_type' )
-        ->select(  'name', 'slug')
+        ->select(  'name', 'slug')->orderby('toannang_raovat_property_type.id', 'DESC')
         ->get();
         $this->page['banner_item'] = Settings::get('banner_item');
         $this->page['provinces'] = Province::select('id','name')->get();

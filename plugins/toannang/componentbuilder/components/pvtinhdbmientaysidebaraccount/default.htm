@@ -7,7 +7,8 @@
         {{ form_token() }}
         {{ form_sessionKey() }}
         <input type="hidden" name="_handler" value="onSubmit">
-        <div id="image-preview" style="background-image: url(' {{ user.avatar.getThumb(200,200,['mode','crop'])  }}')">
+
+        <div id="image-preview" style="background-image: url(' {% if user.profile.link_avatar is empty %} {{ user.avatar.getThumb(200,200,['mode','crop'])  }} {% else %} {{ user.profile.link_avatar }} {% endif %}')">
             <label id="image-label" for="avatar">Ảnh đại diện</label>
             <input type="file" name="avatar" id="avatar">
         </div>
@@ -16,6 +17,7 @@
     </div>
 
     <ul class="list-user">
+        <div id="g-signin2" class="g-signin2" data-width="0" onclick="onSignIn" data-longtitle="true" style="opacity: 0"></div>
         <li class="text-dark"><i class="fa fa-user"></i><a href="/tai-khoan" class="text-dark" title="Tài khoản">Trang
             cá nhân</a></li>
         <li class="text-dark"><i class="fa fa-plus"></i><a href="/dang-tin" class="text-dark" title="Đăng tin">Đăng
@@ -24,7 +26,8 @@
             mật khẩu</a></li>
         <li class="text-dark"><i class="fa fa-list"></i><a href="/danh-sach-tin-dang" class="text-dark"
                                                            title="Danh sách tin đăng">Danh sách tin đăng</a></li>
-        <li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" href="/dang-xuat"
+
+        <li class="text-dark"><i class="fa fa-sign-out"></i><a data-request="onLogout" data-request-data="redirect: '/dang-nhap'" onclick="signOut()" href="#"
                                                                class="text-dark" title="Đăng xuất">Đăng xuất</a></li>
     </ul>
 </div>   

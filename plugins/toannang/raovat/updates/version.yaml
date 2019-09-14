@@ -63,3 +63,9 @@
 1.0.22:
     - 'Updated table toannang_raovat_posts'
     - builder_table_update_toannang_raovat_posts_5.php
+1.0.23:
+    - 'Updated table toannang_raovat_locations'
+    - builder_table_update_toannang_raovat_locations_2.php
+1.0.24:
+    - 'Updated table toannang_raovat_property_type'
+    - builder_table_update_toannang_raovat_property_type_3.php

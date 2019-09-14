@@ -960,7 +960,8 @@ button.toast-close-button {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden; }
+  overflow: hidden;
+  border: 1px solid #ccc; }
   #image-preview #image-label {
     opacity: 0; }
   #image-preview #avatar {

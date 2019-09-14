@@ -33,7 +33,7 @@ class PvtinhDBMienTayArchiveNews extends ComponentBase
         $this->addCss('components/pvtinhdbmientayarchivenews/assets/style.css');  
         $this->addJs('components/pvtinhdbmientayarchivenews/assets/script.js');
 
-        $news = Post::select('rainlab_blog_posts.*')->where('published', '=', '1')->paginate(3);
+        $news = Post::select('rainlab_blog_posts.*')->where('published', '=', '1')->orderby('id', 'desc')->paginate(3);
         $this->page['newslist'] = $news;
 
     }

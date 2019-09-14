@@ -1,0 +1,83 @@
+.news_title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #272a72;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.4; }
+
+.news_box_item {
+  margin-bottom: 20px; }
+  .news_box_item .news_item:hover .news_content .news_name a {
+    color: #2a922d; }
+  .news_box_item .news_item .news_img a {
+    width: 100%;
+    height: 231px;
+    display: block; }
+    .news_box_item .news_item .news_img a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .news_box_item .news_item .news_content {
+    padding-top: 7px; }
+    .news_box_item .news_item .news_content .news_name a {
+      color: #000;
+      font-weight: 700;
+      font-size: 16px;
+      font-size: 16px;
+      line-height: 1.3;
+      display: block;
+      display: -webkit-box;
+      margin: 0 auto;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 41.6px;
+      display: block;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+    .news_box_item .news_item .news_content .news_date {
+      font-size: 14px;
+      font-weight: 400;
+      color: #000;
+      line-height: 1.4; }
+    .news_box_item .news_item .news_content .news_des {
+      font-size: 15px;
+      font-weight: 300;
+      color: #444444;
+      font-size: 15px;
+      line-height: 1.3;
+      display: block;
+      display: -webkit-box;
+      margin: 0 auto;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 97.5px;
+      margin-bottom: 25px; }
+    .news_box_item .news_item .news_content .news_more a {
+      display: inline-block;
+      width: 128px;
+      font-weight: 500;
+      color: #fff;
+      font-size: 14px;
+      padding: 10.3px 0;
+      background-color: #272a72;
+      border-radius: 2px;
+      text-align: center;
+      -webkit-transition: all 0.4s;
+      -moz-transition: all 0.4s;
+      -ms-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s; }
+      .news_box_item .news_item .news_content .news_more a:hover {
+        background-color: #2a922d; }
+      .news_box_item .news_item .news_content .news_more a i {
+        margin-left: 5px; }
+
+/*# sourceMappingURL=style.css.map */

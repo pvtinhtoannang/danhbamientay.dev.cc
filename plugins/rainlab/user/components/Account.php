@@ -553,24 +553,34 @@ class Account extends ComponentBase
         $data['profile']['Paa'];
 
         //email
-        $data['profile']['U3'];
-        $user = Auth::register([
-            'name' => $data['profile']['ig'],
-            'email' => $data['profile']['U3'],
-            'username' => $data['profile']['U3'],
-            'is_activated' => '1',
-            'password' => 'changeme',
-            'password_confirmation' => 'changeme',
-        ], true);
-        $loggedIn = Auth::check();
 
 
-        $user = Auth::getUser();
-        $profile = Profile::getFromUser($user);
-        $profile->id_social = $data['profile']['Eea'];
-        $profile->link_avatar = $data['profile']['Paa'];
-        $profile->type_social = 'google';
-        $profile->save();
-        return Redirect('\tai-khoan');
+        if(Auth::findUserByLogin($data['profile']['U3'])){
+//            $user = Auth::authenticate([
+//                'login' => $data['profile']['U3'],
+//                'password' => 'changeme'
+//            ]);
+            $user = Auth::findUserByLogin($data['profile']['U3']);
+            Auth::login($user);
+            return \Redirect::to('/tai-khoan/');
+        }
+        else{
+            $user = Auth::register([
+                'name' => $data['profile']['ig'],
+                'email' => $data['profile']['U3'],
+                'username' => $data['profile']['U3'],
+                'is_activated' => '1',
+                'password' => 'changeme',
+                'password_confirmation' => 'changeme',
+            ], true);
+            $user = Auth::getUser();
+            $profile = Profile::getFromUser($user);
+            $profile->id_social = $data['profile']['Eea'];
+            $profile->link_avatar = $data['profile']['Paa'];
+            $profile->type_social = 'google';
+            $profile->save();
+            return \Redirect::to('/tai-khoan/');
+        }
+
     }
 }

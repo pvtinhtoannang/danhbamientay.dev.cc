@@ -4,7 +4,7 @@ fields:
         span: left
         type: text
     category_id:
-        label: 'Chuyên mục'    
+        label: 'Chuyên mục'
         span: right
         type: categorybox
     slug:
@@ -14,13 +14,17 @@ fields:
             field: name
             type: slug
         type: text
-    sort_order:
-        label: 'Sắp xếp'
-        span: right
-        type: sortlocations
     description:
         label: 'Mô tả'
         size: small
         span: full
         type: textarea
-    
+    meta_title:
+        label: 'Meta title'
+        span: auto
+        type: text
+    meta_description:
+        label: 'Meta description'
+        size: ''
+        span: auto
+        type: textarea

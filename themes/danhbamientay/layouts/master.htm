@@ -11,17 +11,19 @@ function onStart(){
 ?>
 ==
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="Danh bạ Miền Tây">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="Danh bạ Miền Tây">
-        <link rel="icon" type="image/png" href="{{ favicon }}">
-        <link href="{{ ['assets/include/font-awesome/css/font-awesome.min.css',
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>{% if title is empty %} {{ home_title }} {% else %} {{ title }} | Danh bạ miền tây {% endif %}</title>
+    <meta name="description" content="{% if meta_description is empty %}{{ home_meta_description }}{% else %}{{ meta_description }}{% endif %}">
+    <meta name="title" content="{% if meta_title is empty %}{{ home_meta_title }}{% else %}{{ meta_title }}{% endif %}">
+    <meta name="author" content="Toàn Năng Cần Thơ">
+    <meta name="keywords" content="{{ home_meta_keyword }}">
+    <link rel="canonical" href="{% if page_link is empty %}{{ home_page_link }}{% else %}{{ home_page_link }}{{ page_link }}{% endif %}" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Danh bạ Miền Tây">
+    <link rel="icon" type="image/png" href="{{ favicon }}">
+    <link href="{{ ['assets/include/font-awesome/css/font-awesome.min.css',
                         'assets/css/bootstrap.css',
                         'assets/include/mmenu/jquery.mmenu.all.css',
                         'assets/include/wow/animate.css',
@@ -30,31 +32,45 @@ function onStart(){
                         'assets/css/hover.css',
                         'assets/css/reset.css',
                         'assets/jquery.fancybox.min.css',
-                        'assets/css/style.css',
+                        'assets/css/style.css'
                 ]|theme }}" rel="stylesheet">
-        {% styles %}
-        <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"> </script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <meta name="google-signin-client_id" content="231854363690-35rtmknjscg3ih8ettcb66v57ucpm7as.apps.googleusercontent.com">
-    </head>
-    <body>
-    {% component 'LamDBMienTayHeader' %}
-        <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
-    {% component 'LamDBMienTayFooter' %}
+    {% styles %}
+    <script src="{{ 'assets/js/jquery-3.2.1.min.js'|theme }}"></script>
 
-        <!-- Scripts -->
-        <script src="{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+          content="849394138130-6k7amgm8i1seeh9q8tiod3400qrsat1e.apps.googleusercontent.com">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140944177-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140944177-2');
+    </script>
+    <script>
+
+    </script>
+</head>
+<body>
+{% component 'LamDBMienTayHeader' %}
+<!-- Content -->
+<section id="layout-content">
+    {% page %}
+</section>
+{% component 'LamDBMienTayFooter' %}
+
+<!-- Scripts -->
+<script src="{{ ['assets/include/mmenu/jquery.mmenu.all.min.js',
                 'assets/include/slick/slick.js',
                 'assets/include/wow/wow.js',
                 'assets/js/bootstrap.js',
                 'assets/jquery.fancybox.min.js',
                 'assets/js/index.js',
                 ]|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+{% framework extras %}
+{% scripts %}
 
-    </body>
+</body>
 </html>

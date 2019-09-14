@@ -46,6 +46,7 @@ class PvtinhDBMienTayPlace extends ComponentBase
             $arr[$key]['item_place']['category_home']['link_2'] = $category_home[$key]['link_2'];
             $arr[$key]['item_place']['list_place'] = Posts::select('toannang_raovat_posts.*')
                 ->where('category_id' , '=' , $value['categorybox'])
+                ->orderby('toannang_raovat_posts.id', 'DESC')
                 ->join('toannang_raovat_post_category', 'toannang_raovat_post_category.posts_id', '=', 'toannang_raovat_posts.id') 
                 ->paginate($paginate); 
 

@@ -30,12 +30,15 @@ class PvtinhDBMienTayArchiveLoaiHinh extends ComponentBase
         $category = $this->param('category');
         $location = $this->param('location');
         $myid = Category::select('id', 'name')->where('slug','=', $category)->first();
-        
 
+        $this->page['page_link'] = '/loai-hinh/'.$category.'/'.$location;
         if($category == 'bat-dong-san'){
             $this->page['isbds'] = 'true';
             $this->page['subcategory'] = PropertyType::select('name', 'slug')->get();
-            $protytype = PropertyType::select('id', 'name')->where('slug','=', $location)->first();
+            $protytype = PropertyType::select('id', 'name','meta_title', 'meta_description')->where('slug','=', $location)->first();
+            $this->page['meta_description'] = $protytype->meta_description;
+            $this->page['meta_title'] = $protytype->meta_title;
+            $this->page['title'] = $protytype->name;
             if(!empty($protytype)){
                 $this->page['locations_name'] = $protytype->name;    
             }
@@ -55,7 +58,10 @@ class PvtinhDBMienTayArchiveLoaiHinh extends ComponentBase
         else{
 
             $this->page['isbds'] = 'false';
-            $location_id = Locations::select('id', 'name')->where('slug','=', $location)->first();
+            $location_id = Locations::select('id', 'name','meta_title', 'meta_description')->where('slug','=', $location)->first();
+            $this->page['meta_description'] = $location_id->meta_description;
+            $this->page['meta_title'] = $location_id->meta_title;
+            $this->page['title'] = $location_id->name;
             if(!empty($location_id)){
                 $this->page['locations_name'] = $location_id->name;    
             }

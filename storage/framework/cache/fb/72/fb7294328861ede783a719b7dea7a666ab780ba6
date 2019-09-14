@@ -1,4 +1,4 @@
-1568108811a:1:{s:17:"quen-mat-khau.htm";a:12:{s:8:"fileName";s:17:"quen-mat-khau.htm";s:7:"content";s:532:"title = "Quên mật khẩu"
+1568356259a:1:{s:17:"quen-mat-khau.htm";a:12:{s:8:"fileName";s:17:"quen-mat-khau.htm";s:7:"content";s:532:"title = "Quên mật khẩu"
 url = "/quen-mat-khau"
 layout = "master"
 is_hidden = 0
@@ -19,7 +19,7 @@ paramCode = "code"
       </div>
     </div>
   </div>
-</div>";s:5:"mtime";i:1568097872;s:6:"markup";s:353:"<div class="pvtinh_account_dbmientay">
+</div>";s:5:"mtime";i:1568342628;s:6:"markup";s:353:"<div class="pvtinh_account_dbmientay">
   <div class="container"> 
     <div class="col-md-offset-2 col-md-7">
       <div class="account_form ">

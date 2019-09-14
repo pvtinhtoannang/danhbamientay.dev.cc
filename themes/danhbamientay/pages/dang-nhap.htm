@@ -51,30 +51,22 @@ forceSecure = 0
           </div>
           <div class="col-md-6">
             <div class="login_form">
-              <label for="">Đăng nhập với Google</label>
-              <div class="g-signin2" data-width="290" data-onsuccess="onSignIn" data-longtitle="true"></div>
-              <a href="#" onclick="signOut();">Sign out</a>
-              <p>Hoặc</p>
-              <label for="">Đăng nhập với Facebook</label>
-
-              <div class="fb-login-button" data-width="290" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+              <label for="g-signin2">Đăng nhập với Google</label>
+              <div id="g-signin2"  class="g-signin2" data-width="260"  data-onsuccess="onSignIn"  data-longtitle="true"></div>
+              <p class="text-center or-text-form-account">Hoặc</p>
+              <label for="fb-login-button">Đăng nhập với Facebook</label>
+              <div id="fb-login-button" class="fb-login-button" data-width="260" data-scope="user_photos,public_profile, email" onlogin="checkLoginState()" data-size="large" data-button-type="continue_with" data-auto-logout-link="false"
+                   data-use-continue-as="false"></div>
+              <p><a href="#" onclick="logOutFacebook()">ĐĂNG XUẤT FACEBOOK</a></p>
             </div>              
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-  {% else %}
-
-      {% partial account ~ '::activation_check' %}
-
-      {% partial account ~ '::update' %}
-
-      {% partial account ~ '::deactivate_link' %}
-
   {% endif %}
-
   </div>
 </div>
+<script>
+
+</script>

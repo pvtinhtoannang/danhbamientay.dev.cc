@@ -196,4 +196,21 @@ tabs:
               mode: image
               span: storm
               cssClass: col-xs-4
-            
+
+
+    meta_title:
+      label: 'Meta title'
+      type: text
+      span: left
+      tab: 'Cài đặt chung'
+    meta_keyword:
+      label: 'Meta keyword'
+      type: text
+      span: left
+      tab: 'Cài đặt chung'
+
+    meta_description:
+      label: 'Meta description'
+      type: textarea
+      span: left
+      tab: 'Cài đặt chung'

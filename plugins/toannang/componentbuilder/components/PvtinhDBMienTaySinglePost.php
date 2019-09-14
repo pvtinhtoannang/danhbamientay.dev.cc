@@ -24,7 +24,10 @@ class PvtinhDBMienTaySinglePost extends ComponentBase
         $this->addJs('components/pvtinhdbmientaysinglepost/assets/script.js'); 
         $slug = $this->param('slug');
         
-        $news = Post::select('rainlab_blog_posts.*')->where('slug', '=', $slug )->first(); 
+        $news = Post::select('rainlab_blog_posts.*')->where('slug', '=', $slug )->first();
+        $this->page['meta_description'] = $news->meta_description;
+        $this->page['meta_title'] = $news->meta_title;
+        $this->page['title'] = $news->title;
         $this->page['post'] = $news;
     }
 }
