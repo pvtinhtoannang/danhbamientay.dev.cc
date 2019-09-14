@@ -40,7 +40,7 @@
                             <h1>{{ infopost.title }}</h1>
                         </div>
                         <div class="sub_info_post">
-                            <p class="date_post">{{ infopost.updated_at }}</p>
+                            <p class="date_post">{{ infopost.created_at }}</p>
                             <p class="category_post">Cùng chủ đề: 
                                 {% for category in infopost.categories %}
                                 <a href="/chuyen-muc/{{ category.slug }}"> {{ category.name }}</a>
@@ -93,14 +93,15 @@
                         <div class="title__group">
                             <p>THÔNG TIN CHỦ ĐĂNG</p>
                         </div>
-                        {% if infopost.user.email is not empty %}
+
+                        {% if infopost.user_email is not empty %}
                         <div class="content_info_author"> 
                             <div class="list__info_author">
                                 <ul>
-                                    <li>Họ tên: <span>{{ infopost.user.name }}</span></li>
-                                    <li>Địa chỉ: {{ infopost.user.address }}</li>
-                                    <li>Số điện thoại: <a href="tel:{{ infopost.user.phone }}">{{ infopost.user.phone }}</a></li>
-                                    <li>Email: <a href="mailto: {{ infopost.user.email }}"></a> {{ infopost.user.email }}</li>
+                                    <li>Họ tên: <span>{{ infopost.user_name }}</span></li>
+                                    <li>Địa chỉ: {{ infopost.address }}</li>
+                                    <li>Số điện thoại: <a href="tel:{{ infopost.phone_number }}">{{ infopost.phone_number }}</a></li>
+                                    <li>Email: <a href="mailto: {{ infopost.user_email }}"></a> {{ infopost.user_email }}</li>
                                 </ul>
                             </div>
 

@@ -93,8 +93,6 @@ class PvtinhDBMienTayChinhSuaTinDang extends ComponentBase
                 'title'         => 'required|between:8,255',
                 'description'   => 'required',
                 'content'       => 'required',
-                'price'         => 'min:0|numeric',
-                'area'          => 'min:0|numeric'
             ];
 
             $messages = [
@@ -102,8 +100,6 @@ class PvtinhDBMienTayChinhSuaTinDang extends ComponentBase
                 'title.between' => 'Tiêu đề tin đăng phải có độ dài từ 8 đến 225 kí tự!',
                 'description.required' => 'Vui lòng nhập mô tả tin đăng!',
                 'content.required' => 'Vui lòng nhập nội dung!',
-                'price.min' => 'Giá nhập vào không hợp lệ!',
-                'area.min' => 'Diện tích nhập vào không hợp lệ!',
 
             ];
             $validation = Validator::make($data, $rules,$messages);

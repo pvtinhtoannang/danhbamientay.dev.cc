@@ -63,8 +63,6 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 'title'         => 'required|between:8,255',
                 'description'   => 'required',
                 'content'       => 'required',
-                'price'         => 'min:0|numeric',
-                'area'          => 'min:0|numeric'
             ];
 
             $messages = [
@@ -72,8 +70,6 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 'title.between' => 'Tiêu đề tin đăng phải có độ dài từ 8 đến 225 kí tự!',
                 'description.required' => 'Vui lòng nhập mô tả tin đăng!',
                 'content.required' => 'Vui lòng nhập nội dung!',
-                'price.min' => 'Giá nhập vào không hợp lệ!',
-                'area.min' => 'Diện tích nhập vào không hợp lệ!',
 
             ];
             $validation = Validator::make($data, $rules,$messages);
@@ -82,12 +78,13 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                 throw new ValidationException($validation);
             }
             else{
+                $price = (float)$data['price'];
                 $post               = new Posts();
                 $post->title        = $data['title'];
                 $post->slug         = str_slug($data['title']); 
                 $post->description  = $data['description'];
                 $post->content      = $data['content'];
-                $post->price        = $data['price'];
+                $post->price        = $price;
                 $post->area         = $data['area'];
                 $post->province     = $data['province'];
                 $post->district     = $data['district'];

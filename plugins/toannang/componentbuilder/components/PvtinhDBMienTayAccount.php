@@ -84,7 +84,7 @@ class PvtinhDBMienTayAccount extends ComponentBase
                     'email' => Input::get('email')
                 ]);
                 $profile = Profile::getFromUser($user);
-                var_dump($profile);
+//                var_dump($profile);
                 if(!empty($profile)){
                     $profile->website = Input::get('website');
                     $profile->phone_number = Input::get('phone_number');
