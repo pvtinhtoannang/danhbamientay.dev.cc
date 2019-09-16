@@ -6,30 +6,32 @@
                     <div class="gallery__post">
                         <div class="gallery__main slider-for">
                             {% if infopost.images_gallery is not empty %}
-                                {% for gallery in infopost.images_gallery %}
-                                    <div class="img_main">
-                                        <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
-                                    </div>
-                                {% endfor %}
+                            {% for gallery in infopost.images_gallery %}
+                            <div class="img_main">
+                                <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
+                            </div>
+                            {% endfor %}
                             {% else %}
-                                <div class="img_main">
-                                    <img src="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}" alt="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}">
-                                </div>
-                            {% endif %} 
-                            
+                            <div class="img_main">
+                                <img src="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}"
+                                     alt="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}">
+                            </div>
+                            {% endif %}
+
                         </div>
 
                         <div class="gallery__thumb slider-nav">
                             {% if infopost.images_gallery is not empty %}
-                                {% for gallery in infopost.images_gallery %}
-                                    <div class="img_thumb">
-                                        <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
-                                    </div>
-                                {% endfor %}
+                            {% for gallery in infopost.images_gallery %}
+                            <div class="img_thumb">
+                                <img src="{{ gallery.path }}" alt="{{ gallery.path }}">
+                            </div>
+                            {% endfor %}
                             {% else %}
-                                <div class="img_thumb">
-                                    <img src="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}" alt="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}">
-                                </div>
+                            <div class="img_thumb">
+                                <img src="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}"
+                                     alt="{{ 'pvtinhdbmientayinfopost/images/no-image.jpg'|component }}">
+                            </div>
                             {% endif %}
                         </div>
                     </div>
@@ -41,7 +43,7 @@
                         </div>
                         <div class="sub_info_post">
                             <p class="date_post">{{ infopost.created_at }}</p>
-                            <p class="category_post">Cùng chủ đề: 
+                            <p class="category_post">Cùng chủ đề:
                                 {% for category in infopost.categories %}
                                 <a href="/chuyen-muc/{{ category.slug }}"> {{ category.name }}</a>
                                 {% endfor %}
@@ -51,32 +53,32 @@
                             <p>
                                 <img src="{{ 'pvtinhdbmientayrealestate/images/money.png'|component }}" alt="money">
                                 {% if infopost.price == '0' %}
-                                    Giá: <span>Đang cập nhật</span>
+                                Giá: <span>Đang cập nhật</span>
                                 {% else %}
-                                    Giá: <span>{{ infopost.price|number_format }} VND</span>
+                                Giá: <span>{{ infopost.price|number_format }} VND</span>
                                 {% endif %}
-                                
+
                             </p>
                             <p>
                                 <img src="{{ 'pvtinhdbmientayrealestate/images/ruler.png'|component }}" alt="ruler">
                                 Diện tích:
                                 {% if infopost.area == '0' %}
-                                    Đang cập nhật
+                                Đang cập nhật
                                 {% else %}
-                                    {{ infopost.area|number_format }}m2
+                                {{ infopost.area|number_format }}m2
                                 {% endif %}
                             </p>
                             <p>
                                 <img src="{{ 'pvtinhdbmientayrealestate/images/map3.png'|component }}" alt="map3">
-                                Khu vực: 
+                                Khu vực:
                                 {% if infopost.ward is not empty %}
-                                    {{ posts.ward }},
+                                {{ posts.ward }},
                                 {% endif %}
                                 {% if infopost.district is not empty %}
-                                    {{ infopost.district }},
-                                {% endif %} 
+                                {{ infopost.district }},
+                                {% endif %}
                                 {% if infopost.province is not empty %}
-                                    {{ infopost.province }}
+                                {{ infopost.province }}
                                 {% endif %}
                             </p>
                         </div>
@@ -95,19 +97,22 @@
                         </div>
 
                         {% if infopost.user_email is not empty %}
-                        <div class="content_info_author"> 
+                        <div class="content_info_author">
                             <div class="list__info_author">
                                 <ul>
                                     <li>Họ tên: <span>{{ infopost.user_name }}</span></li>
                                     <li>Địa chỉ: {{ infopost.address }}</li>
-                                    <li>Số điện thoại: <a href="tel:{{ infopost.phone_number }}">{{ infopost.phone_number }}</a></li>
-                                    <li>Email: <a href="mailto: {{ infopost.user_email }}"></a> {{ infopost.user_email }}</li>
+                                    <li>Số điện thoại: <a href="tel:{{ infopost.phone_number }}">{{
+                                        infopost.phone_number }}</a></li>
+                                    <li>Email: <a href="mailto: {{ infopost.user_email }}"></a> {{ infopost.user_email
+                                        }}
+                                    </li>
                                 </ul>
                             </div>
 
                             <div class="button_subscribe">
                                 <a href="#"><span>ĐĂNG KÝ</span></a>
-                            </div>     
+                            </div>
                         </div>
                         {% else %}
                         <div class="content_info_author">
@@ -130,8 +135,8 @@
                         <div class="list__comments">
                             <ul>
                                 <li>
-                                    {{ infopost.content|raw }}                 
-                                </li> 
+                                    {{ infopost.content|raw }}
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -143,19 +148,21 @@
 
                         <div class="list__comments">
                             <ul>
-                                
+
                                 <li>
-                                    <div class="fb-comments" data-href="{{ url }}" data-width="" data-numposts="5"></div>                                     
-                                </li> 
+                                    <div class="fb-comments" data-href="{{ url }}" data-width=""
+                                         data-numposts="5"></div>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-6 col-sm-3 col-md-2">
                     <div class="box_img_ads_right">
-                        <a href="#" target="_blank">
-                            <img src="{{ 'pvtinhdbmientayinfopost/images/ads_right.jpg'|component }}" alt="">
-                        </a>
+                        {% for brand in quangcaochitietbaiviet %}
+                        <a title="{{ brand.name }}" target="_blank" href="{{ brand.link }}"><img
+                                src="{{ brand.image|media }}" alt="{{ brand.image|media  }}"></a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

@@ -91,7 +91,30 @@ tabs:
                   span: storm
                   cssClass: col-xs-4
                   type: text
-
+    quangcaochitietbaiviet:
+      type: repeater
+      label: 'Quảng cáo chi tiết bài viết'
+      titleFrom: 'Quảng cáo'
+      tab: 'Chi tiết bài viết'
+      span: auto
+      form:
+        fields:
+          image:
+            label: 'Hình'
+            type: mediafinder
+            mode: image
+            span: storm
+            cssClass: col-xs-4
+          link:
+            label: 'Liên kết'
+            span: storm
+            cssClass: col-xs-4
+            type: text
+          name:
+            label: 'Tên quảng cáo'
+            span: storm
+            cssClass: col-xs-4
+            type: text
     home_sliders:
         type: repeater
         label: 'Slider'

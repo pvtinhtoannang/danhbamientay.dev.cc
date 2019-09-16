@@ -3,17 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="515871f7-8d07-4338-ac57-8a72903f733f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayAccount.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayAccount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayChinhSuaTinDang.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayChinhSuaTinDang.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/rainlab/user/components/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/rainlab/user/components/Account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayDangTin.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayDangTin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayInfoPost.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/PvtinhDBMienTayInfoPost.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/lamdbmientayfooter/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/lamdbmientayfooter/default.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaychinhsuatindang/assets/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaychinhsuatindang/assets/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaychinhsuatindang/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaychinhsuatindang/default.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaydangtin/assets/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaydangtin/assets/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaydangtin/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientaydangtin/default.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientayinfopost/default.htm" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/componentbuilder/components/pvtinhdbmientayinfopost/default.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/danhbamientay/pages/dang-nhap.htm" beforeDir="false" afterPath="$PROJECT_DIR$/themes/danhbamientay/pages/dang-nhap.htm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/toannang/raovat/models/posts/columns.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/raovat/models/posts/columns.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/toannang/settings/models/settings/fields.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/toannang/settings/models/settings/fields.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/danhbamientay/assets/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/themes/danhbamientay/assets/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +61,9 @@
       <workItem from="1568337712535" duration="5024000" />
       <workItem from="1568347634879" duration="8214000" />
       <workItem from="1568389643777" duration="187000" />
-      <workItem from="1568422882761" duration="7329000" />
+      <workItem from="1568422882761" duration="7926000" />
+      <workItem from="1568544974107" duration="66000" />
+      <workItem from="1568597030567" duration="4657000" />
     </task>
     <servers />
   </component>

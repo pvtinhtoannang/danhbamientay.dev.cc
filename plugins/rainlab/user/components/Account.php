@@ -299,6 +299,7 @@ class Account extends ComponentBase
             if ($redirect = $this->makeRedirection(true)) {
                 return $redirect;
             }
+            return \Redirect::to('/tai-khoan/');
         } catch (Exception $ex) {
             if (Request::ajax()) throw $ex;
             else Flash::error($ex->getMessage());
@@ -536,30 +537,10 @@ class Account extends ComponentBase
 
     protected function onSubmitLoginFormGoogle()
     {
-        echo 'vao day';
         $data = post();
 
-
-        //full name
-        $data['profile']['ig'];
-
-        //frist name
-        $data['profile']['ofa'];
-
-        //last name
-        $data['profile']['wea'];
-
-        //link avatar
-        $data['profile']['Paa'];
-
-        //email
-
-
         if(Auth::findUserByLogin($data['profile']['U3'])){
-//            $user = Auth::authenticate([
-//                'login' => $data['profile']['U3'],
-//                'password' => 'changeme'
-//            ]);
+
             $user = Auth::findUserByLogin($data['profile']['U3']);
             Auth::login($user);
             return \Redirect::to('/tai-khoan/');

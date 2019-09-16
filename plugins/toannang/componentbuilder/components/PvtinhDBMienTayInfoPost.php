@@ -51,5 +51,6 @@ class PvtinhDBMienTayInfoPost extends ComponentBase
         $this->page['meta_description'] = $this->page['infopost']->meta_description;
         $this->page['meta_title'] = $this->page['infopost']->meta_title;
         $this->page['title'] = $this->page['infopost']->title;
+        $this->page['quangcaochitietbaiviet'] = Settings::get('quangcaochitietbaiviet');
     }
 }

@@ -112,8 +112,8 @@ class PvtinhDBMienTayDangTin extends ComponentBase
                     }
                 }                
                 $post->save();
-//                return \Redirect::to('/dang-tin/');
-                return $post;
+                return \Redirect::to('/dang-tin/');
+//                return $post;
             }
         }   
         catch (Exception $ex) {

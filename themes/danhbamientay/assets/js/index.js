@@ -22,15 +22,15 @@ function onSignIn(googleUser) {
         type: 'POST',
         data: {profile: profile},
         success: function (data) {
-
+            if (profile != null) {
+                window.location.replace("tai-khoan");
+            }
         },
         error: function (errorMessage) {
             console.log(errorMessage);
         }
     });
-    if (profile != null) {
-        window.location.replace("tai-khoan");
-    }
+
 }
 
 function signOut() {

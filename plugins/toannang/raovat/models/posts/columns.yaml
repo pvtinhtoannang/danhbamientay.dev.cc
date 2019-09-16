@@ -18,3 +18,8 @@ columns:
         type: text
         select: name
         relation: categories
+    user:
+        label: 'Tác giả'
+        type: text
+        select: name
+        relation: user
